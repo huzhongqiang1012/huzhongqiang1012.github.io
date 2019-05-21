@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-21T13:43:10.889Z</updated>
+  <updated>2019-05-21T13:51:27.991Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,18 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tags</title>
+    <title>不过重头再来罢了</title>
     <link href="http://yoursite.com/2019/05/21/JavaScript%E4%B8%8D%E8%BF%87%E9%87%8D%E5%A4%B4%E5%86%8D%E6%9D%A5%E7%BD%A2%E4%BA%86/"/>
     <id>http://yoursite.com/2019/05/21/JavaScript不过重头再来罢了/</id>
     <published>2019-05-20T17:47:08.000Z</published>
-    <updated>2019-05-21T13:43:10.889Z</updated>
+    <updated>2019-05-21T13:51:27.991Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;JavaScript-基础&quot;&gt;&lt;a href=&quot;#JavaScript-基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 基础&quot;&gt;&lt;/a&gt;JavaScript 基础&lt;/h1&gt;&lt;h3 id=&quot;什么是标识符？&quot;&gt;&lt;a href=&quot;#什么
-      
+      &lt;h1 id=&quot;JavaScript-基础&quot;&gt;&lt;a href=&quot;#JavaScript-基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 基础&quot;&gt;&lt;/a&gt;JavaScript 基础&lt;/h1&gt;&lt;h3 id=&quot;什么是标识符？&quot;&gt;&lt;a href=&quot;#什么是标识符？&quot; class=&quot;headerlink&quot; title=&quot;什么是标识符？&quot;&gt;&lt;/a&gt;什么是标识符？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;变量 丶函数  丶属性的名字丶或者是函数的参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;标识符的命名规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由字母 丶数字丶下划线（_）或美元符号（$）组成&lt;/li&gt;
+&lt;li&gt;不能用数字开头&lt;/li&gt;
+&lt;li&gt;不能用关键字丶保留字&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
