@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-21T13:58:32.991Z</updated>
+  <updated>2019-05-21T14:01:06.674Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>不过重头再来罢了</title>
+    <title>01/JavaScript基础复习</title>
     <link href="http://yoursite.com/2019/05/21/JavaScript%E4%B8%8D%E8%BF%87%E9%87%8D%E5%A4%B4%E5%86%8D%E6%9D%A5%E7%BD%A2%E4%BA%86/"/>
     <id>http://yoursite.com/2019/05/21/JavaScript不过重头再来罢了/</id>
     <published>2019-05-20T17:47:08.000Z</published>
-    <updated>2019-05-21T13:58:32.991Z</updated>
+    <updated>2019-05-21T14:01:06.674Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;#01.javascript 基础入门复习&lt;/p&gt;
-&lt;p&gt;javaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。&lt;/p&gt;
+      &lt;p&gt;javaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;是一种解释性脚本语言（代码不进行&lt;a href=&quot;https://baike.baidu.com/item/%E9%A2%84%E7%BC%96%E8%AF%91&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;预编译&lt;/a&gt;）。 [4] &lt;/li&gt;
 &lt;li&gt;主要用来向&lt;a href=&quot;https://baike.baidu.com/item/HTML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTML&lt;/a&gt;（&lt;a href=&quot;https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;标准通用标记语言&lt;/a&gt;下的一个应用）页面添加交互行为。 [4] &lt;/li&gt;
