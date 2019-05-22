@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-21T16:08:24.771Z</updated>
+  <updated>2019-05-22T13:23:37.589Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,17 +18,23 @@
   
   <entry>
     <title>01-JavaScript基础复习</title>
-    <link href="http://yoursite.com/2019/05/21/JavaScript%E4%B8%8D%E8%BF%87%E9%87%8D%E5%A4%B4%E5%86%8D%E6%9D%A5%E7%BD%A2%E4%BA%86/"/>
-    <id>http://yoursite.com/2019/05/21/JavaScript不过重头再来罢了/</id>
+    <link href="http://yoursite.com/2019/05/21/JavaScript%20%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2019/05/21/JavaScript 基础/</id>
     <published>2019-05-20T17:47:08.000Z</published>
-    <updated>2019-05-21T16:08:24.771Z</updated>
+    <updated>2019-05-22T13:23:37.589Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;javaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。
+      &lt;h2 id=&quot;什么是标识符？&quot;&gt;&lt;a href=&quot;#什么是标识符？&quot; class=&quot;headerlink&quot; title=&quot;什么是标识符？&quot;&gt;&lt;/a&gt;什么是标识符？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;变量 丶函数  丶属性的名字丶或者是函数的参数&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
