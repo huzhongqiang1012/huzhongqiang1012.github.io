@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-26T16:33:54.174Z</updated>
+  <updated>2019-05-26T16:36:43.575Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,11 @@
     <link href="http://yoursite.com/2019/05/27/JavaScript%E5%87%BD%E6%95%B0%E7%AF%87/"/>
     <id>http://yoursite.com/2019/05/27/JavaScript函数篇/</id>
     <published>2019-05-26T16:30:40.000Z</published>
-    <updated>2019-05-26T16:33:54.174Z</updated>
+    <updated>2019-05-26T16:36:43.575Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;JavaScript函数&quot;&gt;&lt;a href=&quot;#JavaScript函数&quot; class=&quot;headerlink&quot; title=&quot;JavaScript函数&quot;&gt;&lt;/a&gt;JavaScript函数&lt;/h2&gt;&lt;p&gt;通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。
-      
+      &lt;h2 id=&quot;JavaScript函数&quot;&gt;&lt;a href=&quot;#JavaScript函数&quot; class=&quot;headerlink&quot; title=&quot;JavaScript函数&quot;&gt;&lt;/a&gt;JavaScript函数&lt;/h2&gt;&lt;p&gt;通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。
     
     </summary>
     
