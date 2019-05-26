@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-26T14:23:51.463Z</updated>
+  <updated>2019-05-26T15:07:02.218Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript函数篇</title>
+    <link href="http://yoursite.com/2019/05/23/JavaScript%E5%87%BD%E6%95%B0%E7%AF%87/"/>
+    <id>http://yoursite.com/2019/05/23/JavaScript函数篇/</id>
+    <published>2019-05-23T12:54:40.000Z</published>
+    <updated>2019-05-26T15:07:02.218Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;JavaScript函数&quot;&gt;&lt;a href=&quot;#JavaScript函数&quot; class=&quot;headerlink&quot; title=&quot;JavaScript函数&quot;&gt;&lt;/a&gt;JavaScript函数&lt;/h2&gt;&lt;p&gt;通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript流程控制篇</title>
