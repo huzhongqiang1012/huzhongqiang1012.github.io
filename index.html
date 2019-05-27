@@ -367,145 +367,20 @@
       
         
           
-            <h1 id="javaScript中内置对象"><a href="#javaScript中内置对象" class="headerlink" title="javaScript中内置对象**"></a>javaScript中内置对象**</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a>Array数组</h2><h4 id="Array构造函数"><a href="#Array构造函数" class="headerlink" title="Array构造函数"></a>Array构造函数</h4><p>语法：var Name =   new Array()</p>
-<p>小括号（）说明：</p>
-<pre><code>1.**预先知道数组要保存的项目数量**
+          javaScript中内置对象**Array数组Array构造函数语法：var Name =   new Array()
+小括号（）说明：
+1.**预先知道数组要保存的项目数量**
 
 2.**向Array构造函数中的传递数组应包含的项**
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种方式: 创建 一个保存颜色的数组，括号中如果不确定多少个值，就可以不写。</span></span><br><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="comment">// 第一种方式: 直接在括号中写已知的值如：( 1，3，5，6，7)</span></span><br><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>,);</span><br><span class="line"><span class="built_in">console</span>.log(colors);</span><br></pre></td></tr></table></figure>
-<h4 id="字面量创建"><a href="#字面量创建" class="headerlink" title="字面量创建"></a>字面量创建</h4><p>由一对包含数组项目的方括号【】表示，多个数组项之间，用 逗号隔开。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 第二种方式：字面量表示法</span><br><span class="line">var Name = [&apos;red&apos;,&apos;pink&apos;,&apos;yellow&apos;,&apos;green&apos;];</span><br></pre></td></tr></table></figure>
-<h4 id="数组元素的读写"><a href="#数组元素的读写" class="headerlink" title="数组元素的读写"></a>数组元素的读写</h4><p>读取和设置时，使用方括号【】并提供相应的索引</p>
-<p>说明：索引是从 0开始的正整数</p>
-<p>当索引找不到，则返回 undefined</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第二种方式：字面量表示法</span></span><br><span class="line"><span class="keyword">var</span> Name = [<span class="string">'red'</span>,<span class="string">'pink'</span>,<span class="string">'yellow'</span>,<span class="string">'green'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取数组中的值</span></span><br><span class="line">congsole.log( Name[<span class="number">0</span>] ); <span class="comment">// red</span></span><br><span class="line">congsole.log( Name[<span class="number">1</span>] ); <span class="comment">// pink</span></span><br><span class="line">congsole.log( Name[<span class="number">2</span>] ); <span class="comment">// yellow</span></span><br></pre></td></tr></table></figure>
-<h4 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h4><p>语法：array:length </p>
-<p>功能：获取数组array的长度</p>
-<p>返回值：number</p>
-<p>说明:</p>
-<pre><code>1.通过设置length 可以从数组的末尾移除项或向数组中添加新项
-
-2.把一个值放在超出当前数组大小的位置上时，会重新计算数组长度值
-
-**长度等于最后一项索引加1.**
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</span><br><span class="line">// 移除末尾值</span><br><span class="line">arr = arr.length -1;</span><br><span class="line">// 重新计算数组</span><br><span class="line">arr[99] = &apos;z&apos;;</span><br><span class="line">console.log(arr.length); // length = 100 = z</span><br></pre></td></tr></table></figure>
-<h4 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(var i = 0 ; i &lt; arr.length; i++)&#123;</span><br><span class="line">    consloe.log(i); // 索引</span><br><span class="line">    consloe.log(i); // 数组值</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 想获取数组中的每个值，就需要循环，循环条件就是 索引小于数组的个数</span><br></pre></td></tr></table></figure>
-<h4 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*     任务</span></span><br><span class="line"><span class="comment">      第一步：先创建一个空数组，用来保存接收到的用户输入的数据</span></span><br><span class="line"><span class="comment">      第二步：使用循环让页面不停地弹出“请输入员工工资”这个窗口，直到用户输入“退出”</span></span><br><span class="line"><span class="comment">      第三步：在页面上输出这个数组，数组中不要包含“退出”</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.空数组用来接收，用户输入的值</span></span><br><span class="line">      <span class="keyword">var</span> num = [];</span><br><span class="line">      <span class="comment">// 2.用变量 i 模拟数组中的下标</span></span><br><span class="line">      <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">      <span class="comment">// 3. 用户输入框</span></span><br><span class="line">      <span class="keyword">var</span> inPt = prompt(<span class="string">'请输入价格'</span>);</span><br><span class="line">      <span class="comment">// 4. 当用户，不输入“结束”关键字时，则无限循环输入提示框</span></span><br><span class="line">      <span class="keyword">while</span> (inPt != <span class="string">'退出'</span>) &#123;</span><br><span class="line">          <span class="comment">// 用户输入框</span></span><br><span class="line">          inPt = prompt(<span class="string">'请输入价格'</span>);</span><br><span class="line">          <span class="comment">// 用户每次输入的，给他添加到数组中去</span></span><br><span class="line">          <span class="comment">// i 代表数组的下标，通过另外一行去自增， 自增后是空的下标，然后把值 赋值给新下标</span></span><br><span class="line">          num[i] = inPt;</span><br><span class="line">          <span class="comment">// 上面的代码执行完毕 i 就会自增12345....i，每次自增后会在数组中生成一个空的下标节点</span></span><br><span class="line">          i++;</span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="comment">// 5. 数组的长度，最后一位是“退出”，应当去掉，然后重新赋值。</span></span><br><span class="line">      num.length = i - <span class="number">1</span>;</span><br><span class="line">      <span class="built_in">document</span>.write(num);</span><br></pre></td></tr></table></figure>
-<h4 id="数组的栈方法"><a href="#数组的栈方法" class="headerlink" title="数组的栈方法"></a>数组的栈方法</h4><h5 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h5><p>   语法：arrayObject. push( newele1,newele2……neweX)</p>
-<p>   功能：</p>
-<pre><code>把它的参数顺序**添加到** arrayObject 的**尾部**
-</code></pre><p>   返回值：</p>
-<pre><code>把指定的值添加到数组后的新长度
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = [];</span><br><span class="line">sum.push(<span class="string">'red'</span>); 	<span class="comment">// 追加到数组末尾</span></span><br><span class="line"><span class="built_in">console</span>.log(sum);	<span class="comment">// ["red"]</span></span><br><span class="line">sum.push(<span class="string">'pink'</span>);	<span class="comment">// 追加到数组末尾</span></span><br><span class="line"><span class="built_in">console</span>.log(sum);	<span class="comment">// ["red", "pink"]</span></span><br><span class="line">sum.push(<span class="string">'bule'</span>);	<span class="comment">// 追加到数组末尾</span></span><br><span class="line"><span class="built_in">console</span>.log(sum);	<span class="comment">// ["red", "pink", "bule"]</span></span><br></pre></td></tr></table></figure>
-<h5 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h5><p>   语法：arrayObject. unshift( newele1,newele2……neweX)</p>
-<p>   功能：</p>
-<pre><code>把它的参数顺序**添加到** arrayObject 的**开头**
-</code></pre><p>   返回值：</p>
-<pre><code>把指定的值添加到数组后的新长度
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">nums.unshift(<span class="string">'前面'</span>, <span class="string">'99'</span>, <span class="string">'88'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(nums);</span><br><span class="line"><span class="comment">// 返回值 ["前面", "99", "88", 1, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<h5 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h5><p>   语法： arrayObject. pop()</p>
-<p>   功能:   <strong>删除</strong> arrayObject 中的<strong>最后一个元素</strong></p>
-<p>   返回值： 被删除的那个元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums1 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> pp = nums1.pop(); </span><br><span class="line"><span class="built_in">console</span>.log(pp);  <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
-<h5 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h5><p>   语法： arrayObject. shift()</p>
-<p>   功能:   <strong>删除</strong> arrayObject 中的<strong>第一个元素</strong></p>
-<p>   返回值： 被删除的那个元素</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums1 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 接收的返回值</span></span><br><span class="line"><span class="keyword">var</span> sd =  nums1.shift();</span><br><span class="line"><span class="built_in">console</span>.log(sd); <span class="comment">// 1  被删掉的那个元素</span></span><br></pre></td></tr></table></figure>
-<h4 id="数组的转换方法"><a href="#数组的转换方法" class="headerlink" title="数组的转换方法"></a>数组的转换方法</h4><h5 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h5><pre><code>语法：arrayObject. join(“分隔符”) 
-
-功能：用于**把数组**中的所有元素**转换成字符串**
-
-返回值：字符串
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">var</span> str =  nums.join(); <span class="comment">// 没写分隔符，默认是 逗号隔开</span></span><br><span class="line"><span class="built_in">console</span>.log(str); <span class="comment">//  2,4,5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> wordstr = nums.join(<span class="string">'-'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(wordstr); <span class="comment">// 2-4-5</span></span><br></pre></td></tr></table></figure>
-<h4 id="数组的重排序方法"><a href="#数组的重排序方法" class="headerlink" title="数组的重排序方法"></a>数组的重排序方法</h4><h5 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h5><pre><code>语法：arrayObject. reverse()
-
-功能：用于颠倒数组中元素的顺序
-
-返回值：数组
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">nums. reverse();</span><br><span class="line"><span class="built_in">console</span>.log(nums); <span class="comment">// 5,4,3,2,</span></span><br></pre></td></tr></table></figure>
-<h5 id="sort（）"><a href="#sort（）" class="headerlink" title="sort（）"></a>sort（）</h5><pre><code>语法：arrayObject. sort(sortby)
-
-功能：对数组的元素进行排序
-
-返回值：数组
-
-说明：
-
-1.即使数组中国的每一项都是数组，sort（）方法比较的也是字符串
-
-2.sort（）方法可以接收一个比较函数作为参数
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = [<span class="number">12</span>,<span class="number">32</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">88</span>,<span class="number">12</span>,<span class="number">11</span>];</span><br><span class="line">sum.sort(<span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 降序排列</span></span><br><span class="line">    <span class="keyword">return</span> b - a;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(sum); <span class="comment">// [88, 32, 12, 12, 11, 3, 2, 1, 0]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = [<span class="number">12</span>,<span class="number">32</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">88</span>,<span class="number">12</span>,<span class="number">11</span>];</span><br><span class="line">sum.sort(<span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 升序排列</span></span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(sum); <span class="comment">// [0, 1, 2, 3, 11, 12, 12, 32, 88]</span></span><br></pre></td></tr></table></figure>
-<h4 id="案例练习"><a href="#案例练习" class="headerlink" title="案例练习"></a>案例练习</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 存储</span></span><br><span class="line"> <span class="keyword">var</span> sum = [];</span><br><span class="line"> <span class="comment">// 模拟 遍历数组中的 i</span></span><br><span class="line"><span class="keyword">var</span> i= <span class="number">0</span>;</span><br><span class="line"> <span class="comment">// 用户输入</span></span><br><span class="line"><span class="keyword">var</span> Name  = prompt(<span class="string">'输入数字,我会进行排序'</span>);</span><br><span class="line"><span class="keyword">while</span> ( Name != <span class="string">'-1'</span>)&#123;</span><br><span class="line">    Name  = prompt(<span class="string">'输入数字,我会进行排序'</span>);</span><br><span class="line">    sum[i]  = Name;</span><br><span class="line">    <span class="comment">// 每次输入后，让 i 自增，让数组长度增加1后</span></span><br><span class="line">    <span class="comment">// 让 Name 当前输入的值 赋值给 这个空 索引。</span></span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  去掉结束符</span></span><br><span class="line">sum.length = i - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对数组排序</span></span><br><span class="line">sum.sort(<span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span>  b - a;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面输出数组</span></span><br><span class="line"><span class="built_in">document</span>.write(sum);</span><br></pre></td></tr></table></figure>
-<h4 id="数组操作方法"><a href="#数组操作方法" class="headerlink" title="数组操作方法"></a>数组操作方法</h4><h5 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h5><p>  语法：arrayObject. concat(arrayX,arrayX,…….arrayX)</p>
-<p>  功能：<strong>连接俩个或者多个数组</strong>  （ <strong>可以复制数组</strong> ）</p>
-<p>  返回值：<strong>数组</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr.concat(arr1);</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br><span class="line"><span class="comment">//返回值 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span></span><br></pre></td></tr></table></figure>
-<h5 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h5><p>  语法：arrayObject. slice( start, end  )</p>
-<p>  功能：<strong>从已有的数组中返回选定的元素</strong>，（ <strong>可以复制数组</strong> ）</p>
-<p>  参数：</p>
-<pre><code>start(必须)：规定从何处**开始选取**，如果是负数，从数组尾部开始算起
-
-end(可选)：规定从何处**结束选取**，是数组片断结束处的数组下标  
-</code></pre><p>  说明：</p>
-<pre><code>如果没指定end, 选取会从 start 到数组结束的所有元素
-
-如果 **slice() 方法**的参数中**有一个负数**，则用**数组长度加上是那个负数确定相应的位置**
-</code></pre><p>  返回值：<strong>数组</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// start, end 都是数组的下标，下标是要减1，👇 如果我要截取，3~5 这几个值。</span></span><br><span class="line"><span class="keyword">var</span> sss = arr.slice(<span class="number">2</span>, <span class="number">5</span>); <span class="comment">// 下标为：2，5  </span></span><br><span class="line"><span class="built_in">console</span>.log(sss); 		   <span class="comment">// [3, 4, 5]</span></span><br></pre></td></tr></table></figure>
-<h5 id="splice-增删替换"><a href="#splice-增删替换" class="headerlink" title="splice() 增删替换"></a>splice() 增删替换</h5><pre><code>**插入某个或多个元素**
-
-    语法：arrayobject.splice( index,0, item1,item2......itmeX)
-
-    功能： 在指定位置插入值
-
-    参数：
-
-        index：起始位置
-
-        0 ： 要删掉的元素个数 （**删掉元素从插入位置开始，包括了插入的那个位置**）
-
-         item1，....itmeX：要插入的项
-
-    返回值：空数组
-
-    说明：
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入元素</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 2 = 从哪里插入。0 是要删掉的项。 </span></span><br><span class="line"><span class="keyword">var</span> insertArr = arr.splice(<span class="number">2</span>,<span class="number">0</span> ,<span class="string">"m"</span>,<span class="string">'h'</span>,<span class="string">'f'</span>); <span class="comment">// 👈</span></span><br><span class="line"><span class="built_in">console</span>.log(insertArr); </span><br><span class="line"><span class="comment">// 返回数组： [1, 2, "m", "h", "f", 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<pre><code>**删除某个或多个元素**
-
-    语法：arrayobject.splice( index,count )
-
-    功能：删掉从 index 处开始的零个或多个元素
-
-    返回值：含有被删掉的元素的数组
-
-    说明：**count是要删除的项目数量**，如果设置为0，则不会删除项目。
-
-        （**删掉元素从插入位置开始，包括了插入的那个位置**）
-
-    如果不设置，则删除从index开始的所有值。
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删掉数组中的从索引2开始的，2个值。</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> delArr = arr.splice(<span class="number">2</span>,<span class="number">2</span>); <span class="comment">// 👈</span></span><br><span class="line"><span class="built_in">console</span>.log(delArr);  <span class="comment">// [3, 4]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">// [1, 2, 5, 6]</span></span><br><span class="line">		</span><br><span class="line"><span class="comment">// 删掉数组中的从索引2开始的所有值</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> delArr = arr.splice(<span class="number">2</span>); <span class="comment">// 👈</span></span><br><span class="line"><span class="built_in">console</span>.log(delArr); <span class="comment">//[3, 4, 5, 6]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">//  [1, 2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 不删掉任何元素</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> delArr = arr.splice(<span class="number">2</span>,<span class="number">0</span>); <span class="comment">// 👈</span></span><br><span class="line"><span class="built_in">console</span>.log(delArr);  <span class="comment">// []</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<pre><code>**替换某个或多个元素**
-
-    语法：arrayobject.splice( index,count, item1,item2......itmeX)
-
-    功能： 在指定位置插入值
-
-    参数：
-
-        index：起始位置
-
-        count： 要删掉的元素个数 ( 删掉要替换的值 ) （**删掉元素从插入位置开始，包括了插入的那个位置**）
-
-         item1，....itmeX：要插入的项 （添加要替换的新值）
-
-    返回值：从原始数组中删掉的项（如果没有删掉，则返回空数组）
-
-    说明：
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入元素</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="comment">// 2 = 从哪里插入。0 是要删掉的项。 </span></span><br><span class="line"><span class="keyword">var</span> replaceArr = arr.splice(<span class="number">2</span>,<span class="number">3</span>,<span class="string">"m"</span>,<span class="string">'h'</span>,<span class="string">'f'</span>); <span class="comment">// 👈</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// 返回数组：[1, 2, "ff", "dd", "gg", 6]</span></span><br><span class="line"><span class="built_in">console</span>.log(replaceArr); </span><br><span class="line"><span class="comment">// [3, 4]  返回值是被删掉的值</span></span><br></pre></td></tr></table></figure>
-<h5 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现b数组对a数组的拷贝，方法越多越好</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="string">'yes'</span>,<span class="number">3</span>],</span><br><span class="line">	b;</span><br><span class="line">	</span><br><span class="line"><span class="comment">// 方法1. 数组遍历</span></span><br><span class="line">b = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; a.length; i++)&#123;</span><br><span class="line">	  </span><br><span class="line">    b.push(a[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 方法2. concat()</span></span><br><span class="line">b= [].concat();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法2. slice()</span></span><br><span class="line">b = [];</span><br><span class="line">b = a.slice(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<p>  案例练习</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jj = [];</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> name = prompt(<span class="string">'qingshurur'</span>);</span><br><span class="line"><span class="comment">// 循环</span></span><br><span class="line"><span class="keyword">while</span> (name != <span class="string">'-1'</span>) &#123;</span><br><span class="line">     name = prompt(<span class="string">'qingshurur'</span>);</span><br><span class="line">     jj[i] = name;</span><br><span class="line">     i++;</span><br><span class="line">&#125;</span><br><span class="line">jj.length = i - <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 替换数组中的第一个</span></span><br><span class="line"><span class="keyword">var</span> x = jj.splice(<span class="number">0</span>,<span class="number">1</span>,<span class="string">'hello'</span>);</span><br><span class="line"><span class="comment">// 输出，并且给数组添加了用分隔符</span></span><br><span class="line"><span class="built_in">document</span>.write(jj.join(<span class="string">"__"</span>));</span><br></pre></td></tr></table></figure>
-          
+12345// 第一种方式: 创建 一个保存颜色的数组，括号
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/27/JavaScript内置对象/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -648,45 +523,21 @@ end(可选)：规定从何处**结束选取**，是数组片断结束处的数�
       
         
           
-            <h2 id="JavaScript函数"><a href="#JavaScript函数" class="headerlink" title="JavaScript函数"></a>JavaScript函数</h2><p>通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。</p>
-<h4 id="函数的语法："><a href="#函数的语法：" class="headerlink" title="函数的语法："></a><strong>函数的语法：</strong></h4><p> function functionName([arg0,argo1,….argn]){</p>
-<p> statements;</p>
-<p>}</p>
-<p>说明：</p>
-<p>1.functionName是要定义的函数名，属于标识符</p>
-<p>2.[ ] 中的arg0,arg1… 为函数的参数，不是必须的，</p>
-<p>3.[ ] 只说明里面的内容不是必须的，它不是语法。</p>
-<h4 id="函数的调用："><a href="#函数的调用：" class="headerlink" title="函数的调用："></a>函数的调用：</h4><p>函数名：（ [arg1,arg2…argon ] ）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"我是一个函数"</span>)；</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 函数的调用</span></span><br><span class="line">myFun();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明带有参数的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sum = num1 + num2 ;</span><br><span class="line">    alert(num1 + <span class="string">'和'</span> + num2 + <span class="string">'的和是'</span> + sum);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 函数调用</span></span><br><span class="line">add(<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"><span class="comment">// 函数调用</span></span><br><span class="line">add(<span class="number">8</span>,<span class="number">12</span>);</span><br><span class="line"><span class="comment">// 函数调用</span></span><br><span class="line">add(<span class="number">12</span>,<span class="number">122</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以上函数全都写死了。。。全部都是弹出页面，没有灵活性。</span></span><br></pre></td></tr></table></figure>
-<p>注释：</p>
-<p>函数是可以重复调用的。</p>
-<p>参数，有些时候可以传，有些时候又不要传，看情况定。</p>
-<h4 id="函数的的返回值"><a href="#函数的的返回值" class="headerlink" title="函数的的返回值"></a>函数的的返回值</h4><p><strong>说明</strong>:</p>
-<pre><code>1.任何函数通过return 语句，后面跟着返回的值来实现返回值
-
-2.函数在执行完return语句后，会停止并且立即退出函数
-
-3.return语句也可以不带有任何返回值， 用于提前停止函数执行，又不需要返回值的情况。
-</code></pre><p><strong>作用</strong>：</p>
-<p>函数内部只做计算，然后把值返回，可以做其他操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 声明带有参数的函数</span><br><span class="line">function add(num1, num2) &#123;</span><br><span class="line">    var sum = num1 + num2;</span><br><span class="line">    return sum; // 返回计算的结果，并且立即退出函数，后面代码不会再执行</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 函数调用,通过参数 传递值 进入函数内部进行计算，然后返回值。</span><br><span class="line">// sum1变量保存add函数，return 返回的结果</span><br><span class="line">var sum1 = add(3, 5);</span><br><span class="line">// 对返回值，进行其他操作。</span><br><span class="line">alert(sum1);</span><br><span class="line"></span><br><span class="line">// 简写方式: 直接弹出，调用的这个函数，返回值包括在内。</span><br><span class="line">alert(add(1012,1993));</span><br></pre></td></tr></table></figure>
-<p><strong>小练习</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">arg</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 如果arg是非数字，不做任何操作,并且结束当前函数</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">isNaN</span>(arg)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 如果arg不是非数字，则返回arg的2倍的 值。</span></span><br><span class="line">    <span class="keyword">return</span> arg *<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="函数的参数-arguments"><a href="#函数的参数-arguments" class="headerlink" title="函数的参数 arguments"></a>函数的参数 arguments</h4><p>ECMAScript 中的参数在内部用一个数组来表示，在函数体内通过 arguments 对象来访问这个数组参数。</p>
-<p>说明：</p>
-<pre><code>1.arguments 对象只是与数组类似，并不是Array 的实例
-
-2.[] 语法访问它的每一个元素
-
-3.length属性确定传递参数的个数，同数组类似
-
-4.arguments  可以通过下标的形式修改值，如果在严格模式下，就无法进行。
-</code></pre><p>注意：函数的参数，在函数内部，是用一个数组表示的。 是通过arguments  这个对象在管理这些参数的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function inner() &#123;</span><br><span class="line">     for (var i = 0; i &lt; arguments.length; i++)&#123;</span><br><span class="line">          console.log(arguments[i]);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">inner(10,5,3,2,1,10);</span><br><span class="line"></span><br><span class="line">function inner(num1,num2)&#123;</span><br><span class="line">   arguments[0] = 100; // 修改了下标为 0 的值， 10改成了100</span><br><span class="line">   console.log(num1)</span><br><span class="line">&#125;</span><br><span class="line">inner(10,5);</span><br></pre></td></tr></table></figure>
-<p>案例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求任意一组数的平均值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAVG</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 所有参数的和</span></span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span>, len = <span class="built_in">arguments</span>.length, i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        sum += <span class="built_in">arguments</span>[i]</span><br><span class="line">        <span class="comment">// sum = 0 + 10</span></span><br><span class="line">        <span class="comment">// sum = 0 + 10 + 20</span></span><br><span class="line">        <span class="comment">// sum = 0 + 10 + 20 + 30</span></span><br><span class="line">        <span class="comment">// sum = 0 + 10 + 20 + 30 + 40</span></span><br><span class="line">        <span class="comment">// sum = 0 + 10 + 20 + 30 + 40 + 50</span></span><br><span class="line">        <span class="comment">//     ...</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//返回值 平均值 = 和 除以 个数</span></span><br><span class="line">    <span class="keyword">return</span> sum / len;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 接收 返回平均值</span></span><br><span class="line"><span class="keyword">var</span> avg = getAVG(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>);</span><br><span class="line"><span class="built_in">document</span>.write(avg);</span><br></pre></td></tr></table></figure>
-
-          
+          JavaScript函数通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。
+函数的语法： function functionName([arg0,argo1,….argn]){
+ statements;
+}
+说明：
+1.functionName是要定义的函数名，属于标识符
+2.[ ] 中的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/27/JavaScript函数篇/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1130,9 +981,16 @@ end(可选)：规定从何处**结束选取**，是数组片断结束处的数�
       
         
           
-            <p>​    4个小时，值得记录一下。😊</p>
+          ​    4个小时，值得记录一下。😊
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/20/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
