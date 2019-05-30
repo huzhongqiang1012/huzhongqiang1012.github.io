@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="-博客,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="FeiFeiFeiFei" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JavaScript DOM 操作Dom 是Document Object Model （文档对象模型）的缩写 文档对象模型（DOM） 是HTML和XML文档的编程接口，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构/样式和内容 DOM查找方法获取 ID语法：document.getElementById(‘id’) 功能：返回对拥有指定ID的第">
+<meta name="keywords" content="-博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptDOM操作">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/JavaScriptDOM操作/index.html">
+<meta property="og:site_name" content="FeiFeiFeiFei">
+<meta property="og:description" content="JavaScript DOM 操作Dom 是Document Object Model （文档对象模型）的缩写 文档对象模型（DOM） 是HTML和XML文档的编程接口，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构/样式和内容 DOM查找方法获取 ID语法：document.getElementById(‘id’) 功能：返回对拥有指定ID的第">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-30T13:26:14.646Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScriptDOM操作">
+<meta name="twitter:description" content="JavaScript DOM 操作Dom 是Document Object Model （文档对象模型）的缩写 文档对象模型（DOM） 是HTML和XML文档的编程接口，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构/样式和内容 DOM查找方法获取 ID语法：document.getElementById(‘id’) 功能：返回对拥有指定ID的第">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/JavaScriptDOM操作/">
+
+
+
+
+
+  <title>JavaScriptDOM操作 | FeiFeiFeiFei</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">FeiFeiFeiFei</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            生活
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            爱好
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/JavaScriptDOM操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="🍊🍊🍊🍊">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FeiFeiFeiFei">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScriptDOM操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T21:24:53+08:00">
+                2019-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">-JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JavaScript-DOM-操作"><a href="#JavaScript-DOM-操作" class="headerlink" title="JavaScript DOM 操作"></a>JavaScript DOM 操作</h2><p>Dom 是Document Object Model （文档对象模型）的缩写</p>
+<p>文档对象模型（DOM） 是HTML和XML文档的<strong>编程接口</strong>，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构/样式和内容</p>
+<h2 id="DOM查找方法"><a href="#DOM查找方法" class="headerlink" title="DOM查找方法"></a>DOM查找方法</h2><h4 id="获取-ID"><a href="#获取-ID" class="headerlink" title="获取 ID"></a>获取 ID</h4><p><strong>语法</strong>：document.getElementById(‘id’)</p>
+<p><strong>功能</strong>：返回对拥有指定ID的第一个对象的引用</p>
+<p><strong>返回值</strong>： DOM对象</p>
+<p><strong>说明</strong>：ID为DOM元素上的ID属性的值，ID 是唯一的一个页面中不能有重复的ID</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"box"</span>&gt;</span><br><span class="line">    元素</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 获取 ID 元素</span></span><br><span class="line"><span class="regexp">var box = document.getElementById('box');</span></span><br><span class="line"><span class="regexp">console.log(box);</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取-类"><a href="#获取-类" class="headerlink" title="获取 类"></a>获取 类</h4><p><strong>语法</strong>：document.getElementsByTagName(‘tag’)</p>
+<p><strong>功能</strong>：返回一个对所有tag标签引用的集合</p>
+<p><strong>返回值</strong>： 数组</p>
+<p><strong>说明</strong>：tag 要获取的标签名称</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;li&gt;前端&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;HTML&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;CSS&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;JAVASCRIPT&lt;/</span>li&gt;</span><br><span class="line">&lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">&lt;ol&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;后端开发&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;AI 技术&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>ol&gt;</span><br><span class="line"><span class="comment">// 获取 页面中所 li 元素</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(tag);</span><br><span class="line"><span class="comment">// 返回的是一个数组，需要遍历才能拿到每个元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 只获取 list 中的 li元素</span></span><br><span class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>).getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(tag); <span class="comment">//获取 list 中的所有li元素</span></span><br></pre></td></tr></table></figure>
+<h2 id="DOM元素的样式"><a href="#DOM元素的样式" class="headerlink" title="DOM元素的样式"></a>DOM元素的样式</h2><p>语法：ele.style.styleName =  styleValue</p>
+<p>功能：设置 ele 元素的CSS样式</p>
+<p>说明：</p>
+<p>1.ele 要设置的样式的DOM对象</p>
+<p>2.styleName 要设置的样式名称 </p>
+<pre><code>不能用 “ -- ” 连字符形式 如： font-seze ,需要写成驼峰命名形式： fontSize
+</code></pre><p>3.styleValue 设置的样式值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"box"</span>&gt;</span><br><span class="line">    元素</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/   ID 元素 设置样式</span></span><br><span class="line"><span class="regexp">var box = document.getElementById('box');</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 设置字体颜色样式</span></span><br><span class="line"><span class="regexp">box.style.color = "red";</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 设置样式 字体大小</span></span><br><span class="line"><span class="regexp">box.style.fontWeight = 'bold';</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;ul id="list"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;前端&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;HTML&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;CSS&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;JAVASCRIPT&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类 元素 设置样式</span></span><br><span class="line"><span class="keyword">var</span> list = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line"><span class="comment">// 它返回值，不是DOM对象，而是一个数组，所以需要循环遍历每个元素</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt; list.length; i++)&#123;</span><br><span class="line">    list[i].style.color = <span class="string">'pink'</span>;</span><br><span class="line">    <span class="comment">// 如果单独设置，需要判断 谁是谁</span></span><br><span class="line">    <span class="keyword">if</span>( i == <span class="number">1</span>)&#123;</span><br><span class="line">        list[i].style.color = <span class="string">'#000'</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>( i == <span class="number">2</span>)&#123;</span><br><span class="line">        list[i].style.color = <span class="string">'#111'</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>( i == <span class="number">3</span>)&#123;</span><br><span class="line">        list[i].style.color = <span class="string">'#222'</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        list[i].style.color = <span class="string">'#333'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="inner-HTML"><a href="#inner-HTML" class="headerlink" title="inner HTML"></a>inner HTML</h4><p>语法：ele.innerHTML</p>
+<p>功能：返回ele元素开始和结束标签之间的HTML</p>
+<p>语法：ele.innerHTML = ‘html’</p>
+<p>功能：设置ele元素开始和结束标签之间的HTML内容为HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=&quot;list&quot;&gt;</span><br><span class="line">    &lt;li&gt;前端&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;HTML&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;i&gt;CSS&lt;/i&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;b&gt;JAVASCRIPT&lt;/b&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">// 类 元素 设置样式</span><br><span class="line">var list = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for(var i = 0; i&lt; list.length; i++)&#123;</span><br><span class="line">    console.log(list[i].innerHTML);  // 包含标签里面的标签  &lt;b&gt;JAVASCRIPT&lt;/b&gt;</span><br><span class="line">    // 添加内容</span><br><span class="line">    list[i].innerHTML += &apos;程序&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="className"><a href="#className" class="headerlink" title="className"></a>className</h4><p>语法：ele.className </p>
+<p>功能：返回ele元素 的 class 属性</p>
+<p>语法：ele.className  = ‘cls’</p>
+<p>功能：设置ele元素 的class属性为 cls</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;li&gt;前端&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;HTML&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;&lt;i&gt;CSS&lt;/i&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;b&gt;JAVASCRIPT&lt;/b&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 获取 </span></span><br><span class="line"><span class="regexp">var list = document.getElementsByTagName('li');</span></span><br><span class="line"><span class="regexp">for(var i = 0; i&lt; list.length; i++)&#123;</span></span><br><span class="line"><span class="regexp">    console.log(list[i].innerHTML);  /</span><span class="regexp">/ 包含标签里面的标签  &lt;b&gt;JAVASCRIPT&lt;/</span>b&gt;</span><br><span class="line">    <span class="comment">// 添加内容</span></span><br><span class="line">    list[i].innerHTML += <span class="string">'程序'</span>;</span><br><span class="line">    <span class="comment">// 添加 class 类名,( 如果原来元素有类，则会覆盖。 如果需要追加，则要把原先类重新添加上)</span></span><br><span class="line">    list[<span class="number">1</span>].className = <span class="string">'current'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="DOM-元素添加属性"><a href="#DOM-元素添加属性" class="headerlink" title="DOM 元素添加属性"></a>DOM 元素添加属性</h2><h4 id="获取属性-getAttribute"><a href="#获取属性-getAttribute" class="headerlink" title="获取属性  getAttribute"></a>获取属性  getAttribute</h4><p>语法：ele.getAttribute(‘attribute’)</p>
+<p>功能：返回ele元素 的 attribute属性 (获取自定义属性)</p>
+<p> 说明：</p>
+<pre><code>ele是要操作的dom对象
+
+attribute是要获取HTML 属性（如：id   type vule）
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'text'</span> <span class="attr">align</span>=<span class="string">'center'</span> <span class="attr">date-type</span>=<span class="string">'title'</span>&gt;</span> 文本 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">"text"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 获取属性</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(p.id);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="设置属性-setAttribute"><a href="#设置属性-setAttribute" class="headerlink" title="设置属性 setAttribute"></a>设置属性 setAttribute</h4><p>功能：返回ele元素 的 设置属性</p>
+<p> 说明：</p>
+<pre><code>ele是要操作的dom对象
+
+attribute 要设置的属性名称
+
+value 设置的attribute 属性的值
+</code></pre><p>注：</p>
+<p>1.setAttribute方法必须要有俩个参数</p>
+<p>2.如果value是字符串，需加引号</p>
+<p>3.setAttribute（）有兼容性问题</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'text'</span> <span class="attr">align</span>=<span class="string">'center'</span> <span class="attr">date-type</span>=<span class="string">'title'</span>&gt;</span> 文本 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 获取属性</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">"text"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 设置属性</span></span></span><br><span class="line"><span class="javascript">    p.setAttribute(<span class="string">"data-color"</span>,<span class="string">"red"</span>);</span></span><br><span class="line"><span class="javascript">   <span class="comment">// 给P 设置一个 isRead 属性</span></span></span><br><span class="line"><span class="javascript">   p.setAttribute(<span class="string">"isRead"</span>,<span class="string">"false"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除属性-removeAttribute"><a href="#删除属性-removeAttribute" class="headerlink" title="删除属性 removeAttribute"></a>删除属性 removeAttribute</h4><p>语法：ele.removeAttribute( “attribute” );</p>
+<p>功能：删除ele上的 isRead 属性</p>
+<p>说明： 1. ele 要操作的DOM对象 2. attribute 要删除的属性名称</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'text'</span> <span class="attr">align</span>=<span class="string">'center'</span> <span class="attr">date-type</span>=<span class="string">'title'</span>&gt;</span> 文本 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 获取属性</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">"text"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 设置属性</span></span></span><br><span class="line"><span class="javascript">    p.setAttribute(<span class="string">"data-color"</span>,<span class="string">"red"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 设置 isRead 属性</span></span></span><br><span class="line"><span class="javascript">    p.setAttribute(<span class="string">"isRead"</span>,<span class="string">"false"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 删除 isRead 属性</span></span></span><br><span class="line"><span class="javascript">    p. removeAttribute(<span class="string">'isRead'</span>);</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h2>
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>JavaScriptDOM操作</p>
+  <p><span>文章作者:</span>🍊🍊🍊🍊</p>
+  <p><span>发布时间:</span>2019年05月30日 - 21:24:53</p>
+  <p><span>最后更新:</span>2019年05月30日 - 21:26:14</p>
+  <p><span>原始链接:</span><a href="/2019/05/30/JavaScriptDOM操作/" title="JavaScriptDOM操作">http://yoursite.com/2019/05/30/JavaScriptDOM操作/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/05/30/JavaScriptDOM操作/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+          
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    🍊🍊🍊🍊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/05/30/JavaScriptDOM操作/" title="JavaScriptDOM操作">http://yoursite.com/2019/05/30/JavaScriptDOM操作/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># -博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/30/JavaScript错误处理/" rel="next" title="JavaScript错误处理">
+                <i class="fa fa-chevron-left"></i> JavaScript错误处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">🍊🍊🍊🍊</p>
+              <p class="site-description motion-element" itemprop="description">道远路滑</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="weixin" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/yourname" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-DOM-操作"><span class="nav-number">1.</span> <span class="nav-text">JavaScript DOM 操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM查找方法"><span class="nav-number">2.</span> <span class="nav-text">DOM查找方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取-ID"><span class="nav-number">2.0.1.</span> <span class="nav-text">获取 ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取-类"><span class="nav-number">2.0.2.</span> <span class="nav-text">获取 类</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM元素的样式"><span class="nav-number">3.</span> <span class="nav-text">DOM元素的样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#inner-HTML"><span class="nav-number">3.0.1.</span> <span class="nav-text">inner HTML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#className"><span class="nav-number">3.0.2.</span> <span class="nav-text">className</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-元素添加属性"><span class="nav-number">4.</span> <span class="nav-text">DOM 元素添加属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取属性-getAttribute"><span class="nav-number">4.0.1.</span> <span class="nav-text">获取属性  getAttribute</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置属性-setAttribute"><span class="nav-number">4.0.2.</span> <span class="nav-text">设置属性 setAttribute</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除属性-removeAttribute"><span class="nav-number">4.0.3.</span> <span class="nav-text">删除属性 removeAttribute</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-事件"><span class="nav-number">5.</span> <span class="nav-text">DOM 事件</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">🍊🍊🍊🍊</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
