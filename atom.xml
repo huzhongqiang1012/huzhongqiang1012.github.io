@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-30T13:30:04.196Z</updated>
+  <updated>2019-05-30T13:45:48.932Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="http://yoursite.com/2019/05/30/JavaScriptDOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2019/05/30/JavaScriptDOM操作/</id>
     <published>2019-05-30T13:24:53.000Z</published>
-    <updated>2019-05-30T13:30:04.196Z</updated>
+    <updated>2019-05-30T13:45:48.932Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;JavaScript-DOM-操作&quot;&gt;&lt;a href=&quot;#JavaScript-DOM-操作&quot; class=&quot;headerlink&quot; title=&quot;JavaScript DOM 操作&quot;&gt;&lt;/a&gt;JavaScript DOM 操作&lt;/h2&gt;&lt;p&gt;Dom 是Docum
+        &lt;p&gt;Dom 是Document Object Model （文档对象模型）的缩写&lt;/p&gt;
+&lt;p&gt;文档对象模型（DOM） 是HTML和XML文档的&lt;strong&gt;编程接口&lt;/strong&gt;，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文
       
     
     </summary>
