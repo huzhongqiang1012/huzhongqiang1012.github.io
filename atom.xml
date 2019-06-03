@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-03T14:37:28.744Z</updated>
+  <updated>2019-06-03T16:50:39.239Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JavaScriptDOM属性</title>
-    <link href="http://yoursite.com/2019/06/03/JavaScript-DOM%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2019/06/03/JavaScript-DOM属性/</id>
-    <published>2019-06-03T14:36:36.000Z</published>
-    <updated>2019-06-03T14:37:28.744Z</updated>
+    <title>Jquery基础</title>
+    <link href="http://yoursite.com/2019/06/03/jquery%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2019/06/03/jquery基础/</id>
+    <published>2019-06-03T15:29:59.000Z</published>
+    <updated>2019-06-03T16:50:39.239Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;节点遍历&lt;/p&gt;
-&lt;h2 id=&quot;查找节点&quot;&gt;&lt;a href=&quot;#查找节点&quot; class=&quot;headerlink&quot; title=&quot;查找节点&quot;&gt;&lt;/a&gt;查找节点&lt;/h2&gt;&lt;h3 id=&quot;第一个子节点&quot;&gt;&lt;a href=&quot;#第一个子节点&quot; class=&quot;headerlink&quot; 
+        &lt;h1 id=&quot;jquery是什么？&quot;&gt;&lt;a href=&quot;#jquery是什么？&quot; class=&quot;headerlink&quot; title=&quot;jquery是什么？&quot;&gt;&lt;/a&gt;jquery是什么？&lt;/h1&gt;&lt;p&gt;jQuery是一个快速，小巧，功能丰富的JavaScript库。它通过易于使
       
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="jquery" scheme="http://yoursite.com/categories/jquery/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
