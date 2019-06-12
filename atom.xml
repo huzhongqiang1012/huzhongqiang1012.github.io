@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>FeiFeiFeiFei</title>
+  <title>HuZhongQiang</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -8,11 +8,6 @@
   <link href="http://yoursite.com/"/>
   <updated>2019-06-04T16:22:55.944Z</updated>
   <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>🍊🍊🍊🍊</name>
-    
-  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
