@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博客,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HuZhongQiang" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JavaScript BOM 操作BOM（browser   object   model ） 浏览器对象模型 👉     浏览器     对象    模型 window 对象方法window 是浏览器的一个实例，在浏览器中，window对象有双重角色，它既是通过JavaScript访问浏览器窗口的一个 接口，又是ECMAScrip 规定的  Global对象   ===  全局对象 ♥ 所有的">
+<meta name="keywords" content="博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptBOM操作 ">
+<meta property="og:url" content="http://yoursite.com/2019/05/31/JavaScriptBOM操作/index.html">
+<meta property="og:site_name" content="HuZhongQiang">
+<meta property="og:description" content="JavaScript BOM 操作BOM（browser   object   model ） 浏览器对象模型 👉     浏览器     对象    模型 window 对象方法window 是浏览器的一个实例，在浏览器中，window对象有双重角色，它既是通过JavaScript访问浏览器窗口的一个 接口，又是ECMAScrip 规定的  Global对象   ===  全局对象 ♥ 所有的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-03T15:27:26.021Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScriptBOM操作 ">
+<meta name="twitter:description" content="JavaScript BOM 操作BOM（browser   object   model ） 浏览器对象模型 👉     浏览器     对象    模型 window 对象方法window 是浏览器的一个实例，在浏览器中，window对象有双重角色，它既是通过JavaScript访问浏览器窗口的一个 接口，又是ECMAScrip 规定的  Global对象   ===  全局对象 ♥ 所有的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/31/JavaScriptBOM操作/">
+
+
+
+
+
+  <title>JavaScriptBOM操作  | HuZhongQiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HuZhongQiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            生活
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            爱好
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/JavaScriptBOM操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HuZhongQiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScriptBOM操作 </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-31T22:18:28+08:00">
+                2019-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaScript-BOM-操作"><a href="#JavaScript-BOM-操作" class="headerlink" title="JavaScript BOM 操作"></a>JavaScript BOM 操作</h1><p>BOM（browser   object   model ） 浏览器对象模型</p>
+<p>👉     浏览器     对象    模型</p>
+<h2 id="window-对象方法"><a href="#window-对象方法" class="headerlink" title="window 对象方法"></a>window 对象方法</h2><p>window 是浏览器的一个实例，在浏览器中，window对象有双重角色，它既是通过JavaScript访问浏览器窗口的一个 <strong>接口</strong>，又是ECMAScrip 规定的  <strong>Global对象</strong>   ===  <strong>全局对象</strong></p>
+<p>♥ <strong>所有的全局变量和全局方法都被归在 window 上了。</strong></p>
+<h3 id="window-alert-警示框"><a href="#window-alert-警示框" class="headerlink" title="window.alert(警示框)"></a>window.alert(警示框)</h3><p>功能：弹出警示框</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'弹出来'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="window-confirm-‘消息对话框’"><a href="#window-confirm-‘消息对话框’" class="headerlink" title="window.confirm (‘消息对话框’);"></a>window.confirm (‘消息对话框’);</h3><p>功能：显示一个<strong>带有指定消息</strong>和 <strong>OK</strong> <strong>及取消按钮的消息</strong>对话框</p>
+<p>返回值： 布尔型 ，确定是 true， 取消是 false</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取按钮</span></span><br><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// 提示文字太长，可以使用 /n 换行</span></span><br><span class="line">    <span class="keyword">var</span> result = <span class="built_in">window</span>.confirm(<span class="string">'您确定要删除吗'</span>);</span><br><span class="line">    <span class="keyword">if</span> (result)&#123;</span><br><span class="line">        <span class="comment">// 获取要隐藏的元素 ID ，然后执行 隐藏样式</span></span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>).style.display = <span class="string">'none'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="window-prompt-text1-text2"><a href="#window-prompt-text1-text2" class="headerlink" title="window.prompt( text1,text2 )"></a>window.prompt( text1,text2 )</h3><p>参数说明：</p>
+<p>text1:要做对话框中显示的纯文本（而不是html格式的文本）</p>
+<p>text2: 默认的输入文本</p>
+<p>返回值：如果用户单击提示框的取消按钮，则返回 null</p>
+<p>​        如果用户单击提示框的确定按钮，则返回 输入字段当前显示的文本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 弹出输入框</span></span><br><span class="line"><span class="keyword">var</span> message = prompt(<span class="string">'请输入您的星座'</span>,<span class="string">"天平座"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(message);</span><br></pre></td></tr></table></figure>
+<h3 id="window-Open-1，2-，3"><a href="#window-Open-1，2-，3" class="headerlink" title="window.Open(  1，2 ，3)"></a>window.Open(  1，2 ，3)</h3><p>功能：打开一个新的浏览器窗口或者查找一个已命名的窗口</p>
+<p>参数说明：</p>
+<p>pageURL： 子窗口路径</p>
+<p>name: 子窗口句柄 （name 声明了新窗口的名称，方便后期通过对子窗口进行引用）</p>
+<p>paramenters: 窗口参数（各参数用逗号分隔）</p>
+<p>​    width/height       left/top    toolbar(是否显示浏览器的工具栏)</p>
+<p>​    menubar    是否显示菜单栏</p>
+<p>​    scrillbars     是否显示滚动条</p>
+<p>​    location    是否显示  地址字段</p>
+<p>​    status    是否添加状态栏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.open(&quot;wwww.baidu.com&quot;,&quot;baidu	&quot;,&quot;......&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="window-close-关闭当前窗口"><a href="#window-close-关闭当前窗口" class="headerlink" title="window.close(关闭当前窗口)"></a>window.close(关闭当前窗口)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.close();</span><br></pre></td></tr></table></figure>
+<h2 id="setTimeout-定时器"><a href="#setTimeout-定时器" class="headerlink" title="setTimeout 定时器"></a>setTimeout 定时器</h2><h3 id="超时调用"><a href="#超时调用" class="headerlink" title="超时调用"></a>超时调用</h3><p>语法：setTimeout( code,millisec)</p>
+<p>功能：在指定的毫秒数后调用函数或计算表达式</p>
+<p>参数说明：</p>
+<p>​    code：调用的函数或要执行的JavaScript代码串</p>
+<p>​    millsec: 在执行代码前需等待的毫秒数</p>
+<p>​    <strong>setTimeout() 只执行code一次，如果要多次调用，可以让code自身再次调用 setTimeout，通过这种方法可以实现 间隙调用相同的功能</strong></p>
+<p>返回值： 返回一个ID值，通过它取消超时调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 匿名函数调用</span><br><span class="line">setTimeout(function () &#123;</span><br><span class="line">    alert(&apos;超时调用&apos;)</span><br><span class="line">&#125;,2000);</span><br><span class="line"></span><br><span class="line">// 自定义函数</span><br><span class="line">var 自定义函数fnCall = function () &#123;</span><br><span class="line">    alert(&apos;超时调用&apos;);</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(fuCall, 3000);</span><br></pre></td></tr></table></figure>
+<h3 id="清除超时调用"><a href="#清除超时调用" class="headerlink" title="清除超时调用"></a>清除超时调用</h3><p>语法：clearTimeout(  id_of_settimeout )</p>
+<p>功能：取消由setTimeout() 方法设置的timeout</p>
+<p>参数说明：</p>
+<p>id_of_settimeout ： 由setTimeout() 返回的ID值，该值标识要取消的延迟执行代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> // 自定义函数</span><br><span class="line">var timeout1 =  setTimeout(function () &#123;</span><br><span class="line">     alert(&apos;超时调用&apos;)</span><br><span class="line"> &#125;,2000);</span><br><span class="line"> </span><br><span class="line"> // 清除定时器</span><br><span class="line"> clearTimeout(  timeout1 )</span><br></pre></td></tr></table></figure>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"删除"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"取消删除"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>点击"删除"按钮后，里面的内容将在3秒钟后消失；<span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span>如点击了"删除"后又不想删除内容，请在点击"删除"按钮3秒之内点击"取消删除"按钮即可<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">width</span>:<span class="number">400px</span>;<span class="attribute">height</span>:<span class="number">120px</span>;<span class="attribute">margin-top</span>:<span class="number">50px</span>;<span class="attribute">border</span>:<span class="number">2px</span> solid gray;<span class="attribute">padding</span>:<span class="number">10px</span>;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取 俩个按钮</span></span><br><span class="line"><span class="keyword">var</span> btn1 = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> btn2 = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>)[<span class="number">1</span>];</span><br><span class="line"><span class="comment">// 要处理的元素</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="comment">//  定时器变量</span></span><br><span class="line"><span class="keyword">var</span> sum ;</span><br><span class="line"><span class="comment">// 点击删掉后 3秒后删掉</span></span><br><span class="line">btn1.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 创建定时器并且命名</span></span><br><span class="line">    sum = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        text.innerHTML = <span class="string">''</span>;</span><br><span class="line">    &#125;,<span class="number">3000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 点击取消按钮后，则立马 清除指定的定时器</span></span><br><span class="line">btn2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    clearTimeout(sum);</span><br><span class="line">&#125; ;</span><br></pre></td></tr></table></figure>
+<h3 id="间歇调用"><a href="#间歇调用" class="headerlink" title="间歇调用"></a>间歇调用</h3><p>语法：setInterval( code,millisec );</p>
+<p>功能：每隔指定的事件执行一次代码</p>
+<p> 参数说明：</p>
+<p>​    code ： 要调用的函数或要执行的代码串</p>
+<p>​    millisec: <strong>周期性</strong>执行或调用code之间的时间间隔，以毫秒计数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 间隙调用</span></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 每隔十秒钟调用一次,无限循环</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"你好"</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="清除间隙调用"><a href="#清除间隙调用" class="headerlink" title="清除间隙调用"></a>清除间隙调用</h3><p>语法: clearInterval( id_of_setinterval )</p>
+<p>功能：取消由setInterval () 方法设置的interval</p>
+<p>参数说明：</p>
+<p>​    id_of_setinterval : 由setInterval () 返回的ID 值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 间隙调用</span></span><br><span class="line"><span class="keyword">var</span> intervalId = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 每隔十秒钟调用一次</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"你好"</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 10秒后停止打印</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 清除间隙调用,填写该变量名就好了</span></span><br><span class="line">    clearInterval(intervalId)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用超时调用实现，间隙调用功能</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">1</span>,</span><br><span class="line">    max = <span class="number">10</span>,</span><br><span class="line">    timer = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 封装函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inCreamentNum</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 一秒后打印一次 num</span></span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">    <span class="comment">// num 递增</span></span><br><span class="line">    num++;</span><br><span class="line">    <span class="comment">// 判断 num 是否小于max</span></span><br><span class="line">    <span class="keyword">if</span> (num &lt;= max) &#123;</span><br><span class="line">        <span class="comment">// true ,再次调用自身函数</span></span><br><span class="line">        setTimeout(inCreamentNum, <span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// false，清除自身定时器</span></span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">timer = setTimeout(inCreamentNum, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h3><p>“☆☆☆今日特卖☆☆☆ ”和“★★★今日特卖★★★”这两个文本每0.5秒互相切换一次 </p>
+<p>任务</p>
+<p>第一步：先获取放置文本的div文本框对象，用变量进行接收</p>
+<p>第二步：自定义一个变量，用来接收记录闪烁的值，初始值是0</p>
+<p>第三步：设置定时器，每500毫秒执行一下定时器里面的脚本</p>
+<p>第四步：定时器的脚本如下：</p>
+<p>（1）  当闪烁变量的值是0时，闪烁变量的值设置为1，div里面的内容设置为：’☆☆☆今日特卖☆☆☆’</p>
+<p>（2）当闪烁变量的值是1时，闪烁变量的值设置为0，div里面的内容设置为：’★★★今日特卖★★★’</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>会闪烁的文字<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"text"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">               <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">               <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">               <span class="attribute">line-height</span>:<span class="number">200px</span>;</span><br><span class="line">               <span class="attribute">border</span>:<span class="number">2px</span> solid gray;</span><br><span class="line">               <span class="attribute">text-align</span>:center;</span><br><span class="line">               <span class="attribute">color</span>:red;</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tex = <span class="built_in">document</span>.getElementById(<span class="string">'text'</span>);</span><br><span class="line"><span class="comment">// 判断的变量值</span></span><br><span class="line"><span class="keyword">var</span> b1 = <span class="number">0</span>;</span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 判断：如果b1是1 ，则执行，然后把b1 改为 0 ，下次判断就会跳另外一个判断</span></span><br><span class="line">    <span class="keyword">if</span> (b1 == <span class="number">1</span>)&#123;</span><br><span class="line">        b1 = <span class="number">0</span>;</span><br><span class="line">        tex.innerText = <span class="string">'★★★今日特卖★★★'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 如果为0; 则b1改为1 。再次跳到另外一个判断，以此无线循环</span></span><br><span class="line">        b1 = <span class="number">1</span>;</span><br><span class="line">        tex.innerText = <span class="string">'☆☆☆今日特卖☆☆☆'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;,<span class="number">500</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="location-窗口对象属性"><a href="#location-窗口对象属性" class="headerlink" title="location 窗口对象属性"></a>location 窗口对象属性</h2><p>location 对象提供了与当前窗口中加载的文档有关的信息，还提供了<strong>导航</strong>的功能，它既是window对象的属性，也是docment对象的属性。</p>
+<h3 id="location-href"><a href="#location-href" class="headerlink" title="location .href"></a>location .href</h3><p>语法：location href</p>
+<p>功能：返回当前加载页面的完整URL</p>
+<p>说明： location .href 与window.location.href 等价</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.location.href);</span><br><span class="line"></span><br><span class="line"><span class="comment">//http://localhost:63342/Desktop/%E5%AD%A6%E4%B9%A0%E6%96%87%E4%BB%B6/01-%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/05-JS%E5%9F%BA%E7%A1%80/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E3%80%81.html?_ijt=15fn5hgq4kmr95ihpv7p3eb3e2</span></span><br></pre></td></tr></table></figure>
+<h3 id="location-hash"><a href="#location-hash" class="headerlink" title="location .hash"></a>location .hash</h3><p>语法：location .hash</p>
+<p>功能：返回URL中的hash（#号后 跟 零或多个字符），如果不包含则返回空字符串。</p>
+<p><strong>注：能实现锚链接 效果</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.location .hash);</span><br></pre></td></tr></table></figure>
+<h3 id="location-host"><a href="#location-host" class="headerlink" title="location .host"></a>location .host</h3><p>语法：location .host</p>
+<p>功能：返回服务器名称和端口号（前提是有这个东东）</p>
+<h3 id="location-hostname"><a href="#location-hostname" class="headerlink" title="location .hostname"></a>location .hostname</h3><p>语法：location .hostname</p>
+<p>功能：返回不带端口号的服务器名称 </p>
+<h3 id="location-pathname"><a href="#location-pathname" class="headerlink" title="location .pathname"></a>location .pathname</h3><p>语法：location .pathname</p>
+<p>功能：返回URL中的目录和文件名</p>
+<h3 id="location-port"><a href="#location-port" class="headerlink" title="location .port"></a>location .port</h3><p>语法：location .port</p>
+<p>功能：返回URL中指定的端口号，如果没有，返回空字符串</p>
+<h3 id="location-portocol"><a href="#location-portocol" class="headerlink" title="location .portocol"></a>location .portocol</h3><p>语法：location .portocol</p>
+<p>功能：返回页面使用的协议</p>
+<h3 id="location-search"><a href="#location-search" class="headerlink" title="location .search"></a>location .search</h3><p>语法：location .search</p>
+<p>功能：返回URL的查询字符串，这个字符串以问号开头</p>
+<h2 id="location-浏览器对象属性"><a href="#location-浏览器对象属性" class="headerlink" title="location 浏览器对象属性"></a>location 浏览器对象属性</h2><h3 id="location-relace"><a href="#location-relace" class="headerlink" title="location . relace()"></a>location . relace()</h3><p>功能：重新定向URL</p>
+<p>说明：使用location.relace 不会在历史记录中生成新记录</p>
+<h3 id="location-reload"><a href="#location-reload" class="headerlink" title="location . reload()"></a>location . reload()</h3><p>功能：重新加载当前显示页面</p>
+<p>说明：</p>
+<p>​    location . reload() 有可能从缓存中加载</p>
+<p>​    location . reload( true) 从服务器重新加载</p>
+<p>注：<strong>一般放在页面最后面。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docment.getElementById(&apos;btn&apos;).onclick = function()&#123;</span><br><span class="line">    location . reload( true)；</span><br><span class="line">    // 从服务器重新加载页面</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>history 对象保存了用户在浏览器中访问页面的历史记录</p>
+<h3 id="history-back"><a href="#history-back" class="headerlink" title="history .back()"></a>history .back()</h3><p>功能：回到历史记录的上一步</p>
+<p>说明：相当于使用了history .go(-1)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 点击btn 按钮时，回到历史记录的上一步</span></span><br><span class="line"><span class="keyword">var</span> btn = docment.getElementById(<span class="string">"btn"</span>);</span><br><span class="line">btn.oncclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    history .back();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 另外一种写法，可以后退N步</span></span><br><span class="line">    <span class="comment">// history .go(-1)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="history-forward"><a href="#history-forward" class="headerlink" title="history .forward()"></a>history .forward()</h3><p>功能：回到历史记录的下一步</p>
+<p>说明：相当于使用了 history .go( 1 )</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 点击btn 按钮时，回到历史记录的下一步</span></span><br><span class="line"><span class="keyword">var</span> btn = docment.getElementById(<span class="string">"btn"</span>);</span><br><span class="line">btn.oncclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    history .forward();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 另外一种写法，可以前进 1 </span></span><br><span class="line">    <span class="comment">// history .go( 1)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Screen-显示器对象及方法"><a href="#Screen-显示器对象及方法" class="headerlink" title="Screen 显示器对象及方法"></a>Screen 显示器对象及方法</h2><p>Screen对象包含有关客户端显示屏幕的信息</p>
+<h3 id="Screen-availWidth"><a href="#Screen-availWidth" class="headerlink" title="Screen . availWidth()"></a>Screen . availWidth()</h3><p>功能：返回可用的屏幕宽度</p>
+<p>说明：获取到的是除了任务栏之外的内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"获取显示器屏幕的宽度"</span> + screen.availWidth);    </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"获取浏览器的高度"</span> + <span class="built_in">window</span>.innerWidth);</span><br></pre></td></tr></table></figure>
+<h3 id="Screen-availHeight"><a href="#Screen-availHeight" class="headerlink" title="Screen . availHeight()"></a>Screen . availHeight()</h3><p>功能：返回可用的屏幕高度</p>
+<p>说明：获取到的是除了任务栏之外的内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"获取显示器屏幕的高度"</span> + screen.availHeight);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"获取浏览器的高度"</span> + <span class="built_in">window</span>.innerHeight);</span><br></pre></td></tr></table></figure>
+<h2 id="navigator-浏览器版本信息"><a href="#navigator-浏览器版本信息" class="headerlink" title="navigator 浏览器版本信息"></a>navigator 浏览器版本信息</h2><h3 id="navigator-userAgent"><a href="#navigator-userAgent" class="headerlink" title="navigator.userAgent"></a>navigator.userAgent</h3><p>用来识别浏览器名称/版本/引擎以及操作系统等信息的内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> explorer = navigator.userAgent;</span><br><span class="line">alert(explorer);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">PC端---返回值</span></span><br><span class="line"><span class="comment">    Mozilla/5.0 (Windows NT 10.0; Win64; x64) </span></span><br><span class="line"><span class="comment">    AppleWebKit/537.36 (KHTML, like Gecko) </span></span><br><span class="line"><span class="comment">    Chrome/74.0.3729.169 Safari/537.36</span></span><br><span class="line"><span class="comment">移动端---返回值</span></span><br><span class="line"><span class="comment">    Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) </span></span><br><span class="line"><span class="comment">    AppleWebKit/604.1.38 (KHTML, like Gecko) </span></span><br><span class="line"><span class="comment">    Version/11.0 Mobile/15A372 Safari/604.1</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T)</span></span><br><span class="line"><span class="comment">    AppleWebKit/537.36 (KHTML, like Gecko)</span></span><br><span class="line"><span class="comment">    Chrome/74.0.3729.169 Mobile Safari/537.36</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012)</span></span><br><span class="line"><span class="comment">    AppleWebKit/537.36 (KHTML, like Gecko) </span></span><br><span class="line"><span class="comment">    Chrome/74.0.3729.169 Mobile Safari/537.36</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="封装检测浏览器类型函数"><a href="#封装检测浏览器类型函数" class="headerlink" title="封装检测浏览器类型函数"></a>封装检测浏览器类型函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 检测浏览器类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBrowser</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获取 userAgent 属性, 并且转换为 小写字母</span></span><br><span class="line">    <span class="keyword">var</span> explorer = navigator.userAgent.toLowerCase(),browser;</span><br><span class="line">    <span class="built_in">console</span>.log(explorer);</span><br><span class="line">    <span class="comment">// 判断 是什么打开的页面</span></span><br><span class="line">    <span class="keyword">if</span> (explorer.indexOf(<span class="string">"msie"</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        browser = <span class="string">'IE'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (explorer.indexOf(<span class="string">"chrome"</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        browser = <span class="string">'chrome'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (explorer.indexOf(<span class="string">'opera'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        browser = <span class="string">'opera'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (explorer.indexOf(<span class="string">'safari'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        browser = <span class="string">'safari'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> browser;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收返回值:  调用getBrowser函数</span></span><br><span class="line"><span class="keyword">var</span> explorer = getBrowser();</span><br><span class="line"><span class="comment">// 输出</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"您当前使用的是:"</span> + explorer + <span class="string">"浏览器"</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="JavaScript-BOM-节点操作"><a href="#JavaScript-BOM-节点操作" class="headerlink" title="JavaScript BOM 节点操作"></a>JavaScript BOM 节点操作</h1><h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><h3 id="docment-write"><a href="#docment-write" class="headerlink" title="docment.write()"></a>docment.write()</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;111111&lt;/h1&gt;'</span>)</span><br><span class="line"><span class="comment">// 缺陷严重,会删掉其他元素</span></span><br></pre></td></tr></table></figure>
+<h3 id="create系列创建节点的方法"><a href="#create系列创建节点的方法" class="headerlink" title="create系列创建节点的方法"></a>create系列创建节点的方法</h3><p> <strong>docment.createElement()</strong>   标签节点</p>
+<p><strong>docment.createTextNode()</strong>   文本内容节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取 ID</span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementById(<span class="string">'ul'</span>);</span><br><span class="line"><span class="comment">// 创建 li</span></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</span><br><span class="line"><span class="comment">// 创建 文本内容</span></span><br><span class="line"><span class="keyword">var</span> txt = <span class="built_in">document</span>.createTextNode(<span class="string">'Item'</span>);</span><br><span class="line"><span class="comment">// 创建的li标签中，”添加“ 上 txt</span></span><br><span class="line">li.appendChild(txt);</span><br><span class="line"><span class="comment">// 目标元素中，"添加” 上 新创建的li标签</span></span><br><span class="line">ul.appendChild(li);</span><br></pre></td></tr></table></figure>
+<h3 id="docment-createDocumentFragment-文档片段"><a href="#docment-createDocumentFragment-文档片段" class="headerlink" title="docment.createDocumentFragment()  文档片段"></a><strong>docment.createDocumentFragment()</strong>  文档片段</h3><h3 id="docment-createComment-注释节点"><a href="#docment-createComment-注释节点" class="headerlink" title="docment.createComment()  注释节点"></a><strong>docment.createComment()</strong>  注释节点</h3><h3 id="create系列案例"><a href="#create系列案例" class="headerlink" title="create系列案例"></a>create系列案例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建注释</span></span><br><span class="line"><span class="keyword">var</span> comment = <span class="built_in">document</span>.createComment(<span class="string">"A Comment"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 代码片段</span></span><br><span class="line"><span class="keyword">var</span> fragment = <span class="built_in">document</span>.createDocumentFragment();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取 ID</span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementById(<span class="string">'ul'</span>);</span><br><span class="line"><span class="comment">// 创建 li变量 = 式接收值</span></span><br><span class="line"><span class="keyword">var</span> li = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环创建 li 标签</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">    <span class="comment">// 循环创建了 li 标签</span></span><br><span class="line">    li = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</span><br><span class="line">    <span class="comment">// li 标签中，填充 文本内容</span></span><br><span class="line">    li.appendChild(<span class="built_in">document</span>.createTextNode(<span class="string">"Item"</span> + (i + <span class="number">1</span>)));</span><br><span class="line">    <span class="comment">// 代码片段,接收 li</span></span><br><span class="line">    fragment.appendChild(li);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ul，每一次循环后，把 接收的代码片段 填充进去;</span></span><br><span class="line">ul.appendChild(fragment);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 注释，插入到 某个标签前面</span></span><br><span class="line"><span class="built_in">document</span>.body.insertBefore(comment,ul);</span><br></pre></td></tr></table></figure>
+<h3 id="高效率创建节点方法"><a href="#高效率创建节点方法" class="headerlink" title="高效率创建节点方法"></a>高效率创建节点方法</h3><p><strong>innerHTML</strong></p>
+<p>用来设置或获取当前标签的起始和结束里面的内容</p>
+<p>限制问题：</p>
+<p>​    字符串的最左边不能出现空白，IE6~8会自动移除掉它</p>
+<p>​    大多数浏览器不会对script 标签进行脚本执行操作</p>
+<p>​    不能单独创建meta,style.link 等元素，一定要在前面加上一些字符</p>
+<p>​    innerHTML不会执行script中脚本的语句。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;div id="box"&gt;&lt;/div&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> content = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">      <span class="keyword">var</span> str = <span class="string">"&lt;p&gt;dioqwj djlasdasnd,m oida sdzcjas &lt;span&gt;HEkjhdq&lt;/span&gt;&lt;/p&gt;"</span></span><br><span class="line">          + <span class="string">"&lt;ul&gt;"</span></span><br><span class="line">          + <span class="string">"&lt;li&gt;itme1 &lt;/li&gt;"</span></span><br><span class="line">          + <span class="string">"&lt;li&gt;itme2 &lt;/li&gt;"</span></span><br><span class="line">          + <span class="string">"&lt;li&gt;itme3 &lt;/li&gt;"</span></span><br><span class="line">          + <span class="string">"&lt;/ul&gt;"</span>;</span><br><span class="line">      content.innerHTML = str;</span><br></pre></td></tr></table></figure>
+<p><strong>outerHTML</strong></p>
+<p>返回调用它的元素及所有的子节点的HTML标签</p>
+<p>会覆盖原先父元素下的所有元素</p>
+<p>outerHTML获取到的是整个标签，而不仅限于标签内部的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">元素名.outerHTML   // 获取</span><br><span class="line"></span><br><span class="line">元素名.outerHTML  = &quot; &lt;p&gt;w h hjwahdkasd&lt;/p&gt;&quot;;  // 填充内容</span><br></pre></td></tr></table></figure>
+<p><strong>innerText</strong></p>
+<p>设置或获取位于对象起始和结束标签内的文本</p>
+<p><strong>outerText</strong></p>
+<h2 id="遍历节点"><a href="#遍历节点" class="headerlink" title="遍历节点"></a>遍历节点</h2><h3 id="————-第1套API-节点查找————"><a href="#————-第1套API-节点查找————" class="headerlink" title="————-第1套API 节点查找————-"></a>————-第1套API 节点查找————-</h3><h3 id="获取第一个子节点"><a href="#获取第一个子节点" class="headerlink" title="获取第一个子节点"></a>获取第一个子节点</h3><p>firstChild</p>
+<h3 id="获取最后一个子节点"><a href="#获取最后一个子节点" class="headerlink" title="获取最后一个子节点"></a>获取最后一个子节点</h3><p>lastChild</p>
+<h3 id="获取父节点"><a href="#获取父节点" class="headerlink" title="获取父节点"></a>获取父节点</h3><p>parentNode</p>
+<p>ownerDocument</p>
+<h3 id="获取下一个兄弟节点获取"><a href="#获取下一个兄弟节点获取" class="headerlink" title="获取下一个兄弟节点获取"></a>获取下一个兄弟节点获取</h3><p>nextSibling</p>
+<h3 id="获取上一个兄弟节点获取"><a href="#获取上一个兄弟节点获取" class="headerlink" title="获取上一个兄弟节点获取"></a>获取上一个兄弟节点获取</h3><p>previousSibling</p>
+<h3 id="获取任意一个子节点"><a href="#获取任意一个子节点" class="headerlink" title="获取任意一个子节点"></a>获取任意一个子节点</h3><p>childNodes[1]</p>
+<p>childNodes.itme(1)</p>
+<h3 id="检查当前节点是否存在子节点"><a href="#检查当前节点是否存在子节点" class="headerlink" title="检查当前节点是否存在子节点"></a>检查当前节点是否存在子节点</h3><p>hasChildNodes( )</p>
+<p><strong>注释：元素与元素之间的空格，会被视为一个文本节点。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 页面打印文档结构</span></span><br><span class="line">	<span class="comment">// 存储变量</span></span><br><span class="line">       <span class="keyword">var</span> s = <span class="string">""</span>;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">travel</span>(<span class="params">space, node</span>) </span>&#123;</span><br><span class="line">           <span class="comment">// 如果当前节点是标签，不是空的，就拼接字符串</span></span><br><span class="line">           <span class="keyword">if</span> (node.tagName) &#123;</span><br><span class="line">               s += space + node.tagName + <span class="string">"&lt;br/&gt;"</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">var</span> len = node.childNodes.length;</span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">               travel(space + <span class="string">"*"</span>, node.childNodes[i])</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       travel(<span class="string">""</span>, <span class="built_in">document</span>);</span><br><span class="line">       <span class="built_in">document</span>.write(s);</span><br></pre></td></tr></table></figure>
+<h3 id="————-第2套API-节点查找-IE8以下不支持————"><a href="#————-第2套API-节点查找-IE8以下不支持————" class="headerlink" title="————-第2套API 节点查找 IE8以下不支持————-"></a>————-第2套API 节点查找 IE8以下不支持————-</h3><h3 id="firstElementChild-第一个字节点"><a href="#firstElementChild-第一个字节点" class="headerlink" title="firstElementChild  第一个字节点"></a>firstElementChild  第一个字节点</h3><h3 id="lastElementChild-最后一个字节点"><a href="#lastElementChild-最后一个字节点" class="headerlink" title="lastElementChild    最后一个字节点"></a>lastElementChild    最后一个字节点</h3><h3 id="nextElementSibling-下一个兄弟节点"><a href="#nextElementSibling-下一个兄弟节点" class="headerlink" title="nextElementSibling    下一个兄弟节点"></a>nextElementSibling    下一个兄弟节点</h3><h3 id="previusElementSibling-上一个兄弟节点"><a href="#previusElementSibling-上一个兄弟节点" class="headerlink" title="previusElementSibling    上一个兄弟节点"></a>previusElementSibling    上一个兄弟节点</h3><h3 id="Children-1-获取任意子节点"><a href="#Children-1-获取任意子节点" class="headerlink" title="Children[1]    获取任意子节点"></a>Children[1]    获取任意子节点</h3><h3 id="childElementCount-返回当前节点的所有子节点"><a href="#childElementCount-返回当前节点的所有子节点" class="headerlink" title="childElementCount    返回当前节点的所有子节点"></a>childElementCount    返回当前节点的所有子节点</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="comment">// 循环遍历 节点</span></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; len = box.chidElementCount; i&lt;len; i++ )&#123;</span><br><span class="line">				    <span class="comment">// 打印当 所有子节点</span></span><br><span class="line">				    <span class="built_in">console</span>.log(box.children[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类数组对象-NodeList"><a href="#类数组对象-NodeList" class="headerlink" title="类数组对象 NodeList"></a>类数组对象 NodeList</h2><p>NodeList 是一种类数组对象，用于保存一组有序的节点</p>
+<p>可以通过方括号语法来访问NodeList的值，有item 方法与length 属性</p>
+<p>它并不是Array  的实例，没有数组对象的方法</p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>JavaScriptBOM操作 </p>
+  <p><span>文章作者:</span></p>
+  <p><span>发布时间:</span>2019年05月31日 - 22:18:28</p>
+  <p><span>最后更新:</span>2019年06月03日 - 23:27:26</p>
+  <p><span>原始链接:</span><a href="/2019/05/31/JavaScriptBOM操作/" title="JavaScriptBOM操作 ">http://yoursite.com/2019/05/31/JavaScriptBOM操作/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/05/31/JavaScriptBOM操作/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+          
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/05/31/JavaScriptBOM操作/" title="JavaScriptBOM操作 ">http://yoursite.com/2019/05/31/JavaScriptBOM操作/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/30/JavaScriptDOM操作/" rel="next" title="JavaScriptDOM操作">
+                <i class="fa fa-chevron-left"></i> JavaScriptDOM操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/03/jquery基础/" rel="prev" title="Jquery基础">
+                Jquery基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/WechatIMG222.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-BOM-操作"><span class="nav-number">1.</span> <span class="nav-text">JavaScript BOM 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#window-对象方法"><span class="nav-number">1.1.</span> <span class="nav-text">window 对象方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#window-alert-警示框"><span class="nav-number">1.1.1.</span> <span class="nav-text">window.alert(警示框)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window-confirm-‘消息对话框’"><span class="nav-number">1.1.2.</span> <span class="nav-text">window.confirm (‘消息对话框’);</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window-prompt-text1-text2"><span class="nav-number">1.1.3.</span> <span class="nav-text">window.prompt( text1,text2 )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window-Open-1，2-，3"><span class="nav-number">1.1.4.</span> <span class="nav-text">window.Open(  1，2 ，3)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window-close-关闭当前窗口"><span class="nav-number">1.1.5.</span> <span class="nav-text">window.close(关闭当前窗口)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setTimeout-定时器"><span class="nav-number">1.2.</span> <span class="nav-text">setTimeout 定时器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#超时调用"><span class="nav-number">1.2.1.</span> <span class="nav-text">超时调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除超时调用"><span class="nav-number">1.2.2.</span> <span class="nav-text">清除超时调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number">1.2.3.</span> <span class="nav-text">案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#间歇调用"><span class="nav-number">1.2.4.</span> <span class="nav-text">间歇调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除间隙调用"><span class="nav-number">1.2.5.</span> <span class="nav-text">清除间隙调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合案例"><span class="nav-number">1.2.6.</span> <span class="nav-text">综合案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编程练习"><span class="nav-number">1.2.7.</span> <span class="nav-text">编程练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#location-窗口对象属性"><span class="nav-number">1.3.</span> <span class="nav-text">location 窗口对象属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#location-href"><span class="nav-number">1.3.1.</span> <span class="nav-text">location .href</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-hash"><span class="nav-number">1.3.2.</span> <span class="nav-text">location .hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-host"><span class="nav-number">1.3.3.</span> <span class="nav-text">location .host</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-hostname"><span class="nav-number">1.3.4.</span> <span class="nav-text">location .hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-pathname"><span class="nav-number">1.3.5.</span> <span class="nav-text">location .pathname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-port"><span class="nav-number">1.3.6.</span> <span class="nav-text">location .port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-portocol"><span class="nav-number">1.3.7.</span> <span class="nav-text">location .portocol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-search"><span class="nav-number">1.3.8.</span> <span class="nav-text">location .search</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#location-浏览器对象属性"><span class="nav-number">1.4.</span> <span class="nav-text">location 浏览器对象属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#location-relace"><span class="nav-number">1.4.1.</span> <span class="nav-text">location . relace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-reload"><span class="nav-number">1.4.2.</span> <span class="nav-text">location . reload()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#history-back"><span class="nav-number">1.4.3.</span> <span class="nav-text">history .back()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#history-forward"><span class="nav-number">1.4.4.</span> <span class="nav-text">history .forward()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Screen-显示器对象及方法"><span class="nav-number">1.5.</span> <span class="nav-text">Screen 显示器对象及方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Screen-availWidth"><span class="nav-number">1.5.1.</span> <span class="nav-text">Screen . availWidth()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Screen-availHeight"><span class="nav-number">1.5.2.</span> <span class="nav-text">Screen . availHeight()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#navigator-浏览器版本信息"><span class="nav-number">1.6.</span> <span class="nav-text">navigator 浏览器版本信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#navigator-userAgent"><span class="nav-number">1.6.1.</span> <span class="nav-text">navigator.userAgent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装检测浏览器类型函数"><span class="nav-number">1.6.2.</span> <span class="nav-text">封装检测浏览器类型函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-BOM-节点操作"><span class="nav-number">2.</span> <span class="nav-text">JavaScript BOM 节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建节点"><span class="nav-number">2.1.</span> <span class="nav-text">创建节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docment-write"><span class="nav-number">2.1.1.</span> <span class="nav-text">docment.write()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create系列创建节点的方法"><span class="nav-number">2.1.2.</span> <span class="nav-text">create系列创建节点的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docment-createDocumentFragment-文档片段"><span class="nav-number">2.1.3.</span> <span class="nav-text">docment.createDocumentFragment()  文档片段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docment-createComment-注释节点"><span class="nav-number">2.1.4.</span> <span class="nav-text">docment.createComment()  注释节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create系列案例"><span class="nav-number">2.1.5.</span> <span class="nav-text">create系列案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高效率创建节点方法"><span class="nav-number">2.1.6.</span> <span class="nav-text">高效率创建节点方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遍历节点"><span class="nav-number">2.2.</span> <span class="nav-text">遍历节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#————-第1套API-节点查找————"><span class="nav-number">2.2.1.</span> <span class="nav-text">————-第1套API 节点查找————-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取第一个子节点"><span class="nav-number">2.2.2.</span> <span class="nav-text">获取第一个子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取最后一个子节点"><span class="nav-number">2.2.3.</span> <span class="nav-text">获取最后一个子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取父节点"><span class="nav-number">2.2.4.</span> <span class="nav-text">获取父节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取下一个兄弟节点获取"><span class="nav-number">2.2.5.</span> <span class="nav-text">获取下一个兄弟节点获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取上一个兄弟节点获取"><span class="nav-number">2.2.6.</span> <span class="nav-text">获取上一个兄弟节点获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取任意一个子节点"><span class="nav-number">2.2.7.</span> <span class="nav-text">获取任意一个子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查当前节点是否存在子节点"><span class="nav-number">2.2.8.</span> <span class="nav-text">检查当前节点是否存在子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#————-第2套API-节点查找-IE8以下不支持————"><span class="nav-number">2.2.9.</span> <span class="nav-text">————-第2套API 节点查找 IE8以下不支持————-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#firstElementChild-第一个字节点"><span class="nav-number">2.2.10.</span> <span class="nav-text">firstElementChild  第一个字节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lastElementChild-最后一个字节点"><span class="nav-number">2.2.11.</span> <span class="nav-text">lastElementChild    最后一个字节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nextElementSibling-下一个兄弟节点"><span class="nav-number">2.2.12.</span> <span class="nav-text">nextElementSibling    下一个兄弟节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#previusElementSibling-上一个兄弟节点"><span class="nav-number">2.2.13.</span> <span class="nav-text">previusElementSibling    上一个兄弟节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Children-1-获取任意子节点"><span class="nav-number">2.2.14.</span> <span class="nav-text">Children[1]    获取任意子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#childElementCount-返回当前节点的所有子节点"><span class="nav-number">2.2.15.</span> <span class="nav-text">childElementCount    返回当前节点的所有子节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类数组对象-NodeList"><span class="nav-number">2.3.</span> <span class="nav-text">类数组对象 NodeList</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
