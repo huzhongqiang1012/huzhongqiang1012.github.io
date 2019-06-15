@@ -6,10 +6,33 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-04T16:22:55.944Z</updated>
+  <updated>2019-06-15T07:15:52.888Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flex布局</title>
+    <link href="http://yoursite.com/2019/06/15/Flex%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2019/06/15/Flex布局/</id>
+    <published>2019-06-15T07:14:39.000Z</published>
+    <updated>2019-06-15T07:15:52.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、Flex布局是什么？&quot;&gt;&lt;a href=&quot;#一、Flex布局是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、Flex布局是什么？&quot;&gt;&lt;/a&gt;一、Flex布局是什么？&lt;/h2&gt;&lt;p&gt;Flex是Flexible Box的缩写，意为”弹性布局”，
+      
+    
+    </summary>
+    
+      <category term="flex" scheme="http://yoursite.com/categories/flex/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue基础篇</title>
