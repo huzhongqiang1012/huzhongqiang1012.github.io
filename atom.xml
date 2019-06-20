@@ -6,10 +6,33 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-15T07:31:42.809Z</updated>
+  <updated>2019-06-20T12:19:04.867Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序篇</title>
+    <link href="http://yoursite.com/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
+    <id>http://yoursite.com/2019/06/20/微信小程序篇/</id>
+    <published>2019-06-20T12:17:51.000Z</published>
+    <updated>2019-06-20T12:19:04.867Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;view-容器&quot;&gt;&lt;a href=&quot;#view-容器&quot; class=&quot;headerlink&quot; title=&quot;view  容器&quot;&gt;&lt;/a&gt;view  容器&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+      
+    
+    </summary>
+    
+      <category term="flex" scheme="http://yoursite.com/categories/flex/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Javascript闭包</title>
