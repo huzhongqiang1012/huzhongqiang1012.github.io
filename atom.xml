@@ -6,24 +6,10 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-26T16:49:15.595Z</updated>
+  <updated>2019-06-26T16:41:21.726Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Photography</title>
-    <link href="http://yoursite.com/2019/06/27/photography/"/>
-    <id>http://yoursite.com/2019/06/27/photography/</id>
-    <published>2019-06-26T16:49:15.000Z</published>
-    <updated>2019-06-26T16:49:15.595Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>微信小程序篇</title>
