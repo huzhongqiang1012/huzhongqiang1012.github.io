@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博客,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HuZhongQiang" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JavaScript分支判断语句if 条件语句 判断语句中的一种，最长使用的一种判断语句">
+<meta name="keywords" content="博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript流程控制篇">
+<meta property="og:url" content="http://yoursite.com/2019/05/23/JavaScript流程控制篇/index.html">
+<meta property="og:site_name" content="HuZhongQiang">
+<meta property="og:description" content="JavaScript分支判断语句if 条件语句 判断语句中的一种，最长使用的一种判断语句">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-01T16:35:32.676Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript流程控制篇">
+<meta name="twitter:description" content="JavaScript分支判断语句if 条件语句 判断语句中的一种，最长使用的一种判断语句">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/23/JavaScript流程控制篇/">
+
+
+
+
+
+  <title>JavaScript流程控制篇 | HuZhongQiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HuZhongQiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-check"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>
+            
+            随笔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            爱好
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photography">
+          <a href="/photography/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-picture-o"></i> <br>
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-JavaScript" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/JavaScript流程控制篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HuZhongQiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript流程控制篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T20:54:40+08:00">
+                2019-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/23/JavaScript流程控制篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/23/JavaScript流程控制篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaScript分支判断语句"><a href="#JavaScript分支判断语句" class="headerlink" title="JavaScript分支判断语句"></a>JavaScript分支判断语句</h1><h2 id="if-条件语句"><a href="#if-条件语句" class="headerlink" title="if 条件语句"></a>if 条件语句</h2><ul>
+<li><p>判断语句中的一种，最长使用的一种判断语句</p>
+<a id="more"></a>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.语法 </span></span><br><span class="line"><span class="keyword">if</span>(条件)&#123;</span><br><span class="line">   代码块<span class="number">1</span>；</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">// 2.语法 </span></span><br><span class="line"><span class="keyword">if</span>(条件)&#123;</span><br><span class="line">   代码块<span class="number">1</span>；</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		 	  代码块<span class="number">2</span>；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.语法 </span></span><br><span class="line"><span class="keyword">if</span>(条件)&#123;</span><br><span class="line">   代码块<span class="number">1</span>；</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(条件)&#123;</span><br><span class="line">		 	  代码块<span class="number">2</span>；</span><br><span class="line">&#125;... else&#123;</span><br><span class="line">	   代码块<span class="number">3</span>；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 注释；... else 前面可以写多个 else if (),条件判断</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">		   拓展知识</span></span><br><span class="line"><span class="comment">		   1.语法： prompt('提示内容');</span></span><br><span class="line"><span class="comment">	   2.功能： 弹出输入框</span></span><br><span class="line"><span class="comment">   3.点击确定，返回 输入内容</span></span><br><span class="line"><span class="comment">   4.点击取消，返回 null</span></span><br><span class="line"><span class="comment">   </span></span><br><span class="line"><span class="comment">   		1.语法： alert('弹出内容');</span></span><br><span class="line"><span class="comment">	   2.功能： 警告框</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>1.案例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.用户输入年龄</span></span><br><span class="line"><span class="comment">// 2.小于18岁--- 未成年</span></span><br><span class="line"><span class="comment">// 3.大于18岁--- 成年了 </span></span><br><span class="line"><span class="keyword">var</span> age = prompt(<span class="string">'输入你的年龄！'</span>);</span><br><span class="line"><span class="keyword">if</span>( age &lt; <span class="number">18</span>)&#123;</span><br><span class="line">   	  alert(<span class="string">'未成年'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">     alert(<span class="string">'成年了'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	   1.程序根据条件去判断执行哪一个代码块的内容</span></span><br><span class="line"><span class="comment">	   2.条件判断则是 根据 布尔值去判断，true 满足条件/ false 不满足条件</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>2.案例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	1.打开浏览器时，弹出一个输入框，提示用户输入成绩 ---提示  prompt('提示内容');</span></span><br><span class="line"><span class="comment">2.当输入的成绩小于60时，弹出警告框，提示“不及格”</span></span><br><span class="line"><span class="comment">3.当输入的成绩大于80时，弹出警告框，提示“您的成绩为优”</span></span><br><span class="line"><span class="comment">4.当输入的成绩在60~80之间时，弹出警告框，提示“您的成绩刚及格”</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> age =  prompt(<span class="string">'提示用户输入成绩'</span>);</span><br><span class="line"><span class="keyword">if</span>(age &lt; <span class="number">60</span>)&#123;</span><br><span class="line">   alert(<span class="string">'不及格'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(age &gt;= <span class="number">80</span>)&#123;</span><br><span class="line">   alert(<span class="string">'您的成绩为优'</span>);     </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">   alert(<span class="string">'您的成绩刚及格'</span>);     </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 用接收了数据的“变量”去跟“指定的值”去比较，如果成立则会执行当前代码块下的代码，否则会跳到👇下一个判断条件，检查条件是否成立，如果成立则会执行当前代码块下的代码，否则会跳到👇下一个判断条件。。。依此类推。</span></span><br></pre></td></tr></table></figure>
+<h2 id="if条件嵌套"><a href="#if条件嵌套" class="headerlink" title="if条件嵌套"></a>if条件嵌套</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">		   综合案例分析流程结构：</span></span><br><span class="line"><span class="comment">                                密码</span></span><br><span class="line"><span class="comment">                       👇                  👇     </span></span><br><span class="line"><span class="comment">                  长度不等于6位           长度等于6位  </span></span><br><span class="line"><span class="comment">                     👇                 👇      👇    </span></span><br><span class="line"><span class="comment">               请输入6位数的数字密码      非数字      数字</span></span><br><span class="line"><span class="comment">                                        👇         👇 </span></span><br><span class="line"><span class="comment">                                  密码必须是6位数字  密码设置正确</span></span><br><span class="line"><span class="comment">                                  </span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment">  拓展知识：如何去判断密码 是不是 6位数？？？？ </span></span><br><span class="line"><span class="comment">  👇 </span></span><br><span class="line"><span class="comment">  	语法：string.leng</span></span><br><span class="line"><span class="comment">  	功能：获取string变量字符串的长度</span></span><br><span class="line"><span class="comment">  	返回值： number</span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment">  语法：isNaN(password)</span></span><br><span class="line"><span class="comment">  功能：检测一个值 是不是 非数字</span></span><br><span class="line"><span class="comment">  返回值： </span></span><br><span class="line"><span class="comment">  	       true  -----   证明是： 不是一个数字</span></span><br><span class="line"><span class="comment">  	       false -----   证明是： 数字</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// prompt 点击确定，返回 输入内容，点击取消，返回 null</span></span><br><span class="line"><span class="keyword">var</span> password = prompt(<span class="string">'提示用户输入成绩'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断 密码长度是 6位数</span></span><br><span class="line"><span class="keyword">if</span> (password.length == <span class="number">6</span>) &#123;</span><br><span class="line">    <span class="comment">//  密码是6位！检测它是不是 是数字</span></span><br><span class="line">    <span class="keyword">if</span> ( <span class="built_in">isNaN</span>(password)) &#123;</span><br><span class="line">        <span class="comment">// 返回值是true  证明这个密码，不全是数字!</span></span><br><span class="line">        alert(<span class="string">'密码必须是6位数字！'</span>)</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//  返回值是false 证明这个密码，6位全是数字!</span></span><br><span class="line">        alert(<span class="string">'密码正确！'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 密码长度不是6位数</span></span><br><span class="line">    alert(<span class="string">'请输入6位数密码'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小结总结案例"><a href="#小结总结案例" class="headerlink" title="小结总结案例"></a>小结总结案例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="built_in">parseInt</span>(<span class="string">'adc123'</span>);</span><br><span class="line"><span class="keyword">if</span> (num == <span class="literal">NaN</span>)&#123;</span><br><span class="line">    alert(<span class="string">'NaN'</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( num == <span class="number">123</span>)&#123;</span><br><span class="line">    alert(<span class="number">123</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( <span class="keyword">typeof</span>  num == <span class="string">'number'</span>)&#123;</span><br><span class="line">    alert(<span class="string">'number'</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    alert(<span class="string">'string'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*  推理：</span></span><br><span class="line"><span class="comment">*       1.adc123 转换为 数字,返回值是 NaN，非数值转换都会返回 NaN</span></span><br><span class="line"><span class="comment">*       2.判断 NaN == NaN  ,条件不成立，NaN 不等于任何值，包括它本身</span></span><br><span class="line"><span class="comment">*       3.判断 NaN == 123  ,条件不成立，NaN 不等于任何值，包括 数字</span></span><br><span class="line"><span class="comment">*       4.判断 （检测NaN,返回值是 number） number  == 'number'  条件成立</span></span><br><span class="line"><span class="comment">* */</span></span><br></pre></td></tr></table></figure>
+<h2 id="switch判断语句"><a href="#switch判断语句" class="headerlink" title="switch判断语句"></a>switch判断语句</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	拓展知识:</span></span><br><span class="line"><span class="comment">	var manme = new Date().getDay()</span></span><br><span class="line"><span class="comment">	功能：获取星期</span></span><br><span class="line"><span class="comment">	返回值：number(0-6) 返回值0代表星期日 </span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	语法： document.write('内容');</span></span><br><span class="line"><span class="comment">	功能：向浏览器输出内容</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇案例实践，仔细看规律，多条件判断，比if判断语句，更适合这种多条件判断，有性能上的提升</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回值：number(0-6) 返回值0代表星期日 </span></span><br><span class="line">        <span class="keyword">var</span> dat = <span class="built_in">Date</span>().getDay();</span><br><span class="line">        <span class="comment">// 接收 dat 的返回值，只写要判断的 值！！ 判断是通过case去判断俩个值是否相等。</span></span><br><span class="line">        <span class="keyword">switch</span> (dat) &#123;</span><br><span class="line">            <span class="comment">// 如果返回值是 0 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"0"</span>: </span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期日'</span>);</span><br><span class="line">                <span class="keyword">break</span>; <span class="comment">// 如果条件满足，则退出判断，后面的条件就没必要再做判断了。</span></span><br><span class="line">            <span class="comment">// 如果返回值是 1 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"1"</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期一'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 2 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"2"</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期二'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 3 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"3"</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期三'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 4 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"4"</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期四'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 5 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"5"</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期五'</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 该位置可以继续写条件判断 .......</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果返回值不满足上面所有的条件， 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="built_in">document</span>.write(<span class="string">'今天是星期六'</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">// 判断条件：expression </span></span><br><span class="line"><span class="comment">// 判断结果：vualue </span></span><br><span class="line"><span class="comment">// 当代码执行之后，自动退出代码块：break</span></span><br><span class="line"><span class="comment">// 最后的条件：default，相当于else </span></span><br><span class="line"><span class="comment">// ⭐⭐注意：，每个case后面没有break语句，所以它会向后面一直执行，输出每个case的执行代码；</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ⭐⭐⭐优化代码</span></span><br><span class="line">        <span class="comment">// 获取今天的是星期几</span></span><br><span class="line">        <span class="keyword">var</span> dat = <span class="built_in">Date</span>().getDay();</span><br><span class="line">        <span class="comment">//  优化： 把判断后的值，存储在变量中。</span></span><br><span class="line">        <span class="keyword">var</span> weekstr = <span class="string">''</span>;</span><br><span class="line">        <span class="comment">// 接收 dat 的返回值</span></span><br><span class="line">        <span class="keyword">switch</span> (dat) &#123;</span><br><span class="line">            <span class="comment">// 如果返回值是 0 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"0"</span>:</span><br><span class="line">                weekstr = <span class="string">'日'</span>;</span><br><span class="line">                <span class="keyword">break</span>; <span class="comment">// 退出</span></span><br><span class="line">            <span class="comment">// 如果返回值是 1 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"1"</span>:</span><br><span class="line">                weekstr = <span class="string">'一'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 2 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"2"</span>:</span><br><span class="line">                weekstr = <span class="string">'二'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 3 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"3"</span>:</span><br><span class="line">                weekstr = <span class="string">'三'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 4 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"4"</span>:</span><br><span class="line">                weekstr = <span class="string">'四'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 如果返回值是 5 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">"5"</span>:</span><br><span class="line">                weekstr = <span class="string">'五'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// 该位置可以继续写条件判断 .......</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果返回值不满足上面所有的条件， 则执行，该代码块</span></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                weekstr = <span class="string">'六'</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">//  调用一次"今天是星期"即可， 几，是通过判断后，返回的值，存在变量中，直接拼接上 ，再输出页面。 </span></span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">'今天是星期'</span> + weekstr);</span><br></pre></td></tr></table></figure>
+<h1 id="JavaScript循环语句"><a href="#JavaScript循环语句" class="headerlink" title="JavaScript循环语句"></a>JavaScript循环语句</h1><h2 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">语法：</span></span><br><span class="line"><span class="comment">for(语句1;语句2;语句3)&#123;</span></span><br><span class="line"><span class="comment">	被执行的代码块;</span></span><br><span class="line"><span class="comment">&#125;	</span></span><br><span class="line"><span class="comment">解析：</span></span><br><span class="line"><span class="comment">	语句1:在循环（代码块）开始前执行</span></span><br><span class="line"><span class="comment">	语句2:定义运行代码（代码块）的条件</span></span><br><span class="line"><span class="comment">	语句3: 在循环（代码块）已经被执行之后执行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ⭐简单的案例： 从页面输出 1 ~ 100 </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++)&#123;</span><br><span class="line">    docment.write(i + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    var i = 1 ;  是循环的初始值</span></span><br><span class="line"><span class="comment">    i &lt; 100  ;   循环的条件</span></span><br><span class="line"><span class="comment">    i++ 		 变量的变量</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">模拟代码执行过程：</span></span><br><span class="line"><span class="comment">第1轮:</span></span><br><span class="line"><span class="comment">    第一步：i 等于 0 ，</span></span><br><span class="line"><span class="comment">    第二步：0 &lt; 100 条件成立,</span></span><br><span class="line"><span class="comment">    第三步：docment.write 会执行一下，输出到页面 当前 i （ 当前 i 是 0 ）</span></span><br><span class="line"><span class="comment">    第四步：0 自增 1 变成 1</span></span><br><span class="line"><span class="comment">第50轮:</span></span><br><span class="line"><span class="comment">    第一步：i 等于 50 ，</span></span><br><span class="line"><span class="comment">    第二步：50 &lt; 100 条件成立,</span></span><br><span class="line"><span class="comment">    第三步：docment.write 会执行一下，输出到页面 当前 i （ 当前 i 是 50 ）</span></span><br><span class="line"><span class="comment">    第四步：50 自增 1 变成 51</span></span><br><span class="line"><span class="comment">第100轮:</span></span><br><span class="line"><span class="comment">    第一步：i 等于 100 ，</span></span><br><span class="line"><span class="comment">    第二步：100 &lt; 100 条件不成立, </span></span><br><span class="line"><span class="comment">    第三步：当前代码不会执行了</span></span><br><span class="line"><span class="comment">    第四步：当前代码不会执行了</span></span><br><span class="line"><span class="comment">              </span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line"><span class="comment">// ⭐⭐简单的案例： 从页面输出 100 98 96 94 ... 1 (输出倒序,并且是偶数)</span></span><br><span class="line"><span class="comment">// 初始值应该是 100， 条件是不小于 1 ，就给我执行， 变量的变化 每次减 2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">100</span>; i &gt;= <span class="number">1</span>; i-=<span class="number">2</span> )&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line">&#125;</span><br><span class="line">alert(i)</span><br></pre></td></tr></table></figure>
+<h2 id="for循环-嵌套"><a href="#for循环-嵌套" class="headerlink" title="for循环 嵌套"></a>for循环 嵌套</h2><p>循环与循环嵌套时，先执行外层，再执行内层</p>
+<p>如果外层为假，内层则不执行，如果为真，则执行内层</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 外层输出 123</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">'--'</span> + i + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line"> <span class="comment">// 内层输出 i 如果是1 ：则内层会输出 2345，如果 i = 2； 则内层会输出 345;以此类推</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt;= <span class="number">10</span>; j++) &#123;</span><br><span class="line">         <span class="built_in">document</span>.write(<span class="string">"----"</span> + j + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  ⭐⭐⭐循环嵌套规则</span></span><br><span class="line"><span class="comment">  1.外层为假时，内层则不会执行；</span></span><br><span class="line"><span class="comment">  2.先执行外层，再执行内层，直到内层的条件为假时，再返回外层去执行。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="综合案例99乘法表"><a href="#综合案例99乘法表" class="headerlink" title="综合案例99乘法表"></a>综合案例99乘法表</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">1</span>; j &lt;= i; j++)&#123;</span><br><span class="line">           <span class="built_in">document</span>.write( j + <span class="string">'*'</span> + i +<span class="string">'='</span> + (i *j ) + <span class="string">"&amp;nbsp&amp;nbsp"</span>)</span><br><span class="line">      &#125;</span><br><span class="line">	<span class="built_in">document</span>.write(<span class="string">'&lt;br/&gt;'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">⭐⭐⭐⭐⭐推理找规律：</span></span><br><span class="line"><span class="comment">第1轮：</span></span><br><span class="line"><span class="comment">	 外层循环: i = 1; 1 &lt; 10，条件满足</span></span><br><span class="line"><span class="comment">	 内层循环: j = 1; 1 &lt;= 1, 条件满足</span></span><br><span class="line"><span class="comment">	 	页面输出: j *  i = 1;  内层代码执行完毕</span></span><br><span class="line"><span class="comment">	 外层代码: 这里是增加了一个换行符，会添加一个换行 </span></span><br><span class="line"><span class="comment">	 i++, 变成 2</span></span><br><span class="line"><span class="comment">	 👇</span></span><br><span class="line"><span class="comment">第2轮：</span></span><br><span class="line"><span class="comment">	 外层循环: i = 2; 2 &lt; 10，条件满足</span></span><br><span class="line"><span class="comment">         内层循环: j = 1; 1 &lt;= 2, 条件满足，  </span></span><br><span class="line"><span class="comment">	 		页面输出: </span></span><br><span class="line"><span class="comment">	 			1 *  1 = 1;</span></span><br><span class="line"><span class="comment">	 			1 *  2 = 2; </span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">      	 j++ j  变成了2👇</span></span><br><span class="line"><span class="comment">         内层循环: j = 1; 1 &lt;= 2, 条件满足，j++ 2</span></span><br><span class="line"><span class="comment">      	 	页面输出: </span></span><br><span class="line"><span class="comment">	 			1 *  1 = 1;</span></span><br><span class="line"><span class="comment">	 			1 *  2 = 2;  2 * 2 = 4; </span></span><br><span class="line"><span class="comment">	 👇	 此时内层条件判断不满足则跳出内层循，继续执行下面的代码</span></span><br><span class="line"><span class="comment">	 外层代码: document.write('&lt;br/&gt;')</span></span><br><span class="line"><span class="comment">	 i++, 变成 3</span></span><br><span class="line"><span class="comment">第3轮：</span></span><br><span class="line"><span class="comment">	 外层循环: i = 3; 3 &lt; 10，条件满足</span></span><br><span class="line"><span class="comment">         内层循环: j = 1; 3 &lt;= 3, 条件满足，  </span></span><br><span class="line"><span class="comment">	 		页面输出: </span></span><br><span class="line"><span class="comment">	 			1 *  1 = 1;</span></span><br><span class="line"><span class="comment">	 			1 *  2 = 2; </span></span><br><span class="line"><span class="comment">	 			1 *  3 = 3; </span></span><br><span class="line"><span class="comment">      	 j++ j  变成了2👇</span></span><br><span class="line"><span class="comment">         内层循环: j = 2; 2 &lt;= 2, 条件满足，</span></span><br><span class="line"><span class="comment">      	 	页面输出: </span></span><br><span class="line"><span class="comment">	 			1 *  1 = 1;</span></span><br><span class="line"><span class="comment">	 			1 *  2 = 2;  2 * 2 = 4; </span></span><br><span class="line"><span class="comment">	 			1 *  3 = 3;  2 * 3 = 3; </span></span><br><span class="line"><span class="comment">	 			</span></span><br><span class="line"><span class="comment">	 	 j++ j  变成了3👇</span></span><br><span class="line"><span class="comment">         内层循环: j = 3; 3 &lt;= 3, 条件满足，</span></span><br><span class="line"><span class="comment">      	 	页面输出: </span></span><br><span class="line"><span class="comment">	 			1 *  1 = 1;</span></span><br><span class="line"><span class="comment">	 			1 *  2 = 2;  2 * 2 = 4; </span></span><br><span class="line"><span class="comment">	 			1 *  3 = 3;  2 * 3 = 3; 3 * 3 = 6; 	</span></span><br><span class="line"><span class="comment">	 👇	 此时内层条件判断不满足则跳出内层循环，</span></span><br><span class="line"><span class="comment">	 	 继续执行下面的换行代码</span></span><br><span class="line"><span class="comment">	 	 然后回到外层自增，再进入内层，内层再自增...</span></span><br><span class="line"><span class="comment">	 	 当内层 j 值等于 外层 i ,则内层循环就会停止,跳出到外层换行代码</span></span><br><span class="line"><span class="comment">	 	 回到i++ 自增</span></span><br><span class="line"><span class="comment">	 	 </span></span><br><span class="line"><span class="comment">	 </span></span><br><span class="line"><span class="comment">	 </span></span><br><span class="line"><span class="comment">	.....</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	以此类推！！</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">		</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="综合案例游戏计数"><a href="#综合案例游戏计数" class="headerlink" title="综合案例游戏计数"></a>综合案例游戏计数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> yxd = <span class="string">'游戏第'</span>;</span><br><span class="line"><span class="keyword">var</span> ldf = <span class="string">'轮，得分'</span>;</span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="comment">// 循环开始 就输出游戏是第几轮，以及得分数</span></span><br><span class="line">     <span class="built_in">document</span>.write(yxd + i + ldf + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">10</span>; j &lt;= <span class="number">100</span>; j+= <span class="number">10</span>) &#123;</span><br><span class="line">                <span class="built_in">document</span>.write(j + <span class="string">'分'</span> + <span class="string">'&amp;nbsp'</span> )</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 当内层循环结束后，换行换行</span></span><br><span class="line">     <span class="built_in">document</span>.write( <span class="string">'&lt;br/&gt;'</span> + <span class="string">'&lt;br/&gt;'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><p>语法：<br>   while ( 条件 ){<br>      需要执行的代码；<br>   }</p>
+<p>⚠️注意⚠️：<strong>while 循环会一直循环代码块，只要指定的条件为 true。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出1～100 之间的所有数。</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>( i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">	   <span class="built_in">document</span>.write();</span><br><span class="line">    i++; <span class="comment">// 自增条件</span></span><br><span class="line">	&#125;</span><br><span class="line">							</span><br><span class="line"></span><br><span class="line"><span class="comment">// 案例， 1+2+3+4+5...+100 = ?</span></span><br><span class="line">		<span class="keyword">var</span> sum = <span class="number">0</span>; <span class="comment">// sum 就是存储和的值</span></span><br><span class="line">		<span class="keyword">var</span> n = <span class="number">1</span>;   <span class="comment">// 变量条件</span></span><br><span class="line">		<span class="keyword">while</span>( n &lt;= <span class="number">100</span>)&#123; <span class="comment">// 判断条件</span></span><br><span class="line">   sum += n; <span class="comment">// sum = sum + n;  sum = 0 + 1; 1 = 1+ 2; 3 = 3 + 3;  6 = 6 + 4.....</span></span><br><span class="line">   n++ <span class="comment">// 变量变化语句，一定要写，不然会造成死循环，页面奔溃。</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">console</span>.log(sum); <span class="comment">// 控制台输出</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 猜数字案例</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="string">'5'</span>)&#123;</span><br><span class="line">        <span class="keyword">var</span> input = prompt(<span class="string">'猜数字游戏 = "？" '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (input &gt; <span class="string">'8'</span>)&#123;</span><br><span class="line">            alert(<span class="string">'数字猜大了！'</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (input &lt; <span class="string">'8'</span>) &#123;</span><br><span class="line">            alert(<span class="string">'数字猜小了！'</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            alert(<span class="string">'恭喜，数字：'</span> + input + <span class="string">'答对了！'</span> );</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h2><p>语法：</p>
+<p>do{</p>
+<p>   需要执行的代码；</p>
+<p>}while(条件)</p>
+<p>说明：⭐<strong>这种语法的循环至少要被执行一次。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> j = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (j % <span class="number">2</span> == <span class="number">0</span> ) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(j);</span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">while</span>(j &lt;= <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="for-in"><a href="#for-in" class="headerlink" title="for-in"></a>for-in</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="循环总结"><a href="#循环总结" class="headerlink" title="循环总结"></a>循环总结</h2><ul>
+<li>for  循环，循环次数少固定的</li>
+<li>while 循环，循环次数不是固定的**</li>
+<li>do…while 循环 不管条件符合不符合，先运行一次代码</li>
+</ul>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ⭐⭐⭐任务提示</span></span><br><span class="line"><span class="comment">// 用两个while循环实现，第一个判断是否是默认密码，第二个判断两次输入的是否一致。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认密码</span></span><br><span class="line">    <span class="keyword">var</span> mima = <span class="number">123456</span>;</span><br><span class="line">    <span class="comment">// 提示用户输入密码</span></span><br><span class="line">    <span class="keyword">var</span> mm = prompt(<span class="string">'输入密码！'</span>);</span><br><span class="line">    <span class="comment">// 第一次判断，如果不等于默认密码则无限循环，如果正确，进入下面都第二次循环并判断...</span></span><br><span class="line">    <span class="keyword">while</span> ( mm != mima)&#123;</span><br><span class="line">        mm = prompt(<span class="string">'输入正确密码!'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第二次输入密码，检测俩个输入都密码是否相等。</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检测上一个值，必须等于 默认密码才能进入此循环。</span></span><br><span class="line">    <span class="keyword">while</span> ( mm == <span class="number">123456</span> ) &#123;</span><br><span class="line">        <span class="comment">// 第二次输入密码/</span></span><br><span class="line">        mmm = prompt(<span class="string">'请再次输入密码!'</span>);</span><br><span class="line">        <span class="comment">// 判断第二次，跟 第一次是否 一致，如果一致，弹出提示，退出循环，否则无限循环。</span></span><br><span class="line">        <span class="keyword">if</span> (mmm == mima)&#123;</span><br><span class="line">            alert(<span class="string">'密码一致!'</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 打印所有0-100（包含100）之间除了22，44，66以及88之外的'偶数'，并求他们的和。</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接收和变量值</span></span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 循环，100以内的偶数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i += <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// 判断如果是 22，44，66，88， 则跳过这一次循环</span></span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">22</span> || i == <span class="number">44</span> || i == <span class="number">66</span> || i == <span class="number">88</span>) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// sum 赋值的情况，如下：👇</span></span><br><span class="line">        <span class="comment">// 2 = 2 +  4  6  8......100;</span></span><br><span class="line">        <span class="comment">// 6 = 6 +  6  8......100;</span></span><br><span class="line">   	     <span class="comment">// 12 = 12 +  8......100;</span></span><br><span class="line">        <span class="comment">// 20 = 20 + 10 ......1000</span></span><br><span class="line">        sum += i;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.write(sum + <span class="string">'&lt;br/&gt;'</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>JavaScript流程控制篇</p>
+  <p><span>文章作者:</span></p>
+  <p><span>发布时间:</span>2019年05月23日 - 20:54:40</p>
+  <p><span>最后更新:</span>2019年06月02日 - 00:35:32</p>
+  <p><span>原始链接:</span><a href="/2019/05/23/JavaScript流程控制篇/" title="JavaScript流程控制篇">http://yoursite.com/2019/05/23/JavaScript流程控制篇/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/05/23/JavaScript流程控制篇/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+          
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/05/23/JavaScript流程控制篇/" title="JavaScript流程控制篇">http://yoursite.com/2019/05/23/JavaScript流程控制篇/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/21/JavaScript语法篇/" rel="next" title="JavaScript语法篇">
+                <i class="fa fa-chevron-left"></i> JavaScript语法篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/27/JavaScript函数篇/" rel="prev" title="JavaScript函数篇">
+                JavaScript函数篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript分支判断语句"><span class="nav-number">1.</span> <span class="nav-text">JavaScript分支判断语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-条件语句"><span class="nav-number">1.1.</span> <span class="nav-text">if 条件语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if条件嵌套"><span class="nav-number">1.2.</span> <span class="nav-text">if条件嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结总结案例"><span class="nav-number">1.3.</span> <span class="nav-text">小结总结案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch判断语句"><span class="nav-number">1.4.</span> <span class="nav-text">switch判断语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript循环语句"><span class="nav-number">2.</span> <span class="nav-text">JavaScript循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#for-循环"><span class="nav-number">2.1.</span> <span class="nav-text">for 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环-嵌套"><span class="nav-number">2.2.</span> <span class="nav-text">for循环 嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合案例99乘法表"><span class="nav-number">2.3.</span> <span class="nav-text">综合案例99乘法表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合案例游戏计数"><span class="nav-number">2.4.</span> <span class="nav-text">综合案例游戏计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while"><span class="nav-number">2.5.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#do…while"><span class="nav-number">2.6.</span> <span class="nav-text">do…while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-in"><span class="nav-number">2.7.</span> <span class="nav-text">for-in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环总结"><span class="nav-number">2.8.</span> <span class="nav-text">循环总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合案例"><span class="nav-number">2.9.</span> <span class="nav-text">综合案例</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+	
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2019/05/23/JavaScript流程控制篇/';
+          this.page.identifier = '2019/05/23/JavaScript流程控制篇/';
+          this.page.title = 'JavaScript流程控制篇';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
