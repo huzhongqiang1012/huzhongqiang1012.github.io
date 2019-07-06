@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博客,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="HuZhongQiang" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="view  容器12&amp;lt; view &amp;gt;&amp;lt;/view&amp;gt;// 相当于 div ,起到承载作用，小程序内没div, 故用view 代替 image 图片12&amp;lt;image src=&apos;/xxx/xxx.png&apos;&amp;gt;&amp;lt;/image&amp;gt;//  注意请尽量使用相对路径 text  文本1&amp;lt;text&amp;gt;我是文本内容&amp;lt;/text&amp;gt; swiper 轮播组件">
+<meta name="keywords" content="博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序篇">
+<meta property="og:url" content="http://yoursite.com/2019/06/20/微信小程序篇/index.html">
+<meta property="og:site_name" content="HuZhongQiang">
+<meta property="og:description" content="view  容器12&amp;lt; view &amp;gt;&amp;lt;/view&amp;gt;// 相当于 div ,起到承载作用，小程序内没div, 故用view 代替 image 图片12&amp;lt;image src=&apos;/xxx/xxx.png&apos;&amp;gt;&amp;lt;/image&amp;gt;//  注意请尽量使用相对路径 text  文本1&amp;lt;text&amp;gt;我是文本内容&amp;lt;/text&amp;gt; swiper 轮播组件">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/Xnip2019-06-27_00-05-21.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/Xnip2019-06-27_00-12-53.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/32.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/33.png">
+<meta property="og:updated_time" content="2019-07-03T15:27:24.777Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序篇">
+<meta name="twitter:description" content="view  容器12&amp;lt; view &amp;gt;&amp;lt;/view&amp;gt;// 相当于 div ,起到承载作用，小程序内没div, 故用view 代替 image 图片12&amp;lt;image src=&apos;/xxx/xxx.png&apos;&amp;gt;&amp;lt;/image&amp;gt;//  注意请尽量使用相对路径 text  文本1&amp;lt;text&amp;gt;我是文本内容&amp;lt;/text&amp;gt; swiper 轮播组件">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/Xnip2019-06-27_00-05-21.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/20/微信小程序篇/">
+
+
+
+
+
+  <title>微信小程序篇 | HuZhongQiang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HuZhongQiang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/home" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-check"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>
+            
+            随笔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            爱好
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photography">
+          <a href="/photography/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-picture-o"></i> <br>
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/20/微信小程序篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HuZhongQiang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">微信小程序篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T20:17:51+08:00">
+                2019-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/flex/" itemprop="url" rel="index">
+                    <span itemprop="name">flex</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/20/微信小程序篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/20/微信小程序篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="view-容器"><a href="#view-容器" class="headerlink" title="view  容器"></a>view  容器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt; view &gt;<span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line"><span class="comment">// 相当于 div ,起到承载作用，小程序内没div, 故用view 代替</span></span><br></pre></td></tr></table></figure>
+<h2 id="image-图片"><a href="#image-图片" class="headerlink" title="image 图片"></a>image 图片</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;image src=<span class="string">'/xxx/xxx.png'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br><span class="line"><span class="comment">//  注意请尽量使用相对路径</span></span><br></pre></td></tr></table></figure>
+<h2 id="text-文本"><a href="#text-文本" class="headerlink" title="text  文本"></a>text  文本</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;text&gt;我是文本内容&lt;<span class="regexp">/text&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="swiper-轮播组件"><a href="#swiper-轮播组件" class="headerlink" title="swiper 轮播组件"></a>swiper 轮播组件</h2><ul>
+<li>轮播组件，必须在 swiper标签下</li>
+<li>滑块视图容器。其中只可放置<a href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper-item.html" target="_blank" rel="noopener">swiper-item</a>组件，否则会导致未定义的行为。</li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html" target="_blank" rel="noopener">点击我查看详细相关属性</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;swiper&gt;</span><br><span class="line">    &lt;swiper-item&gt;</span><br><span class="line">      &lt;image src=<span class="string">'/images/vr.png'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br><span class="line">    &lt;<span class="regexp">/swiper-item&gt;</span></span><br><span class="line"><span class="regexp">    &lt;swiper-item&gt;</span></span><br><span class="line"><span class="regexp">      &lt;image src='/im</span>ages/iqiyi.png<span class="string">'&gt;&lt;/image&gt;</span></span><br><span class="line"><span class="string">    &lt;/swiper-item&gt;</span></span><br><span class="line"><span class="string">    &lt;swiper-item&gt;</span></span><br><span class="line"><span class="string">      &lt;image src='</span>/images/wx.png<span class="string">'&gt;&lt;/image&gt;</span></span><br><span class="line"><span class="string">    &lt;/swiper-item&gt;</span></span><br><span class="line"><span class="string">&lt;/swiper&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据绑定概念和基础"><a href="#数据绑定概念和基础" class="headerlink" title="数据绑定概念和基础"></a>数据绑定概念和基础</h2><p>简单– 不适用，  <strong>数据必须是在 data中才能渲染到页面</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 请在当前页面的js 文件中👇函数中编写数据 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面的初始数据</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    date: <span class="string">"Hu 18  2020"</span>,</span><br><span class="line">    title: <span class="string">"大通湖大闸蟹"</span>,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 在当前页面的的wxml 页面中编写如下代码就能渲染出 js中的数据</span></span><br><span class="line"></span><br><span class="line">&lt;text &gt;&#123;&#123; date &#125;&#125; &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">&lt;text &gt;&#123;&#123; title &#125;&#125; &lt;/</span>text&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面会渲染出</span></span><br><span class="line">Hu <span class="number">18</span>  <span class="number">2020</span></span><br><span class="line">大通湖大闸蟹</span><br></pre></td></tr></table></figure>
+<h2 id="setData方法绑定数据"><a href="#setData方法绑定数据" class="headerlink" title="setData方法绑定数据"></a>setData方法绑定数据</h2><p>获取服务器数据方式（模拟–不适用，不是动态的，不是服务器上的）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 页面的初始数据</span></span><br><span class="line"><span class="comment">// 👉⚠data</span></span><br><span class="line"></span><br><span class="line">  data: &#123;</span><br><span class="line">    date: <span class="string">"Hu 18  2020"</span>,</span><br><span class="line">    title: <span class="string">"大通湖大闸蟹"</span>,</span><br><span class="line">  &#125;，</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生命周期函数-----监听页面加载</span></span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> post = &#123;</span><br><span class="line">        date: <span class="string">"Hu feifei"</span>,</span><br><span class="line">        title: <span class="string">"18岁少年"</span>,</span><br><span class="line">        post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">        content: <span class="string">"xxxxxxxxxxxxxxxxxxxxxxxxx"</span>,</span><br><span class="line">        view_num: <span class="string">"112"</span> </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 注释：所有的数据必须在 data 中才能被渲染，上面的数据必须 传入到 data 中。</span></span><br><span class="line">    <span class="comment">// 👉 ⚠数据 ---&gt;&gt; ⚠data ---&gt;&gt; ⚠渲染页面</span></span><br><span class="line">    <span class="keyword">this</span>.setData( post )  <span class="comment">// post =  数据的变量名称</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👉⚠渲染页面</span></span><br><span class="line">&lt;text &gt;&#123;&#123; date &#125;&#125; &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">&lt;text &gt;&#123;&#123; title &#125;&#125; &lt;/</span>text&gt;</span><br><span class="line">&lt;image scr=<span class="string">"&#123;&#123;post_img&#125;&#125;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="setData方法绑定数据-1"><a href="#setData方法绑定数据-1" class="headerlink" title="setData方法绑定数据"></a>setData方法绑定数据</h2><p> 数据嵌套— 如何获取???  如何调用数据???</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生命周期函数-----监听页面加载</span></span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> post = &#123;</span><br><span class="line">        <span class="comment">// 👇 数据嵌套</span></span><br><span class="line">        img:&#123;</span><br><span class="line">            post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">        	content: <span class="string">"xxxxxxxxxxxxxxxxxxxxxxxxx"</span>,</span><br><span class="line">        	view_num: <span class="string">"112"</span> </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">// 👉 数据  ----&gt;&gt; data 获取数据  ----&gt;&gt; WXML 调用数据 </span></span><br><span class="line">    <span class="keyword">this</span>.setData( post ) </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👉⚠渲染页面</span></span><br><span class="line">&lt;text &gt;&#123;&#123; img.content &#125;&#125; &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">&lt;text &gt;&#123;&#123; img.view_num &#125;&#125; &lt;/</span>text&gt;</span><br><span class="line">&lt;image scr=<span class="string">"&#123;&#123; img.post_img &#125;&#125;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="wx-if-条件渲染"><a href="#wx-if-条件渲染" class="headerlink" title="wx:if   条件渲染"></a>wx:if   条件渲染</h2><p>某个元素的隐藏显示的控制通过 wx:if 来判断</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 👇⚠渲染页面</span></span><br><span class="line">&lt;text wx:<span class="keyword">if</span>=<span class="string">"wxif"</span>&gt;&#123;&#123; img.content &#125;&#125; &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 生命周期函数-----监听页面加载</span></span><br><span class="line"><span class="regexp">onLoad: function (options)&#123;</span></span><br><span class="line"><span class="regexp">    var post = &#123;</span></span><br><span class="line"><span class="regexp">        data: '我是数据data',</span></span><br><span class="line"><span class="regexp">        img:&#123;</span></span><br><span class="line"><span class="regexp">            post_img: "/</span>xxx/xxx/xxx.png<span class="string">",</span></span><br><span class="line"><span class="string">        	content: "</span>xxxxxxxxxxxxxxxxxxxxxxxxx<span class="string">",</span></span><br><span class="line"><span class="string">        	view_num: "</span><span class="number">112</span><span class="string">",</span></span><br><span class="line"><span class="string">        	wxif: true    // 👈 显示，false 隐藏</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    this.setData( post ) </span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="wx-for-列表渲染"><a href="#wx-for-列表渲染" class="headerlink" title="wx:for   列表渲染"></a>wx:for   列表渲染</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//   👇block 列表渲染--- wx:for="xx" 数据对象  wx:for-item ="item"  =  第几个子元素  wx:for-index = "index"  =  数组索引值 = 数组序号</span></span><br><span class="line"></span><br><span class="line">&lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123; post_key &#125;&#125;"</span> wx:<span class="keyword">for</span>-item=<span class="string">"item"</span> &gt;</span><br><span class="line">	&lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">'post-box'</span>&gt;</span><br><span class="line">    	&lt;text &gt;&#123;&#123; item.date &#125;&#125; &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">    &lt;text &gt;&#123;&#123; item.title &#125;&#125; &lt;/</span>text&gt;</span><br><span class="line">    &lt;image scr=<span class="string">"&#123;&#123; item.post_img &#125;&#125;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>block&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 生命周期函数-----监听页面加载</span></span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> post = [&#123;</span><br><span class="line">        date: <span class="string">"Hu feifei"</span>,</span><br><span class="line">        title: <span class="string">"18岁少年"</span>,</span><br><span class="line">        post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        date: <span class="string">"zhou bangbang"</span>,</span><br><span class="line">        title: <span class="string">"16岁菇娘"</span>,</span><br><span class="line">        post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">    &#125;]</span><br><span class="line">    <span class="comment">// 👉 数据(传送必须是对象)  ----&gt;&gt; data 获取数据  ----&gt;&gt; WXML 调用数据 </span></span><br><span class="line">    <span class="comment">// 这里需要注意的是当前变量，必须是对象，而现在是数组。需要把对象赋值给变量。</span></span><br><span class="line">    <span class="comment">// 该变量值，必须跟wx:for="post" 相同的，不然无法获取到数据</span></span><br><span class="line">    <span class="keyword">this</span>.setData(&#123; post_key ：post &#125;)  </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注释，列表循环是根据数据 的组数来决定生成的,列子是2组数据，页面会自动生成俩组数据</span></span><br><span class="line"><span class="comment">// item : 估计是指"每组数据"，  1  2 3 4 5 6 ... 跟 循环中i 值，相等。</span></span><br></pre></td></tr></table></figure>
+<h2 id="事件机制——捕捉与回调1"><a href="#事件机制——捕捉与回调1" class="headerlink" title="事件机制——捕捉与回调1"></a>事件机制——捕捉与回调1</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 事件监听</span></span><br><span class="line">&lt;view bind:tap=<span class="string">"onTap"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line">Page(&#123;</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">    noTap:funciton()&#123;</span><br><span class="line">        <span class="comment">// 内置 跳转 API,值必须是一个对象</span></span><br><span class="line">        wx:navigateTo(&#123;</span><br><span class="line">            url:<span class="string">"../xxx/xxx"</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="事件机制——捕捉与回调2"><a href="#事件机制——捕捉与回调2" class="headerlink" title="事件机制——捕捉与回调2"></a>事件机制——捕捉与回调2</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 事件监听</span></span><br><span class="line">&lt;view bind:tap=<span class="string">"onTap"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line">Page(&#123;</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">    noTap:funciton()&#123;</span><br><span class="line">        <span class="comment">// 该内置跳转API，没有返回按钮</span></span><br><span class="line">        wx:redirectTo(&#123;</span><br><span class="line">            url:<span class="string">"../xxx/xxx"</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="冒泡与非冒泡"><a href="#冒泡与非冒泡" class="headerlink" title="冒泡与非冒泡"></a>冒泡与非冒泡</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 该情况下，点击子元素，父元素的事件监听也会被触发</span></span><br><span class="line">&lt;view bind:tap=<span class="string">"noTap"</span>&gt;</span><br><span class="line">	&lt;view bind:tap= <span class="string">"caTch"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/view&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 该情况下，点击子元素，父元素的事件监听，不会被触发，被阻止冒泡了</span></span><br><span class="line">&lt;view bind:tap=<span class="string">"noTap"</span>&gt;</span><br><span class="line">	&lt;view <span class="keyword">catch</span>:tap= <span class="string">"caTch"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/view&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="把数据分离到一个新的文件中，数据需要给导出的出口"><a href="#把数据分离到一个新的文件中，数据需要给导出的出口" class="headerlink" title="把数据分离到一个新的文件中，数据需要给导出的出口"></a>把数据分离到一个新的文件中，数据需要给导出的出口</h2><h3 id="1-新建js文件（创建新的数据模块）"><a href="#1-新建js文件（创建新的数据模块）" class="headerlink" title="1.新建js文件（创建新的数据模块）"></a>1.新建js文件（创建新的数据模块）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义变量，存储数组 ----&gt;&gt; 对象数据</span></span><br><span class="line"><span class="keyword">var</span> 自定义变量名 = [&#123;</span><br><span class="line">        date: <span class="string">"Hu feifei"</span>,</span><br><span class="line">        title: <span class="string">"18岁少年"</span>,</span><br><span class="line">        post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        date: <span class="string">"zhou bangbang"</span>,</span><br><span class="line">        title: <span class="string">"16岁菇娘"</span>,</span><br><span class="line">        post_img: <span class="string">"/xxx/xxx/xxx.png"</span>,</span><br><span class="line">    &#125;]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数据导出</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    postList: 引用👆自定义变量名</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-require-导入新的数据模块"><a href="#2-require-导入新的数据模块" class="headerlink" title="2.  require 导入新的数据模块"></a>2.  require 导入新的数据模块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当前js页面顶部-----导入数据,必须是相对路径</span></span><br><span class="line"><span class="keyword">var</span>  数据名称 =  <span class="built_in">require</span>(<span class="string">'../../xxx.js'</span>)</span><br><span class="line"><span class="comment">// 检测数据是否获取到数据</span></span><br><span class="line"><span class="built_in">console</span>.log( 数据名称 )</span><br></pre></td></tr></table></figure>
+<h3 id="3-载入数据模块"><a href="#3-载入数据模块" class="headerlink" title="3.载入数据模块"></a>3.载入数据模块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把数据载入到 data </span></span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        自定义变量名 : 数据名称.postList</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-页面渲染-数据"><a href="#4-页面渲染-数据" class="headerlink" title="4.页面渲染 数据"></a>4.页面渲染 数据</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 循环渲染 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:key</span>=<span class="string">'1'</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123; 渲染数据 &#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"item"</span> <span class="attr">wx:for-index</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">		        <span class="tag">&lt;<span class="name">text</span> &gt;</span>&#123;&#123; item.date &#125;&#125; <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">text</span> &gt;</span>&#123;&#123; item.title &#125;&#125; <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">scr</span>=<span class="string">"&#123;&#123;item.post_img&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span>	</span><br><span class="line"><span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="template-使用模板-（别称-占位符）"><a href="#template-使用模板-（别称-占位符）" class="headerlink" title="template  使用模板 （别称 占位符）"></a>template  使用模板 （别称 占位符）</h2><p>template 组件化思维， 小程序中有— <strong>自定义组件Component</strong> </p>
+<p>用途： 代码的复用性，代码的更好的表现形式。</p>
+<h3 id="1-wxml-创建模块"><a href="#1-wxml-创建模块" class="headerlink" title="1.wxml  创建模块"></a>1.wxml  创建模块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 👇 模块名字 postItem</span></span><br><span class="line">&lt;template name=<span class="string">"postItem"</span> &gt; </span><br><span class="line"> </span><br><span class="line"> <span class="comment">//  模板内容</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-wxml-模块调用"><a href="#2-wxml-模块调用" class="headerlink" title="2.wxml   模块调用"></a>2.wxml   模块调用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// wxml 页面顶部 引入模块内容 👇，必须有结束符合/</span></span><br><span class="line">&lt;<span class="keyword">import</span> src=<span class="string">"模块路径地址.wxml"</span>/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  列表渲染</span></span><br><span class="line">&lt;block wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123; 循环数据名 &#125;&#125;"</span> wx:<span class="keyword">for</span>-item=<span class="string">"item"</span> wx:<span class="keyword">for</span>-index=<span class="string">"index"</span> &gt;</span><br><span class="line"><span class="comment">// 循环数据名= js中导入到数据，通过自定义变量名传入到data 中的这个变量</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// template 调用模块内容，1.必须要传递数据到模块内进行数据绑定，2.必须有结束标签 /</span></span><br><span class="line">	&lt;template is = <span class="string">"postItem"</span> data=<span class="string">"&#123;&#123; item &#125;&#125;"</span>/&gt;</span><br><span class="line"><span class="comment">// ⚠️： data  必须传，不然获取不到数据</span></span><br><span class="line"><span class="comment">// ⚠️： 结束符 必须写，不然报错</span></span><br><span class="line">        </span><br><span class="line">&lt;<span class="regexp">/block&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-wxss-模块创建与调用"><a href="#3-wxss-模块创建与调用" class="headerlink" title="3.wxss 模块创建与调用"></a>3.wxss 模块创建与调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.CSS样式移到新的 wxml 下的wxss 文件中，直接粘贴即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2.在当前WXSS文件 顶部引入 css模块路径</span><br><span class="line">@import &quot;../../...wxss&quot;;</span><br></pre></td></tr></table></figure>
+<h2 id="数据填充"><a href="#数据填充" class="headerlink" title="数据填充"></a>数据填充</h2><p>新闻列表</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入数据</span></span><br><span class="line"><span class="keyword">var</span> postsData = <span class="built_in">require</span>(<span class="string">'../../data/posts-data.js'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面加载</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 数据导入到data 进行数据初始化渲染</span></span><br><span class="line">    <span class="comment">// this.data.postList = postsData.postList</span></span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      post_key: postsData.postList</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 新闻列表点击当前这个，进入对应到详情</span></span><br><span class="line">  noPostTap: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获取 postid </span></span><br><span class="line">    <span class="keyword">var</span> postId = event.currentTarget.dataset.postid;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"当前点击到是第"</span> + postId + <span class="string">"页"</span>)</span><br><span class="line">    <span class="comment">// 点击，跳转到子页面，并且有返回按钮</span></span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: <span class="string">'posts-datail/posts-datail?id='</span> + postId,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>新闻详情页js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入数据</span></span><br><span class="line"><span class="keyword">var</span> postsData = <span class="built_in">require</span>(<span class="string">'../../data/posts-data.js'</span>)</span><br><span class="line"></span><br><span class="line">	  </span><br><span class="line">  noPostTap: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获取 postid </span></span><br><span class="line">    <span class="keyword">var</span> postId = event.currentTarget.dataset.postid;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"当前点击到是第"</span> + postId + <span class="string">"页"</span>)</span><br><span class="line">    <span class="comment">// 点击，跳转到子页面，并且有返回按钮</span></span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: <span class="string">'posts-datail/posts-datail?id='</span> + postId,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>新闻详情页wxml</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">'head-image'</span> <span class="attr">src</span>=<span class="string">'&#123;&#123;postData.headImgSrc&#125;&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>图解：</p>
+<p><img src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/Xnip2019-06-27_00-05-21.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/Xnip2019-06-27_00-12-53.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/32.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/33.png" alt></p>
+<h3 id="ES6扩展运算符的巧妙应用"><a href="#ES6扩展运算符的巧妙应用" class="headerlink" title="ES6扩展运算符的巧妙应用"></a>ES6扩展运算符的巧妙应用</h3><p>ES6扩展运算符，…  把数据展开，每组数据都是一个对象，数据展开意思是把对象去掉，直接获取到 对应的对象名上，也就说添加了三个小点，就如同把数据 子项直接写在data 里面</p>
+<p>不添加三个小点：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;	</span><br><span class="line">	title :<span class="string">"12345"</span>,</span><br><span class="line">	content:<span class="string">"6789"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 必须这样获取数据</span></span><br><span class="line">&lt;text&gt;&#123;&#123; item.title &#125;&#125;&lt;<span class="regexp">/text&gt;</span></span><br></pre></td></tr></table></figure>
+<p>添加三个小点如同数据写在data 里面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data&#123;</span><br><span class="line">   title :<span class="string">"12345"</span>,</span><br><span class="line">   content:<span class="string">"6789"</span> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样获取数据</span></span><br><span class="line">&lt;text&gt;&#123;&#123; title &#125;&#125;&lt;<span class="regexp">/text&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 循环渲染 --&gt;</span><br><span class="line">&lt;block wx:key=<span class="string">'1'</span> wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;post_key&#125;&#125;"</span> wx:<span class="keyword">for</span>-item=<span class="string">"item"</span> wx:<span class="keyword">for</span>-index=<span class="string">"index"</span>&gt;</span><br><span class="line">    <span class="comment">// item ，前面添加三个... 可以在每个页面调用不同的数据，模块内部，不需要添加  item.xxx</span></span><br><span class="line">    <span class="comment">// 由外部的页面 ...item  去传入（ES6语法）</span></span><br><span class="line">  &lt;template is=<span class="string">"postItem"</span> data=<span class="string">"&#123;&#123; ...item &#125;&#125;"</span> /&gt; </span><br><span class="line">      </span><br><span class="line">&lt;<span class="regexp">/block&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 这里由外部，去传入 item ,内部 src=&#123;&#123; item.imgSrc &#125;&#125;,不需要去添加 item.imgSrc,直接写imgSrc值</span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">'post-image'</span> <span class="attr">src</span>=<span class="string">'&#123;&#123;imgSrc&#125;&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="组件的自定义属性及获取属性"><a href="#组件的自定义属性及获取属性" class="headerlink" title="组件的自定义属性及获取属性"></a>组件的自定义属性及获取属性</h3><p><strong>原则：先静后动，先样式再数据</strong></p>
+<p>如果我们想把一个值或者一个属性，绑定到标签上面不能使用自定义属性名，在小程序中如果你想记录数据，必须使用：如下👇</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;view bind:tap=<span class="string">"noPostTap"</span> data-s=<span class="string">"&#123;&#123;item.postId&#125;&#125;"</span>&gt;</span><br><span class="line">	<span class="comment">// data-s</span></span><br><span class="line">&lt;<span class="regexp">/view&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="收藏、未收藏功能思路"><a href="#收藏、未收藏功能思路" class="headerlink" title="收藏、未收藏功能思路"></a>收藏、未收藏功能思路</h3><ul>
+<li><p>获取所有缓存状态</p>
+</li>
+<li><p>判断所有缓存状态是否存在</p>
+<ul>
+<li>获取当前文章的缓存状态</li>
+<li>(<strong>遇上报错一个巨坑</strong>， <strong>mac</strong>：该位置需要对当前缓存值做判断  <strong>vs</strong>   <strong>windows</strong> ：不做判断，居然不报错，一切正常)<ul>
+<li>修改data 的Collected 的值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如果 缓存状态不存在</p>
+<ul>
+<li>则需要创建 缓存状态的对象</li>
+<li>如果没有缓存状态，证明当前的文章缓存值，默认为false:表示未收藏</li>
+<li>然后把该缓存值，存放到缓存状态中</li>
+<li>更新文章是否收藏的缓存值</li>
+<li>更新data数据绑定, 实现图片的切换</li>
+<li><p>提示收藏未收藏文字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面加载</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 接收 post.js 传送来的 ID</span></span><br><span class="line">      <span class="keyword">var</span> postId = options.id;</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 把Postid 放到 data 中去，作为参数共点击事件做调用</span></span><br><span class="line">      <span class="keyword">this</span>.data.currentPostId = postId;</span><br><span class="line">	</span><br><span class="line">      <span class="built_in">console</span>.log(postId);</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 取本地的数据: 本地数据名.postList[ 数据ID名 ]</span></span><br><span class="line">      <span class="keyword">var</span> postData = postsData.postList[postId]</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 数据绑定,添加扩展运算符</span></span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;...postData&#125;)</span><br><span class="line">	</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 获取所有缓存状态</span></span><br><span class="line">      <span class="keyword">var</span> postsCollected = wx.getStorageSync(<span class="string">"posts_Collected"</span>);</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 判断所有缓存状态是否存在</span></span><br><span class="line">      <span class="keyword">if</span> (postsCollected) &#123;</span><br><span class="line">	</span><br><span class="line">          <span class="comment">// 2.1 获取：当前缓存状态(</span></span><br><span class="line">          <span class="keyword">var</span> Collected = postsCollected[postId];</span><br><span class="line">     </span><br><span class="line">     	     <span class="comment">//  windows不做判断，不报错，Macos 不做判断，报错。</span></span><br><span class="line">          <span class="comment">// 2.2 巨坑---解决报错：Setting data field "collected" to undefined is invalid.</span></span><br><span class="line">          <span class="comment">// 2.2 判断当前缓存状态是否存在，如果存在，则更改data数据，否则不要做任何操作</span></span><br><span class="line">          <span class="keyword">if</span> (Collected) &#123;</span><br><span class="line">              <span class="comment">// 2.2 更改：data中collected当前缓存值状态</span></span><br><span class="line">              <span class="keyword">this</span>.setData(&#123;<span class="attr">collected</span>: Collected&#125;)</span><br><span class="line">          &#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">// 如果 缓存状态不存在，则需要创建 缓存状态的对象</span></span><br><span class="line">          <span class="keyword">var</span> postsCollected = &#123;&#125;;</span><br><span class="line">	</span><br><span class="line">          <span class="comment">// 如果没有缓存状态，证明当前的文章缓存值，默认为false:表示未收藏</span></span><br><span class="line">          postsCollected[postId] = <span class="literal">false</span>;</span><br><span class="line">	</span><br><span class="line">          <span class="comment">// 然后把该缓存值，存放到缓存状态中</span></span><br><span class="line">          wx.setStorageSync(<span class="string">"posts_Collected"</span>, postsCollected)</span><br><span class="line">	</span><br><span class="line">      &#125;</span><br><span class="line">	</span><br><span class="line">  &#125;,</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">  <span class="comment">// 当用户点击收藏按钮时，发生的事件</span></span><br><span class="line">  onCollectedTap: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 获取所有缓存状态</span></span><br><span class="line">      <span class="keyword">var</span> postsCollected = wx.getStorageSync(<span class="string">"posts_Collected"</span>);</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 获取当前,文章的缓存值。(currentPostId ,不存在当前函数中，需要借助变量来传递)</span></span><br><span class="line">      <span class="keyword">var</span> Collected = postsCollected[<span class="keyword">this</span>.data.currentPostId];</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 点击之后，收藏变成未收藏，未收藏变成收藏</span></span><br><span class="line">      Collected = !Collected;</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 把当前缓存值，赋值到 所有缓存状态中</span></span><br><span class="line">      postsCollected[<span class="keyword">this</span>.data.currentPostId] = Collected;</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 更新文章是否收藏的缓存值</span></span><br><span class="line">      wx.setStorageSync(<span class="string">"posts_Collected"</span>, postsCollected)</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 更新data数据绑定, 实现图片的切换</span></span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">          collected: Collected</span><br><span class="line">      &#125;);</span><br><span class="line">	</span><br><span class="line">      <span class="comment">// 提示收藏未收藏文字</span></span><br><span class="line">      wx.showToast(&#123;</span><br><span class="line">          title: Collected ? <span class="string">"收藏成功"</span> : <span class="string">"取消收藏"</span>,</span><br><span class="line">          duration: <span class="number">1000</span>,</span><br><span class="line">          icon: <span class="string">"success"</span></span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="分享功能"><a href="#分享功能" class="headerlink" title="分享功能"></a>分享功能</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分享事件</span></span><br><span class="line">noSharTap: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> itemList = [</span><br><span class="line">        <span class="string">"分享到微信"</span>,</span><br><span class="line">        <span class="string">"分享到微博"</span>,</span><br><span class="line">        <span class="string">"分享到QQ空间"</span>,</span><br><span class="line">        <span class="string">"分享到朋友圈"</span></span><br><span class="line">    ]</span><br><span class="line">    wx.showActionSheet(&#123;</span><br><span class="line">        itemList: itemList,</span><br><span class="line">        itemColor: <span class="string">"#405f80"</span>,</span><br><span class="line">        <span class="comment">// 回调函数</span></span><br><span class="line">        success(res) &#123;</span><br><span class="line">            <span class="comment">// res.cancel 用户是不是点击了取消</span></span><br><span class="line">            <span class="comment">// res.tapIndex 数组元素的序号，从0开始</span></span><br><span class="line">            wx.showModal(&#123;</span><br><span class="line">                title: <span class="string">"用户"</span> + itemList[res.tapIndex],</span><br><span class="line">                content: <span class="string">"用户是否取消?"</span> + res.cancel + <span class="string">"现在无法实现分享功能，什么时候能实现，官网没说"</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="同步异步方法对比"><a href="#同步异步方法对比" class="headerlink" title="同步异步方法对比"></a>同步异步方法对比</h3><p>（1）同步的缺陷是如果在这里执行不了，整个UI会在此处卡住，后面的代码走不了，这段时间耗时会非常长.<br>（2）在小程序中，能用同步用同步，尽量少用异步.<br>（3）京东订单系统用的是异步操作。<br>（4）异步的缺陷是在下一个方法中要使用上一个方法执行后的数据，由于异步原因，上一个方法还未执行完就开始执行下一个方法，导致数据获取失败</p>
+<h3 id="音乐播放功能"><a href="#音乐播放功能" class="headerlink" title="音乐播放功能"></a>音乐播放功能</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// 音乐播放组件业务</span><br><span class="line">noMusicTap: function (event) &#123;</span><br><span class="line">    // 获取当前音乐</span><br><span class="line">    var isPlayingMusic = this.data.isPlayingMusic;</span><br><span class="line"></span><br><span class="line">    //  从数据对象中获取音乐数据</span><br><span class="line">    var currentPostId = this.data.currentPostId;</span><br><span class="line">     // 获取到数据对象，postList下面才是数据，请输入控制台查看获取数据情况</span><br><span class="line">    var postData = postsData.postList[currentPostId];</span><br><span class="line">    console.log(postData )</span><br><span class="line"></span><br><span class="line">    // 判断当前音乐是否 开启</span><br><span class="line">    if (isPlayingMusic) &#123;</span><br><span class="line">        // 关闭音乐</span><br><span class="line">        wx.pauseBackgroundAudio();</span><br><span class="line">        // 关闭音乐后，把变量状态值，改变为false,更新Data值，必须用setData</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">            isPlayingMusic: false</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 音乐启动API</span><br><span class="line">        wx.playBackgroundAudio(&#123;</span><br><span class="line">            dataUrl: postData.music.url ,</span><br><span class="line">            title: postData.music.title,</span><br><span class="line">            coverImg: postData.music.coverImg,</span><br><span class="line">        &#125;);</span><br><span class="line">        // 开启音乐后，把变量状态值，改变为 true</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">            isPlayingMusic: true</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 图片切换通过三元表达式方法切换 --&gt;</span><br><span class="line">&lt;image catchtap=&quot;noMusicTap&quot; class=&quot;audio&quot;</span><br><span class="line">  src=&quot;&#123;&#123;isPlayingMusic?&apos;/images/music/music-stop.png&apos;:&apos;/images/music/music-start.png&apos;&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="音乐BUG-解决方法"><a href="#音乐BUG-解决方法" class="headerlink" title="音乐BUG 解决方法"></a>音乐BUG 解决方法</h3><p>问题1：总控开关和页面开关不同步<br>解决方案：监听函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 播放监听</span><br><span class="line">wx.onBackgroundAudioPlay(()=&gt;&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">        isPlayingMusic : true</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">// 暂停监听</span><br><span class="line">wx.onBackgroundAudioPause(()=&gt;&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">        isPlayingMusic : false</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ol>
+<li>事件驱动思想, 使用事件驱动来实现模块之间传递参数与解耦.比如在A模块发射一个事件，在B模块监听这个事件，中间使用数据来进行传递即可，像这里就是在总模块里面监听子模块里面的音乐播放状态 ；</li>
+<li>数据优先思想, 改变UI, 只需要改变该数据绑定的对应的数据就可以. 这点和angular，iOS中的RAC, 响应式编程思想类似.；</li>
+<li>数据绑定优势还有，一个数据可以绑定多个事件，这样只需要在js文件里面写上对应的多个事件即可，不用像jQuery一样要获取多个dom元素才能进行多个事件描述；</li>
+<li>可能利于做单元测试</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>微信小程序篇</p>
+  <p><span>文章作者:</span></p>
+  <p><span>发布时间:</span>2019年06月20日 - 20:17:51</p>
+  <p><span>最后更新:</span>2019年07月03日 - 23:27:24</p>
+  <p><span>原始链接:</span><a href="/2019/06/20/微信小程序篇/" title="微信小程序篇">http://yoursite.com/2019/06/20/微信小程序篇/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/06/20/微信小程序篇/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+          
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/06/20/微信小程序篇/" title="微信小程序篇">http://yoursite.com/2019/06/20/微信小程序篇/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/15/Javascript闭包/" rel="next" title="Javascript闭包">
+                <i class="fa fa-chevron-left"></i> Javascript闭包
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#view-容器"><span class="nav-number">1.</span> <span class="nav-text">view  容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#image-图片"><span class="nav-number">2.</span> <span class="nav-text">image 图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-文本"><span class="nav-number">3.</span> <span class="nav-text">text  文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swiper-轮播组件"><span class="nav-number">4.</span> <span class="nav-text">swiper 轮播组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据绑定概念和基础"><span class="nav-number">5.</span> <span class="nav-text">数据绑定概念和基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setData方法绑定数据"><span class="nav-number">6.</span> <span class="nav-text">setData方法绑定数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setData方法绑定数据-1"><span class="nav-number">7.</span> <span class="nav-text">setData方法绑定数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-if-条件渲染"><span class="nav-number">8.</span> <span class="nav-text">wx:if   条件渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-for-列表渲染"><span class="nav-number">9.</span> <span class="nav-text">wx:for   列表渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件机制——捕捉与回调1"><span class="nav-number">10.</span> <span class="nav-text">事件机制——捕捉与回调1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件机制——捕捉与回调2"><span class="nav-number">11.</span> <span class="nav-text">事件机制——捕捉与回调2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡与非冒泡"><span class="nav-number">12.</span> <span class="nav-text">冒泡与非冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把数据分离到一个新的文件中，数据需要给导出的出口"><span class="nav-number">13.</span> <span class="nav-text">把数据分离到一个新的文件中，数据需要给导出的出口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-新建js文件（创建新的数据模块）"><span class="nav-number">13.1.</span> <span class="nav-text">1.新建js文件（创建新的数据模块）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-require-导入新的数据模块"><span class="nav-number">13.2.</span> <span class="nav-text">2.  require 导入新的数据模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-载入数据模块"><span class="nav-number">13.3.</span> <span class="nav-text">3.载入数据模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-页面渲染-数据"><span class="nav-number">13.4.</span> <span class="nav-text">4.页面渲染 数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#template-使用模板-（别称-占位符）"><span class="nav-number">14.</span> <span class="nav-text">template  使用模板 （别称 占位符）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-wxml-创建模块"><span class="nav-number">14.1.</span> <span class="nav-text">1.wxml  创建模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-wxml-模块调用"><span class="nav-number">14.2.</span> <span class="nav-text">2.wxml   模块调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-wxss-模块创建与调用"><span class="nav-number">14.3.</span> <span class="nav-text">3.wxss 模块创建与调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据填充"><span class="nav-number">15.</span> <span class="nav-text">数据填充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6扩展运算符的巧妙应用"><span class="nav-number">15.1.</span> <span class="nav-text">ES6扩展运算符的巧妙应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件的自定义属性及获取属性"><span class="nav-number">15.2.</span> <span class="nav-text">组件的自定义属性及获取属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收藏、未收藏功能思路"><span class="nav-number">15.3.</span> <span class="nav-text">收藏、未收藏功能思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分享功能"><span class="nav-number">15.4.</span> <span class="nav-text">分享功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步异步方法对比"><span class="nav-number">15.5.</span> <span class="nav-text">同步异步方法对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音乐播放功能"><span class="nav-number">15.6.</span> <span class="nav-text">音乐播放功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音乐BUG-解决方法"><span class="nav-number">15.7.</span> <span class="nav-text">音乐BUG 解决方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+	
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2019/06/20/微信小程序篇/';
+          this.page.identifier = '2019/06/20/微信小程序篇/';
+          this.page.title = '微信小程序篇';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
