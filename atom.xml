@@ -6,17 +6,40 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-06T08:34:26.619Z</updated>
+  <updated>2019-07-06T08:41:51.498Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端路径整理</title>
+    <link href="http://yoursite.com/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2019/07/06/前端路径整理/</id>
+    <published>2019-07-06T08:20:51.000Z</published>
+    <updated>2019-07-06T08:41:51.498Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;工具篇&quot;&gt;&lt;a href=&quot;#工具篇&quot; class=&quot;headerlink&quot; title=&quot;工具篇&quot;&gt;&lt;/a&gt;工具篇&lt;/h3&gt;&lt;p&gt;工欲善其事，必先利其器，所以在开始之前选择一个合适好用的编辑器是很重要的，工具不再多，在于好用就行，除了编辑器，我们也要掌握其他的一
+      
+    
+    </summary>
+    
+      <category term="flex" scheme="http://yoursite.com/categories/flex/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序篇</title>
     <link href="http://yoursite.com/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     <id>http://yoursite.com/2019/06/20/微信小程序篇/</id>
     <published>2019-06-20T12:17:51.000Z</published>
-    <updated>2019-07-06T08:34:26.619Z</updated>
+    <updated>2019-07-06T08:40:00.621Z</updated>
     
     <summary type="html">
     
