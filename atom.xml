@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-06T08:41:51.498Z</updated>
+  <updated>2019-07-06T08:44:48.405Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
@@ -16,7 +16,7 @@
     <link href="http://yoursite.com/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2019/07/06/前端路径整理/</id>
     <published>2019-07-06T08:20:51.000Z</published>
-    <updated>2019-07-06T08:41:51.498Z</updated>
+    <updated>2019-07-06T08:44:48.405Z</updated>
     
     <summary type="html">
     
@@ -27,7 +27,7 @@
     
     </summary>
     
-      <category term="flex" scheme="http://yoursite.com/categories/flex/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
