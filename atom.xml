@@ -6,10 +6,29 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-09T14:11:08.666Z</updated>
+  <updated>2019-07-23T15:32:51.415Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6篇</title>
+    <link href="http://yoursite.com/2019/07/23/1/"/>
+    <id>http://yoursite.com/2019/07/23/1/</id>
+    <published>2019-07-23T15:30:33.000Z</published>
+    <updated>2019-07-23T15:32:51.415Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h1&gt;&lt;h2 id=&quot;let-和-var-的主要区别-？&quot;&gt;&lt;a href=&quot;#let-和-var-的主要区别-？&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>前端进阶篇</title>
