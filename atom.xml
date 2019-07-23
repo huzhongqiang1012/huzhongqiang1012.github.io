@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-23T15:32:51.415Z</updated>
+  <updated>2019-07-23T15:34:55.803Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
@@ -16,7 +16,7 @@
     <link href="http://yoursite.com/2019/07/23/1/"/>
     <id>http://yoursite.com/2019/07/23/1/</id>
     <published>2019-07-23T15:30:33.000Z</published>
-    <updated>2019-07-23T15:32:51.415Z</updated>
+    <updated>2019-07-23T15:34:55.803Z</updated>
     
     <summary type="html">
     
@@ -26,6 +26,8 @@
       
     
     </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
     
     
   </entry>
@@ -82,7 +84,7 @@
     <link href="http://yoursite.com/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     <id>http://yoursite.com/2019/06/20/微信小程序篇/</id>
     <published>2019-06-20T12:17:51.000Z</published>
-    <updated>2019-07-06T08:40:00.621Z</updated>
+    <updated>2019-07-23T15:34:37.820Z</updated>
     
     <summary type="html">
     
@@ -93,7 +95,7 @@
     
     </summary>
     
-      <category term="flex" scheme="http://yoursite.com/categories/flex/"/>
+      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
