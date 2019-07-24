@@ -6,10 +6,31 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/root/"/>
-  <updated>2019-07-24T13:45:38.233Z</updated>
+  <updated>2019-07-24T13:56:18.788Z</updated>
   <id>http://yoursite.com/root/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SEO优化</title>
+    <link href="http://yoursite.com/root/2019/07/24/1/"/>
+    <id>http://yoursite.com/root/2019/07/24/1/</id>
+    <published>2019-07-24T13:54:40.000Z</published>
+    <updated>2019-07-24T13:56:18.788Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;SEO-搜索引擎优化&quot;&gt;&lt;a href=&quot;#SEO-搜索引擎优化&quot; class=&quot;headerlink&quot; title=&quot;SEO 搜索引擎优化&quot;&gt;&lt;/a&gt;SEO 搜索引擎优化&lt;/h1&gt;&lt;h5 id=&quot;白帽SEO，搜索引擎支持推荐的，三好市民&quot;&gt;&lt;a href=&quot;#白
+      
+    
+    </summary>
+    
+      <category term="SEO" scheme="http://yoursite.com/root/categories/SEO/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>WebQuality</title>
