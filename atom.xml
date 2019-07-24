@@ -96,27 +96,6 @@
   </entry>
   
   <entry>
-    <title>HTML5语义化标签</title>
-    <link href="http://yoursite.com/root/2019/07/24/1/"/>
-    <id>http://yoursite.com/root/2019/07/24/1/</id>
-    <published>2019-07-24T12:46:11.000Z</published>
-    <updated>2019-07-24T12:50:34.921Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;HTML-语义化标签&quot;&gt;&lt;a href=&quot;#HTML-语义化标签&quot; class=&quot;headerlink&quot; title=&quot;HTML 语义化标签&quot;&gt;&lt;/a&gt;HTML 语义化标签&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org
-      
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/root/categories/HTML/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>ES6篇</title>
     <link href="http://yoursite.com/root/2019/07/23/1/"/>
     <id>http://yoursite.com/root/2019/07/23/1/</id>
@@ -456,6 +435,30 @@
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/root/categories/javascript/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/root/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Shawshank Redemption</title>
+    <link href="http://yoursite.com/root/2019/05/20/hello-world/"/>
+    <id>http://yoursite.com/root/2019/05/20/hello-world/</id>
+    <published>2019-05-20T14:29:07.956Z</published>
+    <updated>2019-07-24T12:51:27.892Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;开启博客之旅！😄&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/root/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/root/tags/%E5%8D%9A%E5%AE%A2/"/>
