@@ -6,59 +6,17 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/root/"/>
-  <updated>2019-07-24T13:01:55.280Z</updated>
+  <updated>2019-07-24T13:45:38.233Z</updated>
   <id>http://yoursite.com/root/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Ajax</title>
+    <title>WebQuality</title>
     <link href="http://yoursite.com/root/2019/07/24/1/"/>
     <id>http://yoursite.com/root/2019/07/24/1/</id>
-    <published>2019-07-24T13:01:33.000Z</published>
-    <updated>2019-07-24T13:01:55.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;为什么要使用Ajax&quot;&gt;&lt;a href=&quot;#为什么要使用Ajax&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用Ajax?&quot;&gt;&lt;/a&gt;为什么要使用Ajax?&lt;/h1&gt;&lt;h2 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;header
-      
-    
-    </summary>
-    
-      <category term="Ajax" scheme="http://yoursite.com/root/categories/Ajax/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SEO搜素引擎优化</title>
-    <link href="http://yoursite.com/root/2019/07/24/1/"/>
-    <id>http://yoursite.com/root/2019/07/24/1/</id>
-    <published>2019-07-24T12:48:00.000Z</published>
-    <updated>2019-07-24T13:09:02.152Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;SEO-搜索引擎优化&quot;&gt;&lt;a href=&quot;#SEO-搜索引擎优化&quot; class=&quot;headerlink&quot; title=&quot;SEO 搜索引擎优化&quot;&gt;&lt;/a&gt;SEO 搜索引擎优化&lt;/h1&gt;&lt;h5 id=&quot;白帽SEO，搜索引擎支持推荐的，三好市民&quot;&gt;&lt;a href=&quot;#白
-      
-    
-    </summary>
-    
-      <category term="ESO" scheme="http://yoursite.com/root/categories/ESO/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>WebQuality无障碍访问</title>
-    <link href="http://yoursite.com/root/2019/07/24/1/"/>
-    <id>http://yoursite.com/root/2019/07/24/1/</id>
-    <published>2019-07-24T12:47:21.000Z</published>
-    <updated>2019-07-24T12:52:01.869Z</updated>
+    <published>2019-07-24T13:44:10.000Z</published>
+    <updated>2019-07-24T13:45:38.233Z</updated>
     
     <summary type="html">
     
@@ -69,28 +27,7 @@
     
     </summary>
     
-      <category term="HTML" scheme="http://yoursite.com/root/categories/HTML/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>css媒体查询</title>
-    <link href="http://yoursite.com/root/2019/07/24/1/"/>
-    <id>http://yoursite.com/root/2019/07/24/1/</id>
-    <published>2019-07-24T12:46:34.000Z</published>
-    <updated>2019-07-24T12:52:52.769Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;CSS-媒体查询&quot;&gt;&lt;a href=&quot;#CSS-媒体查询&quot; class=&quot;headerlink&quot; title=&quot;CSS 媒体查询&quot;&gt;&lt;/a&gt;CSS 媒体查询&lt;/h1&gt;&lt;h5 id=&quot;什么是媒体查询-media-query？&quot;&gt;&lt;a href=&quot;#什么是媒体查询-m
-      
-    
-    </summary>
-    
-      <category term="CSS" scheme="http://yoursite.com/root/categories/CSS/"/>
+      <category term="无障碍访问" scheme="http://yoursite.com/root/categories/%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BF%E9%97%AE/"/>
     
     
   </entry>
