@@ -288,10 +288,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 5 个标签
+                目前共计 6 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/AJAX/" style="font-size: 12px; color: #ccc">AJAX</a> <a href="/tags/SEO/" style="font-size: 12px; color: #ccc">SEO</a> <a href="/tags/WebQuality/" style="font-size: 12px; color: #ccc">WebQuality</a> <a href="/tags/html/" style="font-size: 12px; color: #ccc">html</a> <a href="/tags/博客/" style="font-size: 30px; color: #111">博客</a>
+              <a href="/tags/AJAX/" style="font-size: 12px; color: #ccc">AJAX</a> <a href="/tags/SEO/" style="font-size: 12px; color: #ccc">SEO</a> <a href="/tags/WebQuality/" style="font-size: 12px; color: #ccc">WebQuality</a> <a href="/tags/css媒体查询/" style="font-size: 12px; color: #ccc">css媒体查询</a> <a href="/tags/html/" style="font-size: 12px; color: #ccc">html</a> <a href="/tags/博客/" style="font-size: 30px; color: #111">博客</a>
             </div>
           </div>
         
@@ -377,7 +377,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -464,7 +464,33 @@
             </div>
           
 
-          
+          <div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("05/27/2017 15:13:14");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
 
         </div>
       </section>
