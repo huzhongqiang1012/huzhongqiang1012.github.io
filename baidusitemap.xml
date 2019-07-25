@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/child/2019/07/25/1/</loc>
+    <loc>http://yoursite.com/child/2019/07/24/WebQuality/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/24/SEO/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/25/html5/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/25/AJAX/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
     <lastmod>2019-07-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2019/07/25/1/</loc>
-    <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/25/1/</loc>
-    <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/24/1/</loc>
-    <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/24/1/</loc>
     <lastmod>2019-07-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2019/07/23/1/</loc>
@@ -27,9 +30,6 @@
   </url>  <url>
     <loc>http://yoursite.com/child/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AF%87/</loc>
     <lastmod>2019-07-23</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    <lastmod>2019-07-18</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/life/index.html</loc>
     <lastmod>2019-07-18</lastmod>
