@@ -78,17 +78,17 @@
 
 
 
-<meta name="description" content="AV.initialize(“leancloud_appid”, “leancloud_appkey”);   var time=0  var title=””  var url=””  var query = new AV.Query(‘Counter’);  query.notEqualTo(‘id’,0);  query.descending(‘time’);  query.limit">
+<meta name="description" content="AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query">
 <meta property="og:type" content="website">
 <meta property="og:title" content="H-Z-Q">
 <meta property="og:url" content="http://yoursite.com/child/top/index.html">
 <meta property="og:site_name" content="H-Z-Q">
-<meta property="og:description" content="AV.initialize(“leancloud_appid”, “leancloud_appkey”);   var time=0  var title=””  var url=””  var query = new AV.Query(‘Counter’);  query.notEqualTo(‘id’,0);  query.descending(‘time’);  query.limit">
+<meta property="og:description" content="AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T22:55:14.593Z">
+<meta property="og:updated_time" content="2019-07-25T23:17:25.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="H-Z-Q">
-<meta name="twitter:description" content="AV.initialize(“leancloud_appid”, “leancloud_appkey”);   var time=0  var title=””  var url=””  var query = new AV.Query(‘Counter’);  query.notEqualTo(‘id’,0);  query.descending(‘time’);  query.limit">
+<meta name="twitter:description" content="AV.initialize(&quot;leancloud_appid&quot;, &quot;leancloud_appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query">
 
 
 
@@ -299,12 +299,33 @@
       <div class="post-body">
         
         
-          <hr>
-<p><div id="top"></div></p>
-<p><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script></p>
-<p><script>AV.initialize(“leancloud_appid”, “leancloud_appkey”);</script></p>
-<p><script type="text/javascript"><br>  var time=0<br>  var title=””<br>  var url=””<br>  var query = new AV.Query(‘Counter’);<br>  query.notEqualTo(‘id’,0);<br>  query.descending(‘time’);<br>  query.limit(1000);<br>  query.find().then(function (todo) {<br>    for (var i=0;i&lt;1000;i++){<br>      var result=todo[i].attributes;<br>      time=result.time;<br>      title=result.title;<br>      url=result.url;<br>      // var content=”<a href='"+"https://hoxis.github.io"+url+"'>“+title+”</a>“+”<br>“+”<font color='#fff'>“+”阅读次数：”+time+”</font>“+”<br><br>“;<br>      var content=”<p>“+”<font color='#1C1C1C'>“+”【文章热度:”+time+”℃】”+”</font>“+”<a href='"+"https://hoxis.github.io"+url+"'>“+title+”</a>“+”</p>“;<br>      document.getElementById(“top”).innerHTML+=content<br>    }<br>  }, function (error) {<br>    console.log(“error”);<br>  });</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></script></p>
+          <p><div id="top"></div></p>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script>AV.initialize("leancloud_appid", "leancloud_appkey");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(1000);
+  query.find().then(function (todo) {
+    for (var i=0;i<1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      // var content="<a href='"+"https://hoxis.github.io"+url+"'>"+title+"</a>"+"<br>"+"<font color='#fff'>"+"阅读次数："+time+"</font>"+"<br><br>";
+      var content="<p>"+"<font color='#1C1C1C'>"+"【文章热度:"+time+"℃】"+"</font>"+"<a href='"+"https://hoxis.github.io"+url+"'>"+title+"</a>"+"</p>";
+      document.getElementById("top").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
+
+
         
       </div>
       
