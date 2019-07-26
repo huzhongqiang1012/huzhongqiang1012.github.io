@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>朽木</title>
+  <title>伍陆柒</title>
   
   <subtitle>不积跬步，无以至千里；不积小流，无以成江海</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -8,6 +8,11 @@
   <link href="http://yoursite.com/child/"/>
   <updated>2019-07-25T22:18:03.337Z</updated>
   <id>http://yoursite.com/child/</id>
+  
+  <author>
+    <name>HuZhongQiang</name>
+    
+  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
