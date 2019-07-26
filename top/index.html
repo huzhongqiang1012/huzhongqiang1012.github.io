@@ -65,7 +65,7 @@
 
 
 
-  <meta name="keywords" content="top,文章阅读量排行榜">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -78,18 +78,17 @@
 
 
 
-<meta name="description" content="博客文章阅读量排行榜">
-<meta name="keywords" content="top,文章阅读量排行榜">
+<meta name="description" content="AV.initialize(&quot;填你的appid&quot;, &quot;填你的appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query.limit(15);">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TopX &#x2F;* 可以不为 TopX，随便取 *&#x2F;">
+<meta property="og:title" content="阅读排行榜">
 <meta property="og:url" content="http://yoursite.com/child/top/index.html">
 <meta property="og:site_name" content="H-Z-Q">
-<meta property="og:description" content="博客文章阅读量排行榜">
+<meta property="og:description" content="AV.initialize(&quot;填你的appid&quot;, &quot;填你的appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query.limit(15);">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T23:25:56.478Z">
+<meta property="og:updated_time" content="2019-07-25T23:49:50.258Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TopX &#x2F;* 可以不为 TopX，随便取 *&#x2F;">
-<meta name="twitter:description" content="博客文章阅读量排行榜">
+<meta name="twitter:title" content="阅读排行榜">
+<meta name="twitter:description" content="AV.initialize(&quot;填你的appid&quot;, &quot;填你的appkey&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.descending(&apos;time&apos;);   query.limit(15);">
 
 
 
@@ -128,7 +127,7 @@
 
 
 
-  <title>TopX /* 可以不为 TopX，随便取 */ | H-Z-Q</title>
+  <title>阅读排行榜 | H-Z-Q</title>
   
 
 
@@ -288,12 +287,8 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">TopX /* 可以不为 TopX，随便取 */</h1>
+	<h1 class="post-title" itemprop="name headline">阅读排行榜</h1>
 
-
-	<div class="post-meta">
-		<div class="post-description">博客文章阅读量排行榜</div>
-	</div>
 
 
 </header>
@@ -304,33 +299,30 @@
       <div class="post-body">
         
         
-          <div id="top"></div>
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script>AV.initialize("app_id", "app_key");</script>
+          <p><div id="rank"></div></p>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script>AV.initialize("填你的appid", "填你的appkey");</script>
 <script type="text/javascript">
-    var time=0
-    var title=""
-    var url=""
-    var query = new AV.Query('Counter');
-    query.notEqualTo('id',0);
-    query.descending('time');
-    query.limit(1000);
-    query.find().then(function (todo) {
-        for (var i=0;i<1000;i++){
-            var result=todo[i].attributes;
-            time=result.time;
-            title=result.title;
-            url=result.url;
-            var content="<a href='"+"https://reuixiy.github.io"+url+"'>"+title+"</a>"+"<br />"+"<font color='#555'>"+"阅读次数："+time+"</font>"+"<br /><br />";
-            document.getElementById("top").innerHTML+=content
-        }
-    }, function (error) {
-        console.log("error");
-    });
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(15);
+  query.find().then(function (todo) {
+    for (var i=0;i<15;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<p>"+"<font color=#a7a7e5>"+"🌸 Time number: "+"</font>"+"<font color=#f1a8ce>"+time+"次  "+"</font>"+"<a href='"+"https://leflacon.github.io"+url+"'>"+title+"</a>"+"</p>";
+      document.getElementById("rank").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
 </script>
-
-<style>.post-description { display: none; }</style>
         
       </div>
       
@@ -525,7 +517,7 @@
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+  <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder"></span>
