@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/about/index.html</loc>
+    
+    <lastmod>2019-07-26T12:03:55.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/2019/07/23/1/</loc>
+    
+    <lastmod>2019-07-26T12:02:53.707Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/Photography/index.html</loc>
+    
+    <lastmod>2019-07-26T12:01:28.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/top/index.html</loc>
+    
+    <lastmod>2019-07-26T12:01:03.511Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/categories/index.html</loc>
+    
+    <lastmod>2019-07-26T12:00:47.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/2019/07/24/WebQuality/</loc>
     
     <lastmod>2019-07-26T00:13:59.864Z</lastmod>
@@ -12,13 +47,6 @@
     <loc>http://yoursite.com/child/Hobby/index.html</loc>
     
     <lastmod>2019-07-26T00:10:31.523Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/top/index.html</loc>
-    
-    <lastmod>2019-07-25T23:49:50.258Z</lastmod>
     
   </url>
   
@@ -47,13 +75,6 @@
     <loc>http://yoursite.com/child/2019/07/25/AJAX/</loc>
     
     <lastmod>2019-07-25T22:18:03.337Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/2019/07/23/1/</loc>
-    
-    <lastmod>2019-07-24T12:59:16.921Z</lastmod>
     
   </url>
   
@@ -93,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/child/Photography/index.html</loc>
-    
-    <lastmod>2019-07-07T17:12:03.383Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/child/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/</loc>
     
     <lastmod>2019-07-06T08:44:48.405Z</lastmod>
@@ -117,13 +131,6 @@
     <loc>http://yoursite.com/child/2019/06/15/Javascript%E9%97%AD%E5%8C%85/</loc>
     
     <lastmod>2019-06-15T07:31:42.809Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/about/index.html</loc>
-    
-    <lastmod>2019-06-11T17:07:03.522Z</lastmod>
     
   </url>
   
@@ -187,13 +194,6 @@
     <loc>http://yoursite.com/child/2019/05/27/JavaScript%E5%87%BD%E6%95%B0%E7%AF%87/</loc>
     
     <lastmod>2019-05-27T11:46:31.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/categories/index.html</loc>
-    
-    <lastmod>2019-05-20T17:49:10.976Z</lastmod>
     
   </url>
   

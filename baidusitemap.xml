@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/child/about/index.html</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/23/1/</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/Photography/index.html</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/child/2019/07/24/WebQuality/</loc>
     <lastmod>2019-07-26</lastmod>
   </url>  <url>
@@ -19,9 +28,6 @@
     <loc>http://yoursite.com/child/2019/07/25/AJAX/</loc>
     <lastmod>2019-07-25</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/23/1/</loc>
-    <lastmod>2019-07-24</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/child/2019/06/15/Flex%E5%B8%83%E5%B1%80/</loc>
     <lastmod>2019-07-24</lastmod>
   </url>  <url>
@@ -36,9 +42,6 @@
   </url>  <url>
     <loc>http://yoursite.com/child/2019/07/08/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
     <lastmod>2019-07-09</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/Photography/index.html</loc>
-    <lastmod>2019-07-07</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/</loc>
     <lastmod>2019-07-06</lastmod>
