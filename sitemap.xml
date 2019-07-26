@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
+    
+    <lastmod>2019-07-26T13:55:59.936Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/top/index.html</loc>
     
-    <lastmod>2019-07-26T13:39:36.954Z</lastmod>
+    <lastmod>2019-07-26T13:45:26.562Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>http://yoursite.com/child/2019/07/24/WebQuality/</loc>
     
     <lastmod>2019-07-26T00:13:59.864Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    
-    <lastmod>2019-07-26T00:10:31.523Z</lastmod>
     
   </url>
   
