@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="SEO优化">
 <meta property="og:url" content="http://yoursite.com/child/2019/07/24/SEO/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="SEO 搜索引擎优化白帽SEO，搜索引擎支持推荐的，三好市民 网站标题、关键字、描述、 网站内容优化 网站结构布局优化—语义化标签 Robot.txt文件 网站地图 增加外链引用  网站结构布局优化 扁平化结构，不得超过3层嵌套 控制首页链接数量( 100个以内 ) 扁平化的目录层次（ 3层就能达到内页 ） 导航SEO优化  面包屑导航 让用户了解当前所处位置 使用户可以了解网站组织形式">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/SEO.jpg">
@@ -131,7 +131,7 @@
 
 
 
-  <title>SEO优化 | H-Z-Q</title>
+  <title>SEO优化 | 朽木</title>
   
 
 
@@ -161,7 +161,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -317,7 +317,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="H-Z-Q">
+      <meta itemprop="name" content="朽木">
     </span>
 
     
@@ -372,6 +372,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/24/SEO/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/24/SEO/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -646,6 +656,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1065,6 +1078,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

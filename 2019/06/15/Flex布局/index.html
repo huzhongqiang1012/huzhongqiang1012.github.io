@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flex布局">
 <meta property="og:url" content="http://yoursite.com/child/2019/06/15/Flex布局/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="一、Flex布局是什么？Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。 任何一个容器都可以指定为Flex布局。 123.box&amp;#123;  display: flex;&amp;#125; 行内元素也可以使用Flex布局。 123.box&amp;#123;  display: inline-flex;&amp;#125; Webkit内核的浏览器，必须加上-webkit前">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png">
@@ -143,7 +143,7 @@
 
 
 
-  <title>Flex布局 | H-Z-Q</title>
+  <title>Flex布局 | 朽木</title>
   
 
 
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -329,7 +329,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="H-Z-Q">
+      <meta itemprop="name" content="朽木">
     </span>
 
     
@@ -384,6 +384,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/15/Flex布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/15/Flex布局/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -729,6 +739,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1148,6 +1161,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

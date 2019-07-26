@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="WebQuality">
 <meta property="og:url" content="http://yoursite.com/child/2019/07/24/WebQuality/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="Web Quality - 无障碍访问能够被残障人士使用的网站才能称得上一个易用的（易访问的）网站。 残障人士指的是那些带有残疾或者身体不健康的用户。  Web Accessibility Initiative - WAIWAI （由 W3C 在1997年发起）是一系列计划供 web 开发者、创作者以及设计者使用的指导方针 - 关于如何使内容对残障人士更易用。 这些指导方针的目标是易用性（acce">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.runoob.com/images/lamp.gif">
@@ -130,7 +130,7 @@
 
 
 
-  <title>WebQuality | H-Z-Q</title>
+  <title>WebQuality | 朽木</title>
   
 
 
@@ -160,7 +160,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -316,7 +316,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="H-Z-Q">
+      <meta itemprop="name" content="朽木">
     </span>
 
     
@@ -371,6 +371,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/24/WebQuality/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/24/WebQuality/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -634,6 +644,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1053,6 +1066,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

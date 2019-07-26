@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -82,7 +82,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="相册">
 <meta property="og:url" content="http://yoursite.com/child/Photography/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/IMG_2397.JPG">
 <meta property="og:updated_time" content="2019-07-07T17:12:03.383Z">
@@ -127,7 +127,7 @@
 
 
 
-  <title>相册 | H-Z-Q</title>
+  <title>相册 | 朽木</title>
   
 
 
@@ -157,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -329,6 +329,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -723,6 +726,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

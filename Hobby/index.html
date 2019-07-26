@@ -73,7 +73,7 @@
   
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="收藏">
 <meta property="og:url" content="http://yoursite.com/child/Hobby/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="必备利器 PicGo图床 Typora写作 利器清单 Shadowsocks X 鸠摩搜书  Mac 少数派 数码荔枝 MAC派 最全Mac破解  windows windows导航 MSDN TypingClub打字练习  HEXO建站 轻松入门 Hexo HEXO官网主题 Hexo博客+Next主题深度优化与定制 一些有趣的博客 hexo 建站分类  电影 bt之家">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-26T00:10:31.523Z">
@@ -130,7 +130,7 @@
 
 
 
-  <title>收藏 | H-Z-Q</title>
+  <title>收藏 | 朽木</title>
   
 
 
@@ -160,7 +160,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -360,6 +360,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -779,6 +782,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

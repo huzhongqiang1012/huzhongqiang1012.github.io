@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -82,7 +82,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6篇">
 <meta property="og:url" content="http://yoursite.com/child/2019/07/23/1/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="ES6let 和 var 的主要区别 ？ let 声明的变量只在当前作用域内有效 let声明的变量不能被重复声明 不存在变量提升 ES6之前的作用域：全局作用域、函数作用域、eval作用域、ES6块级作用域  ES6块级作用域是什么？包裹在花括号中的区域{…….}， 如下： 12345if()&amp;#123;&amp;#125; switch()&amp;#123;&amp;#125;for()&amp;#123;&amp;#125;try">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-24T12:59:16.921Z">
@@ -127,7 +127,7 @@
 
 
 
-  <title>ES6篇 | H-Z-Q</title>
+  <title>ES6篇 | 朽木</title>
   
 
 
@@ -157,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -313,7 +313,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="H-Z-Q">
+      <meta itemprop="name" content="朽木">
     </span>
 
     
@@ -368,6 +368,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/23/1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/23/1/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -601,6 +611,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1020,6 +1033,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

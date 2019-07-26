@@ -71,7 +71,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="H-Z-Q" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="朽木" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript错误处理">
 <meta property="og:url" content="http://yoursite.com/child/2019/05/30/JavaScript错误处理/index.html">
-<meta property="og:site_name" content="H-Z-Q">
+<meta property="og:site_name" content="朽木">
 <meta property="og:description" content="JavaScript 错误处理语法错误1简单来说，语法错误就是不符合JS语法的错误。出现语法错误，控制台会进行报错并告知出错的行号（但行号不一定准确）。 常见的语法错误有12345**符号漏打，多大，少打，错打****使用了不符合语法的变量名****语句写错了，没写完** 1234567891011121314151617// 语法错误： token = 符号错误Uncaught SyntaxEr">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-05-30T13:29:52.189Z">
@@ -128,7 +128,7 @@
 
 
 
-  <title>JavaScript错误处理 | H-Z-Q</title>
+  <title>JavaScript错误处理 | 朽木</title>
   
 
 
@@ -158,7 +158,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">H-Z-Q</span>
+        <span class="site-title">朽木</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -314,7 +314,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="H-Z-Q">
+      <meta itemprop="name" content="朽木">
     </span>
 
     
@@ -369,6 +369,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/30/JavaScript错误处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/30/JavaScript错误处理/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -614,6 +624,9 @@
 
           
   
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -1033,6 +1046,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
