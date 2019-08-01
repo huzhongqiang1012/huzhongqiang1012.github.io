@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
+    
+    <lastmod>2019-08-01T14:13:00.538Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/Little/index.html</loc>
     
     <lastmod>2019-08-01T13:55:54.485Z</lastmod>
@@ -33,20 +40,6 @@
     <loc>http://yoursite.com/child/2019/06/15/Flex%E5%B8%83%E5%B1%80/</loc>
     
     <lastmod>2019-07-28T14:00:55.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    
-    <lastmod>2019-07-28T12:48:35.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/top/index.html</loc>
-    
-    <lastmod>2019-07-26T13:45:26.562Z</lastmod>
     
   </url>
   
@@ -138,13 +131,6 @@
     <loc>http://yoursite.com/child/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/</loc>
     
     <lastmod>2019-07-06T08:44:48.405Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/tags/index.html</loc>
-    
-    <lastmod>2019-07-02T15:45:04.815Z</lastmod>
     
   </url>
   
