@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2019-08-05T14:14:28.737Z</updated>
+  <updated>2019-08-05T15:51:51.558Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Macmini融合硬盘双系统完美版</title>
+    <link href="http://yoursite.com/child/2019/08/05/1/"/>
+    <id>http://yoursite.com/child/2019/08/05/1/</id>
+    <published>2019-08-05T15:48:30.000Z</published>
+    <updated>2019-08-05T15:51:51.558Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/1.png&quot; alt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;解救融合硬盘版-iMac：将-Windows-10-放入内置固态硬
+      
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://yoursite.com/child/categories/Mac/"/>
+    
+    
+      <category term="MacOS" scheme="http://yoursite.com/child/tags/MacOS/"/>
+    
+  </entry>
   
   <entry>
     <title>一岗多职</title>
@@ -445,29 +469,6 @@
       
       
         &lt;h1 id=&quot;Array数组&quot;&gt;&lt;a href=&quot;#Array数组&quot; class=&quot;headerlink&quot; title=&quot;Array数组&quot;&gt;&lt;/a&gt;Array数组&lt;/h1&gt;&lt;h2 id=&quot;Array构造函数&quot;&gt;&lt;a href=&quot;#Array构造函数&quot; class=&quot;header
-      
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/child/categories/javascript/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript函数篇</title>
-    <link href="http://yoursite.com/child/2019/05/27/JavaScript%E5%87%BD%E6%95%B0%E7%AF%87/"/>
-    <id>http://yoursite.com/child/2019/05/27/JavaScript函数篇/</id>
-    <published>2019-05-26T16:30:40.000Z</published>
-    <updated>2019-05-27T11:46:31.401Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;JavaScript函数&quot;&gt;&lt;a href=&quot;#JavaScript函数&quot; class=&quot;headerlink&quot; title=&quot;JavaScript函数&quot;&gt;&lt;/a&gt;JavaScript函数&lt;/h2&gt;&lt;p&gt;通过函数可以封装人意多条语句，而且可以在任何时间调用该函数。
       
     
     </summary>
