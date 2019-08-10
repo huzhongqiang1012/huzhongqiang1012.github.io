@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2019-08-06T12:16:03.591Z</updated>
+  <updated>2019-08-10T16:36:22.923Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ProcessOn 在线作图</title>
+    <link href="http://yoursite.com/child/2019/08/11/ProcessOn/"/>
+    <id>http://yoursite.com/child/2019/08/11/ProcessOn/</id>
+    <published>2019-08-10T16:20:50.000Z</published>
+    <updated>2019-08-10T16:36:22.923Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;免费在线作图，实时协作&quot;&gt;&lt;a href=&quot;#免费在线作图，实时协作&quot; class=&quot;headerlink&quot; title=&quot;免费在线作图，实时协作&quot;&gt;&lt;/a&gt;免费在线作图，实时协作&lt;/h1&gt;&lt;p&gt;ProcessOn 支持流程图、思维导图、原型图、UML、网络拓扑图
+      
+    
+    </summary>
+    
+    
+      <category term="ProcessOn" scheme="http://yoursite.com/child/tags/ProcessOn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NPM-包管理工具</title>
+    <link href="http://yoursite.com/child/2019/08/07/NPM/"/>
+    <id>http://yoursite.com/child/2019/08/07/NPM/</id>
+    <published>2019-08-07T13:52:33.000Z</published>
+    <updated>2019-08-07T13:53:37.240Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在正式开始Node.js学习之前，我们先认识一下npm。&lt;/p&gt;
+&lt;p&gt;npm是什么东东？npm其实是Node.js的包管理工具（package manager）。&lt;/p&gt;
+&lt;p&gt;为啥我们需要一个包管理工具呢？因为我们在Node.js上开发时，会用到很多别人写的JavaSc
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Macmini融合硬盘双系统完美版</title>
@@ -423,52 +465,6 @@
       
         &lt;p&gt;Dom 是Document Object Model （文档对象模型）的缩写&lt;/p&gt;
 &lt;p&gt;文档对象模型（DOM） 是HTML和XML文档的&lt;strong&gt;编程接口&lt;/strong&gt;，它提供了对文档的结构优化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文
-      
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/child/categories/javascript/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript错误处理</title>
-    <link href="http://yoursite.com/child/2019/05/30/JavaScript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/"/>
-    <id>http://yoursite.com/child/2019/05/30/JavaScript错误处理/</id>
-    <published>2019-05-30T13:19:59.000Z</published>
-    <updated>2019-05-30T13:29:52.189Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;JavaScript-错误处理&quot;&gt;&lt;a href=&quot;#JavaScript-错误处理&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 错误处理&quot;&gt;&lt;/a&gt;JavaScript 错误处理&lt;/h2&gt;&lt;h4 id=&quot;语法错误&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/child/categories/javascript/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript内置对象篇</title>
-    <link href="http://yoursite.com/child/2019/05/27/JavaScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/child/2019/05/27/JavaScript内置对象/</id>
-    <published>2019-05-27T11:44:22.000Z</published>
-    <updated>2019-06-01T16:43:38.092Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Array数组&quot;&gt;&lt;a href=&quot;#Array数组&quot; class=&quot;headerlink&quot; title=&quot;Array数组&quot;&gt;&lt;/a&gt;Array数组&lt;/h1&gt;&lt;h2 id=&quot;Array构造函数&quot;&gt;&lt;a href=&quot;#Array构造函数&quot; class=&quot;header
       
     
     </summary>
