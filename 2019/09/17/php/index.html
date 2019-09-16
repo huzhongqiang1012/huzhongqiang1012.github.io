@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="php,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="不进则退" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1、PHP基础语法标准格式（XML格式）123&amp;lt;?php	// 代码块?&amp;gt; script 格式123&amp;lt;script language=&quot;php&quot; &amp;gt;	echo date(&apos;Y-m-d H:i:s&apos;);&amp;lt;/script&amp;gt; 短格式123456789101112131415161718&amp;lt;?   短格式  ?&amp;gt;            /*需要配置php.in">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php基础学习">
+<meta property="og:url" content="http://yoursite.com/child/2019/09/17/php/index.html">
+<meta property="og:site_name" content="不进则退">
+<meta property="og:description" content="1、PHP基础语法标准格式（XML格式）123&amp;lt;?php	// 代码块?&amp;gt; script 格式123&amp;lt;script language=&quot;php&quot; &amp;gt;	echo date(&apos;Y-m-d H:i:s&apos;);&amp;lt;/script&amp;gt; 短格式123456789101112131415161718&amp;lt;?   短格式  ?&amp;gt;            /*需要配置php.in">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/Windows-PicGo/master/img/数据结构.png">
+<meta property="og:updated_time" content="2019-09-16T16:17:36.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php基础学习">
+<meta name="twitter:description" content="1、PHP基础语法标准格式（XML格式）123&amp;lt;?php	// 代码块?&amp;gt; script 格式123&amp;lt;script language=&quot;php&quot; &amp;gt;	echo date(&apos;Y-m-d H:i:s&apos;);&amp;lt;/script&amp;gt; 短格式123456789101112131415161718&amp;lt;?   短格式  ?&amp;gt;            /*需要配置php.in">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/huzhongqiang1012/Windows-PicGo/master/img/数据结构.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: "",
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/child/2019/09/17/php/">
+
+
+
+
+
+
+
+
+  <title>php基础学习 | 不进则退</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">不进则退</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">纸上得来终觉浅，绝知此事要躬行</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-check"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br>
+            
+            前端
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>
+            
+            收藏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photography">
+          <a href="/photography/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-picture-o"></i> <br>
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-personallog">
+          <a href="/Personallog" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            语录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-little">
+          <a href="/Little/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-key"></i> <br>
+            
+            私人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2019/09/17/php/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuZhongQiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/GG.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不进则退">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">php基础学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-17T00:15:16+08:00">
+                2019-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/17/php/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/17/php/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1、PHP基础语法"><a href="#1、PHP基础语法" class="headerlink" title="1、PHP基础语法"></a>1、PHP基础语法</h3><h4 id="标准格式（XML格式）"><a href="#标准格式（XML格式）" class="headerlink" title="标准格式（XML格式）"></a>标准格式（XML格式）</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="comment">// 代码块</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="script-格式"><a href="#script-格式" class="headerlink" title="script 格式"></a>script 格式</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=<span class="string">"php"</span> &gt;</span><br><span class="line">	<span class="keyword">echo</span> date(<span class="string">'Y-m-d H:i:s'</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="短格式"><a href="#短格式" class="headerlink" title="短格式"></a>短格式</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?</span>   短格式  <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">需要配置php.ini，默认未开启短格式</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">; http://php.net/short-open-tag</span></span><br><span class="line"><span class="comment">short_open_tag = Off</span></span><br><span class="line"><span class="comment">short_open_tag = On   ----开启短格式标签</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">; Allow ASP-style &lt;% %&gt; tags.</span></span><br><span class="line"><span class="comment">; http://php.net/asp-tags</span></span><br><span class="line"><span class="comment">asp_tags = Off</span></span><br><span class="line"><span class="comment">asp_tags = On		----开启asp格式的标签</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><h4 id="asp格式"><a href="#asp格式" class="headerlink" title="asp格式"></a>asp格式</h4></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%  asp格式  %&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 单行注释</span><br><span class="line"></span><br><span class="line">/* */ 多行注释</span><br></pre></td></tr></table></figure>
+<h3 id="2、变量及操作"><a href="#2、变量及操作" class="headerlink" title="2、变量及操作"></a>2、变量及操作</h3><p>程序语言就是对内存进行操作（对内存进行读写操作）</p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>变量是内存中 用于临时存储数据的一个空间，这个空间有一个名字，就是这个变量名，变量名是用于对这个内存中的数据进行引用的。</p>
+<h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><p>语法：$变量名 =  值</p>
+<p>说明：</p>
+<p>​            php中的变量必须参 $ 开头，变量名只能包含字母/数字/下划线，只能以字母，下划线开头。</p>
+<p>示例：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$v1  = <span class="number">1</span>;</span><br><span class="line">$v2 = <span class="number">2</span>;</span><br><span class="line">$r = $v1 +  $v2;</span><br><span class="line"><span class="keyword">echo</span>  $r;    <span class="comment">// 输出 $r  = 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="修改变量"><a href="#修改变量" class="headerlink" title="修改变量"></a>修改变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="number">10</span>;	<span class="comment">// 定义变量</span></span><br><span class="line"></span><br><span class="line">$v1 = <span class="number">20</span>;	<span class="comment">// 修改变量 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $v1;	<span class="comment">// 输出变量</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除变量"><a href="#删除变量" class="headerlink" title="删除变量"></a>删除变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">echo</span> $v1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">unset</span>($v1); <span class="comment">// 删掉变量，就是将变量从内存中销毁</span></span><br></pre></td></tr></table></figure>
+<h4 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a>可变变量</h4><p>通过一个变量，访问另外一个变量</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$v = <span class="string">'age'</span>; <span class="comment">// 创建变量</span></span><br><span class="line">$age = <span class="number">20</span>;  <span class="comment">// 变量赋值 </span></span><br><span class="line"><span class="keyword">echo</span> $v;    <span class="comment">// 输出变量时，$v解析为  age  </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $$v;   <span class="comment">// 输出变量时，$$v解析为 $age 的值 20 （这就是可变变量）</span></span><br></pre></td></tr></table></figure>
+<p>通过一个变量，创建另外一个变量</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$v = <span class="string">'age'</span>;</span><br><span class="line">$$v = <span class="number">20</span>;	<span class="comment">// 通过这个可变变量，创建了一个变量</span></span><br><span class="line"><span class="keyword">echo</span> $age;  <span class="comment">// 输出</span></span><br></pre></td></tr></table></figure>
+<h4 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a>预定义变量</h4><p>PHP为我们预先定义了一组变量，这些变量会在不同的需求中使用</p>
+<ul>
+<li>$_GET        用于接收  get 方式提交的数据</li>
+<li>$_POST     用于接收 post 方式提交的数据</li>
+<li>$_REQUEST   用于 get 或 post 方法提交的数据</li>
+<li>$_SERVER      记录了服务器端与客户端的相关信息緟⚠</li>
+<li>$_COOKIE       一种会话技术</li>
+<li>$_SESSION    一种会话技术</li>
+<li>$_FILES         用于记录用户上传的文件信息</li>
+<li>$_GLOBAL     用于记录全局变量</li>
+</ul>
+<h3 id="3、内存原理（形象理解）"><a href="#3、内存原理（形象理解）" class="headerlink" title="3、内存原理（形象理解）"></a>3、内存原理（形象理解）</h3><p>程序语言就是对内存进行操作的</p>
+<h4 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h4><ol>
+<li><p>栈区</p>
+<p> 保存变量点（术语称之为引用），</p>
+<p> 特点：对于CPU来说，读写速度是最快的</p>
+</li>
+<li><p>堆区</p>
+<p> 存储“复杂”的数据，数组/ 对象</p>
+</li>
+<li><p>数据段</p>
+<p> 存储的是简单的数据，例如：整型、浮点型、布尔值</p>
+</li>
+<li><p>代码段</p>
+<p> 存储的是源代码的对应的机器指令（人能看懂的计算机是看不懂的，必须经过转换）</p>
+</li>
+<li><p>输出缓存</p>
+<p> 只要遇到输出指令，例如：echo 、print 、print_r、var_dump,这些指令都会将所有数据都放在 输出缓存中。</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/huzhongqiang1012/Windows-PicGo/master/img/数据结构.png" alt></p>
+<h4 id="PHP执行过程"><a href="#PHP执行过程" class="headerlink" title="PHP执行过程"></a>PHP执行过程</h4><ol>
+<li>编译阶段<ol>
+<li>语法检查、词法检查、代码优化</li>
+<li>编译通过后将源代码转换为机器指令</li>
+</ol>
+</li>
+</ol>
+<p>​      特点：编译阶段错误的提示信息如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Parse error : xxxxxxxxxxx</span><br><span class="line">语法错误/ 引用错误 ....</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>执行阶段</p>
+<p> 如果编译通过后，会将源代码对应的机器指令，保存在代码段，再开始执行代码段中的机器指令</p>
+</li>
+<li><p>程序执行结束</p>
+<p> 输出缓存中的数据会自动返回给apache ,apche 自动返回给浏览器，同时会清除栈区中的内容，同时，数据段中的数据也会被系统销毁，代码段中的数据会销毁。</p>
+</li>
+</ol>
+<h4 id="PHP嵌入到HTML的执行过程"><a href="#PHP嵌入到HTML的执行过程" class="headerlink" title="PHP嵌入到HTML的执行过程"></a>PHP嵌入到HTML的执行过程</h4><p>当PHP功能模块在处理一个PHP文件时，它只关心PHP代码（使用PHP标签包含的代码）。对于非PHP代码它会原样输出。</p>
+<p><strong>PHP仅处理&lt;?php ?&gt;标签内的代码，js /html /css /对于PHP来说都是字符串</strong></p>
+<h4 id="PHP中变量的传值方式"><a href="#PHP中变量的传值方式" class="headerlink" title="PHP中变量的传值方式"></a>PHP中变量的传值方式</h4><p>在PHP中变量有俩种传值方式：</p>
+<p>1.赋值传值</p>
+<p>​    使用一个变量a为另一个变量b赋值时，<strong>传递的是变量a的值</strong>，这种赋值方式就是赋值传值。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$v1 = <span class="number">10</span>;</span><br><span class="line">	$v2 = $v1;   <span class="comment">// 将变量$v1的值赋值给变量$v2 </span></span><br><span class="line">	$v2 = <span class="number">20</span>;</span><br><span class="line">	<span class="keyword">echo</span> $v1;    <span class="comment">//  10</span></span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.引用传值</p>
+<p>使用一个变量a 为另外一个变量b 赋值时，<strong>传递的是变量  a 的地址</strong>，这种赋值方式就是赋值传值</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$v1 = <span class="number">10</span>;</span><br><span class="line">	$v2 = &amp;$v1;   <span class="comment">// $v2 和 $v1 俩个地址指向的同一的堆空间，改变一个，俩都会改变</span></span><br><span class="line">	$v2 = <span class="number">20</span>;</span><br><span class="line">	<span class="keyword">echo</span> $v1;    <span class="comment">//  20</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>提示：js种不允许认为的更改传值的方式，但是php中可以使用地址符 “&amp;”, 来将赋值传值，更改为引用传值（单向的）</p>
+<h3 id="4-常量"><a href="#4-常量" class="headerlink" title="4.常量"></a>4.常量</h3><h4 id="常量的概念"><a href="#常量的概念" class="headerlink" title="常量的概念"></a>常量的概念</h4><p>常量就是一种特殊的变量，也是用于存储数据，常量一旦定义就不允许修改其值，常量本身也不允许删除。</p>
+<h4 id="常量的定义"><a href="#常量的定义" class="headerlink" title="常量的定义"></a>常量的定义</h4><h5 id="语法1：define-“常量名”，值"><a href="#语法1：define-“常量名”，值" class="headerlink" title="语法1：define(“常量名”，值)"></a>语法1：define(“常量名”，值)</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">"PI"</span>, <span class="number">123</span> );</span><br><span class="line"><span class="keyword">echo</span> PI;</span><br></pre></td></tr></table></figure>
+<h5 id="语法2：const-常量名-值"><a href="#语法2：const-常量名-值" class="headerlink" title="语法2：const  常量名 = 值"></a>语法2：const  常量名 = 值</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PE = <span class="string">'123'</span>;</span><br><span class="line"><span class="keyword">echo</span>  PE;</span><br></pre></td></tr></table></figure>
+<p>说明：常量一旦定义就不允许更改</p>
+<p>常量的值只能是<strong>基本数据类型</strong>（标量数据类型）</p>
+<p>常量默认区分大小写，一般常量命名时，我们会大写形式。    </p>
+<p>​        </p>
+<h4 id="定义区别-define-VS-const"><a href="#定义区别-define-VS-const" class="headerlink" title="定义区别    define  VS  const"></a>定义区别    define  VS  const</h4><p>define 语法可以在分支结构中定义常量，constant</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">	define(<span class="string">'PI'</span>,<span class="number">2133</span>);   <span class="comment">// 正确语法</span></span><br><span class="line">	<span class="keyword">const</span> PI = <span class="number">2133</span>;	 <span class="comment">// 错误语法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="常量的判断及获取所有常量"><a href="#常量的判断及获取所有常量" class="headerlink" title="常量的判断及获取所有常量"></a>常量的判断及获取所有常量</h4><ol>
+<li>defined(常量名称)；</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个常量</span></span><br><span class="line">define(<span class="string">"PI"</span>, <span class="number">12345</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断常量是否存在</span></span><br><span class="line">$result = defined(<span class="string">'PI'</span>);</span><br><span class="line">var_dump($result);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>获取所有的常量</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取所有常量</span></span><br><span class="line">$return = get_defined_constants();</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;pre&gt;"</span>; <span class="comment">// 换行</span></span><br><span class="line">print_r($return);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/pre&gt;"</span>;<span class="comment">// 换行</span></span><br></pre></td></tr></table></figure>
+<h4 id="魔术常量"><a href="#魔术常量" class="headerlink" title="魔术常量"></a>魔术常量</h4><ul>
+<li><strong> FILE </strong>  获取前文件夹名完整路径及文件名</li>
+<li><strong> DIR </strong>    获取前文件夹名的路径</li>
+<li><strong> LINE </strong>  获取代码行号</li>
+<li><strong> FUNCTION </strong>  获取当前函数的函数名</li>
+<li><strong> METHOD </strong>   获取当前方法的方法名</li>
+<li><strong> CLASS </strong>  获取当前类的类名</li>
+<li><strong> NAMESPACE </strong>    获取当前空间的空间名</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 魔术常量</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__FILE__</span>,<span class="string">"&lt;br/&gt;"</span>;  <span class="comment">//获取前文件夹名完整路径及文件名</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__DIR__</span>,<span class="string">"&lt;br/&gt;"</span>;		   <span class="comment">//获取前文件夹名的路径</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__LINE__</span>,<span class="string">"&lt;br/&gt;"</span>;  <span class="comment">//获取代码行号</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5.数据类型"></a>5.数据类型</h3><p>PHP数据类型分为三大类八小类</p>
+<h5 id="数据类型分类"><a href="#数据类型分类" class="headerlink" title="数据类型分类"></a>数据类型分类</h5><ul>
+<li><p><strong>标量类型</strong></p>
+<ul>
+<li>int     整型</li>
+<li>float    浮点类型</li>
+<li>boolean    布尔类型</li>
+<li>string    字符串</li>
+</ul>
+</li>
+<li><p><strong>复合类型：</strong></p>
+<ul>
+<li>array    数组</li>
+<li>object    对象</li>
+</ul>
+</li>
+<li><p><strong>特殊类型</strong></p>
+<ul>
+<li>null    null</li>
+<li>resource    资源类型</li>
+</ul>
+</li>
+</ul>
+<h5 id="整数（int）类型"><a href="#整数（int）类型" class="headerlink" title="整数（int）类型"></a>整数（int）类型</h5><p>线性的整数</p>
+<h6 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="number">255</span>;</span><br><span class="line"><span class="keyword">echo</span> $v1; <span class="comment">// 结果：255</span></span><br></pre></td></tr></table></figure>
+<h6 id="八进制"><a href="#八进制" class="headerlink" title="八进制"></a>八进制</h6><p>以0开头，并且不能有超过7的数字</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$v2 = <span class="number">076</span>;</span><br><span class="line"><span class="keyword">echo</span> $v2; <span class="comment">// 结果：62</span></span><br></pre></td></tr></table></figure>
+<h6 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h6><p>以0开头，包含0-9， a()-f </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$v3 = <span class="number">0xFF</span>;</span><br><span class="line"><span class="keyword">echo</span> $v3; <span class="comment">// 结果：255</span></span><br></pre></td></tr></table></figure>
+<h5 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h5><p>带有小数点的数，就是浮点数。</p>
+<p>小数有俩中表达方式：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通方式</span></span><br><span class="line">$v1 = <span class="number">3.5</span>;</span><br><span class="line"><span class="keyword">echo</span>($v1);	 <span class="comment">// 3.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 科学计数法</span></span><br><span class="line">$v2 = <span class="number">1.32E+9</span>;</span><br><span class="line"><span class="keyword">echo</span>($v2); <span class="comment">// 1320000000</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="number">0.7</span><span class="number">-0.3</span> == <span class="number">0.4</span>) &#123;</span><br><span class="line">	<span class="comment"># code...</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"yes"</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"no"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注：请不要随意的比较俩个浮点数的大小</span></span><br></pre></td></tr></table></figure>
+<h5 id="字符串（string）类型"><a href="#字符串（string）类型" class="headerlink" title="字符串（string）类型"></a>字符串（string）类型</h5><h6 id="使用单引号定义字符串"><a href="#使用单引号定义字符串" class="headerlink" title="使用单引号定义字符串"></a>使用单引号定义字符串</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$str1 = <span class="string">'hu \'feifei '</span>;</span><br><span class="line"><span class="comment">// 能够被转义的符号有： \\  \</span></span><br><span class="line"><span class="comment">// 字符串中的变量不能被解析其值</span></span><br></pre></td></tr></table></figure>
+<h6 id="使用双引号定义字符串"><a href="#使用双引号定义字符串" class="headerlink" title="使用双引号定义字符串"></a>使用双引号定义字符串</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$str2 = <span class="string">"hu \"feifei"</span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	   能够被转义的符号有：</span></span><br><span class="line"><span class="comment">	   \' -- 单引号</span></span><br><span class="line"><span class="comment">	   \" -- tab符</span></span><br><span class="line"><span class="comment">	   \t -- 双引号 </span></span><br><span class="line"><span class="comment">	   \r -- 回车符</span></span><br><span class="line"><span class="comment">	   \n -- 换行符</span></span><br><span class="line"><span class="comment">	   \\ -- \</span></span><br><span class="line"><span class="comment">	   \$ -- $</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串中的变量 能被解析其值</span></span><br><span class="line">$str3 = <span class="number">202</span>;</span><br><span class="line">$str1 = <span class="string">"hufeifei $str3 "</span>;  <span class="comment">// 结果：hufeifei 202</span></span><br><span class="line"><span class="comment">// 字符串中的变量不解析其值</span></span><br><span class="line">$str3 = <span class="number">202</span>;</span><br><span class="line">$str1 = <span class="string">"hufeifei /$str3 "</span>;  <span class="comment">// 结果：hufeifei $str3</span></span><br></pre></td></tr></table></figure>
+<h6 id="heredo-定义字符串"><a href="#heredo-定义字符串" class="headerlink" title="heredo 定义字符串"></a>heredo 定义字符串</h6><p>用于定义字符串，<strong>主要应用场景是定义大段的字符串</strong>非常方便。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$heredoc = <span class="string">&lt;&lt;&lt;abc</span></span><br><span class="line"><span class="string">	    // 代码块，可以是html标签。</span></span><br><span class="line"><span class="string">adc；</span></span><br><span class="line"><span class="string">// 开始标记,结束标记，必须相同。</span></span><br></pre></td></tr></table></figure>
+<h6 id="转义符："><a href="#转义符：" class="headerlink" title="转义符：\"></a>转义符：\</h6><p>用于将程序语言所赋予的某写字符的特殊功能转义掉。</p>
+<p>输出不可见的符。</p>
+<h5 id="布尔（boolean）类型"><a href="#布尔（boolean）类型" class="headerlink" title="布尔（boolean）类型"></a>布尔（boolean）类型</h5><h6 id="true-成立"><a href="#true-成立" class="headerlink" title="true-成立"></a>true-成立</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">   <span class="comment">// 条件成立执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="false-不成立"><a href="#false-不成立" class="headerlink" title="false-不成立"></a>false-不成立</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">false</span>)&#123;</span><br><span class="line">   </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	   <span class="comment">// 条件不成立执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="数组（Array）类型"><a href="#数组（Array）类型" class="headerlink" title="数组（Array）类型"></a>数组（Array）类型</h5><h6 id="索引数组"><a href="#索引数组" class="headerlink" title="索引数组"></a>索引数组</h6><p>​    数组元素的下标是数值，这样的数组就是索引数组。</p>
+<h6 id="关联数组"><a href="#关联数组" class="headerlink" title="关联数组"></a>关联数组</h6><p>​    数组元素的下标是字符串，这样的数组就是关联数组。</p>
+<h6 id="数组元素的访问："><a href="#数组元素的访问：" class="headerlink" title="数组元素的访问："></a>数组元素的访问：</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 访问_SERVER数组中的下标为REMOTE_ADDR的元素</span></span><br><span class="line"><span class="keyword">echo</span> $_SERVER[<span class="string">'REMOTE_ADDR'</span>];</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 变量与字符串进行拼接--方式1</span></span><br><span class="line">$h3 = <span class="string">"&lt;h3&gt;$_SERVER[REMOTE_ADDR]&lt;/h3&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> $h3;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 变量与字符串进行拼接--方式2</span></span><br><span class="line">$h3 = <span class="string">"&lt;h3&gt;&#123;$_SERVER['REMOTE_ADDR']&#125;&lt;/h3&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> $h3;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果在一个字符串中想输出数组的元素，那么下标不需要加引号</span></span><br><span class="line"><span class="comment">// 如果使用&#123;花括号&#125;限制了数组，那么必须下标必须加引号</span></span><br></pre></td></tr></table></figure>
+<h5 id="null（null）类型"><a href="#null（null）类型" class="headerlink" title="null（null）类型"></a>null（null）类型</h5><p>null类型只有一个值，null</p>
+<h5 id="资源（resource）类型"><a href="#资源（resource）类型" class="headerlink" title="资源（resource）类型"></a>资源（resource）类型</h5><p>resource类型，资源数据类型也是一个特殊的变量，程序员没有办法直接定义一个资源，必须使用PHP提供的获取资源的函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// fopen('资源名称','打开方式') 获取资源函数</span></span><br><span class="line">$fpen = fopen(<span class="string">'date.txt'</span>, <span class="string">'r'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取资源内容</span></span><br><span class="line"><span class="keyword">echo</span> fgetc($fpen);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpg" alt="HuZhongQiang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/zhifubao.jpg" alt="HuZhongQiang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Huzhongqiang：</strong>
+    HuZhongQiang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/child/2019/09/17/php/" title="php基础学习">http://yoursite.com/child/2019/09/17/php/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/02/少玩手机/" rel="next" title="少玩手机">
+                <i class="fa fa-chevron-left"></i> 少玩手机
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/GG.gif" alt="HuZhongQiang">
+            
+              <p class="site-author-name" itemprop="name">HuZhongQiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/developer" title="阮 一 峰" target="_blank">阮 一 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/wiki/1022910821149312" title="廖 雪 峰" target="_blank">廖 雪 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/TomXu" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、PHP基础语法"><span class="nav-number">1.</span> <span class="nav-text">1、PHP基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准格式（XML格式）"><span class="nav-number">1.1.</span> <span class="nav-text">标准格式（XML格式）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#script-格式"><span class="nav-number">1.2.</span> <span class="nav-text">script 格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#短格式"><span class="nav-number">1.3.</span> <span class="nav-text">短格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#asp格式"><span class="nav-number">1.4.</span> <span class="nav-text">asp格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">1.5.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、变量及操作"><span class="nav-number">2.</span> <span class="nav-text">2、变量及操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明"><span class="nav-number">2.2.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改变量"><span class="nav-number">2.3.</span> <span class="nav-text">修改变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除变量"><span class="nav-number">2.4.</span> <span class="nav-text">删除变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变变量"><span class="nav-number">2.5.</span> <span class="nav-text">可变变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定义变量"><span class="nav-number">2.6.</span> <span class="nav-text">预定义变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、内存原理（形象理解）"><span class="nav-number">3.</span> <span class="nav-text">3、内存原理（形象理解）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存结构"><span class="nav-number">3.1.</span> <span class="nav-text">内存结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP执行过程"><span class="nav-number">3.2.</span> <span class="nav-text">PHP执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP嵌入到HTML的执行过程"><span class="nav-number">3.3.</span> <span class="nav-text">PHP嵌入到HTML的执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP中变量的传值方式"><span class="nav-number">3.4.</span> <span class="nav-text">PHP中变量的传值方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-常量"><span class="nav-number">4.</span> <span class="nav-text">4.常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的概念"><span class="nav-number">4.1.</span> <span class="nav-text">常量的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的定义"><span class="nav-number">4.2.</span> <span class="nav-text">常量的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#语法1：define-“常量名”，值"><span class="nav-number">4.2.1.</span> <span class="nav-text">语法1：define(“常量名”，值)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#语法2：const-常量名-值"><span class="nav-number">4.2.2.</span> <span class="nav-text">语法2：const  常量名 = 值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义区别-define-VS-const"><span class="nav-number">4.3.</span> <span class="nav-text">定义区别    define  VS  const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的判断及获取所有常量"><span class="nav-number">4.4.</span> <span class="nav-text">常量的判断及获取所有常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#魔术常量"><span class="nav-number">4.5.</span> <span class="nav-text">魔术常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-数据类型"><span class="nav-number">5.</span> <span class="nav-text">5.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据类型分类"><span class="nav-number">5.0.1.</span> <span class="nav-text">数据类型分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#整数（int）类型"><span class="nav-number">5.0.2.</span> <span class="nav-text">整数（int）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#十进制"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#八进制"><span class="nav-number">5.0.2.2.</span> <span class="nav-text">八进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#十六进制"><span class="nav-number">5.0.2.3.</span> <span class="nav-text">十六进制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浮点类型"><span class="nav-number">5.0.3.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串（string）类型"><span class="nav-number">5.0.4.</span> <span class="nav-text">字符串（string）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#使用单引号定义字符串"><span class="nav-number">5.0.4.1.</span> <span class="nav-text">使用单引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#使用双引号定义字符串"><span class="nav-number">5.0.4.2.</span> <span class="nav-text">使用双引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#heredo-定义字符串"><span class="nav-number">5.0.4.3.</span> <span class="nav-text">heredo 定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#转义符："><span class="nav-number">5.0.4.4.</span> <span class="nav-text">转义符：\</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔（boolean）类型"><span class="nav-number">5.0.5.</span> <span class="nav-text">布尔（boolean）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#true-成立"><span class="nav-number">5.0.5.1.</span> <span class="nav-text">true-成立</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#false-不成立"><span class="nav-number">5.0.5.2.</span> <span class="nav-text">false-不成立</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组（Array）类型"><span class="nav-number">5.0.6.</span> <span class="nav-text">数组（Array）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#索引数组"><span class="nav-number">5.0.6.1.</span> <span class="nav-text">索引数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#关联数组"><span class="nav-number">5.0.6.2.</span> <span class="nav-text">关联数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数组元素的访问："><span class="nav-number">5.0.6.3.</span> <span class="nav-text">数组元素的访问：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null（null）类型"><span class="nav-number">5.0.7.</span> <span class="nav-text">null（null）类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#资源（resource）类型"><span class="nav-number">5.0.8.</span> <span class="nav-text">资源（resource）类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+
+
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuZhongQiang</span>
+  <span>|</span>
+  <div class="theme-info">
+    <div class="powered-by"></div>
+    <span class="post-count">博客全站共60.7k字</span>
+  </div>
+  <div id="days"></div> 
+  <script>
+    function show_date_time(){
+      window.setTimeout("show_date_time()", 1000);
+      BirthDay=new Date("05/20/2019 12:00:00");
+      today=new Date();
+      timeold=(today.getTime()-BirthDay.getTime());
+      sectimeold=timeold/1000
+      secondsold=Math.floor(sectimeold);
+      msPerDay=24*60*60*1000
+      e_daysold=timeold/msPerDay
+      daysold=Math.floor(e_daysold);
+      e_hrsold=(e_daysold-daysold)*24;
+      hrsold=setzero(Math.floor(e_hrsold));
+      e_minsold=(e_hrsold-hrsold)*60;
+      minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+      seconds=setzero(Math.floor((e_minsold-minsold)*60));
+      document.getElementById('days').innerHTML="本站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+  </script>
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+	
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+</html>
