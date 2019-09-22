@@ -87,7 +87,7 @@
 <meta property="og:description" content="1、PHP基础语法标准格式（XML格式）123&amp;lt;?php	// 代码块?&amp;gt; script 格式123&amp;lt;script language=&quot;php&quot; &amp;gt;	echo date(&apos;Y-m-d H:i:s&apos;);&amp;lt;/script&amp;gt; 短格式123456789101112131415161718&amp;lt;?   短格式  ?&amp;gt;            /*需要配置php.in">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/huzhongqiang1012/Windows-PicGo/master/img/数据结构.png">
-<meta property="og:updated_time" content="2019-09-16T16:17:36.560Z">
+<meta property="og:updated_time" content="2019-09-22T15:42:28.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php基础学习">
 <meta name="twitter:description" content="1、PHP基础语法标准格式（XML格式）123&amp;lt;?php	// 代码块?&amp;gt; script 格式123&amp;lt;script language=&quot;php&quot; &amp;gt;	echo date(&apos;Y-m-d H:i:s&apos;);&amp;lt;/script&amp;gt; 短格式123456789101112131415161718&amp;lt;?   短格式  ?&amp;gt;            /*需要配置php.in">
@@ -507,22 +507,19 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 魔术常量</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__FILE__</span>,<span class="string">"&lt;br/&gt;"</span>;  <span class="comment">//获取前文件夹名完整路径及文件名</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__DIR__</span>,<span class="string">"&lt;br/&gt;"</span>;		   <span class="comment">//获取前文件夹名的路径</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__LINE__</span>,<span class="string">"&lt;br/&gt;"</span>;  <span class="comment">//获取代码行号</span></span><br></pre></td></tr></table></figure>
 <h3 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5.数据类型"></a>5.数据类型</h3><p>PHP数据类型分为三大类八小类</p>
 <h5 id="数据类型分类"><a href="#数据类型分类" class="headerlink" title="数据类型分类"></a>数据类型分类</h5><ul>
-<li><p><strong>标量类型</strong></p>
-<ul>
+<li><strong>标量类型</strong><ul>
 <li>int     整型</li>
 <li>float    浮点类型</li>
 <li>boolean    布尔类型</li>
 <li>string    字符串</li>
 </ul>
 </li>
-<li><p><strong>复合类型：</strong></p>
-<ul>
+<li><strong>复合类型：</strong><ul>
 <li>array    数组</li>
 <li>object    对象</li>
 </ul>
 </li>
-<li><p><strong>特殊类型</strong></p>
-<ul>
+<li><strong>特殊类型</strong><ul>
 <li>null    null</li>
 <li>resource    资源类型</li>
 </ul>
@@ -551,7 +548,174 @@
 <h5 id="null（null）类型"><a href="#null（null）类型" class="headerlink" title="null（null）类型"></a>null（null）类型</h5><p>null类型只有一个值，null</p>
 <h5 id="资源（resource）类型"><a href="#资源（resource）类型" class="headerlink" title="资源（resource）类型"></a>资源（resource）类型</h5><p>resource类型，资源数据类型也是一个特殊的变量，程序员没有办法直接定义一个资源，必须使用PHP提供的获取资源的函数</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// fopen('资源名称','打开方式') 获取资源函数</span></span><br><span class="line">$fpen = fopen(<span class="string">'date.txt'</span>, <span class="string">'r'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取资源内容</span></span><br><span class="line"><span class="keyword">echo</span> fgetc($fpen);</span><br></pre></td></tr></table></figure>
-
+<h3 id="6-数据类型的转换"><a href="#6-数据类型的转换" class="headerlink" title="6.数据类型的转换"></a>6.数据类型的转换</h3><p>什么时候会出生数据类型的转换。</p>
+<p>数据就是用于运算，当参与运算的俩个数据，类型不同时，PHP会自动进行转换。</p>
+<p>有时候我们也会进行强制转换。</p>
+<h5 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$i = <span class="number">100</span>;</span><br><span class="line">$l = <span class="string">'100元'</span>;	  <span class="comment">// 自动转换了</span></span><br><span class="line"><span class="keyword">echo</span> $i  * $l;  <span class="comment">// 10000</span></span><br></pre></td></tr></table></figure>
+<h5 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h5><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(integer)</td>
+<td>将其他数据类型强制转换为整型</td>
+</tr>
+<tr>
+<td>(float)</td>
+<td>将其他数据类型强制转换为浮点型</td>
+</tr>
+<tr>
+<td>(string)</td>
+<td>将其他数据类型强制转换为字符型</td>
+</tr>
+<tr>
+<td>(boolean)</td>
+<td>将其他数据类型强制转换为布尔型</td>
+</tr>
+<tr>
+<td>(array)</td>
+<td>将其他数据类型强制转换为数组</td>
+</tr>
+<tr>
+<td>(object)</td>
+<td>将其他数据类型强制转换为对象</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="number">10</span>;</span><br><span class="line">$v2 = <span class="number">0</span>;</span><br><span class="line">$v3 = <span class="string">''</span>;</span><br><span class="line">$v4 = <span class="string">'0'</span>;</span><br><span class="line">$v5 = [];</span><br><span class="line">$v6 =  <span class="keyword">null</span>;</span><br><span class="line">$v7 = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 强制转换为布尔值</span></span><br><span class="line">$shuchu =  (boolean) $v1;   <span class="comment">// true </span></span><br><span class="line">$shuchu =  (boolean) $v2;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v3;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v4;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v4;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v5;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v6;   <span class="comment">// false </span></span><br><span class="line">$shuchu =  (boolean) $v7;   <span class="comment">// false </span></span><br><span class="line">var_dump ($shuchu);  </span><br><span class="line"></span><br><span class="line"><span class="comment">//  0. 0.0  空字符  字符0 空数组  null  等同于布尔值 false的值。</span></span><br></pre></td></tr></table></figure>
+<h4 id="数据及类型的判断"><a href="#数据及类型的判断" class="headerlink" title="数据及类型的判断"></a>数据及类型的判断</h4><p>判断函数的格式规律</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is_int（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_string（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_bool（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_float（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_scalar(v)</td>
+<td>判断变量的类型是否是 int/string/bool/float</td>
+</tr>
+<tr>
+<td>is_array（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_object（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_resourece（v）</td>
+<td></td>
+</tr>
+<tr>
+<td>is_null(v)</td>
+<td></td>
+</tr>
+<tr>
+<td>isset(v)</td>
+<td>用于判断变量是否有设置值为 null</td>
+</tr>
+<tr>
+<td>empty(v)</td>
+<td>用于判断变量v 的值是否为”空”，布尔false的值都被empty认为是空。<br>如果是空则返回 “true”，<br>如果是不是空则返回”false”<br>/。 （空的返回true，不是空的返回false）</td>
+</tr>
+</tbody>
+</table>
+<p>实例：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="number">10</span>;</span><br><span class="line">$v2 = <span class="number">0</span>;</span><br><span class="line">$v3 = <span class="string">''</span>;</span><br><span class="line">$v4 = <span class="string">'0'</span>;</span><br><span class="line">$v5 = [];</span><br><span class="line">$v6 =  <span class="keyword">null</span>;</span><br><span class="line">$v7 = <span class="number">0.0</span>;</span><br><span class="line">$v8 = <span class="keyword">false</span>;</span><br><span class="line">$result = <span class="keyword">isset</span>($v1); <span class="comment">// true </span></span><br><span class="line">$result = <span class="keyword">isset</span>($v2); <span class="comment">// true</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v3); <span class="comment">// true</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v4); <span class="comment">// true</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v5); <span class="comment">// true</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v6); <span class="comment">// false</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v7); <span class="comment">// true</span></span><br><span class="line">$result = <span class="keyword">isset</span>($v8); <span class="comment">// true</span></span><br><span class="line">var_dump($result);</span><br></pre></td></tr></table></figure>
+<h3 id="7-运算符"><a href="#7-运算符" class="headerlink" title="7.运算符"></a>7.运算符</h3><h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><p>运算规则：    将赋值号右边的值赋值给左边的变量，左边必须是变量不能是式子。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$i = <span class="number">10</span>;</span><br><span class="line">$a = <span class="number">20</span>;</span><br><span class="line">$numb = $i + $a;</span><br><span class="line"><span class="keyword">echo</span> $numb;  <span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
+<h5 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h5><p>加减乘除 / 取余</p>
+<p>运算规则： 取俩个数相除，余下的那个数。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> $a = <span class="number">5</span>;</span><br><span class="line">$result = $a % <span class="number">3</span> ;</span><br><span class="line"><span class="keyword">echo</span>  <span class="string">"余数："</span> .$result;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;br/&gt;"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$i  = <span class="number">5</span>;</span><br><span class="line">$result = $i  %  <span class="number">3</span>;</span><br><span class="line"><span class="keyword">echo</span> $result;</span><br><span class="line"></span><br><span class="line">$result = $i / <span class="number">3</span>;</span><br><span class="line"><span class="keyword">echo</span> $result;  </span><br><span class="line"><span class="comment">// 在实际开发中，我们经常使用%（取余）运算判断奇偶数。</span></span><br></pre></td></tr></table></figure>
+<h5 id="自操作运算符"><a href="#自操作运算符" class="headerlink" title="自操作运算符"></a>自操作运算符</h5><ul>
+<li><p>自增运算符</p>
+<ul>
+<li><p>前自增</p>
+<p>  规则：先对变量的值自增1，再使用变量的新值参与式子的运算</p>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$v = <span class="number">10</span>;</span><br><span class="line">$r = ++$v ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $r;  <span class="comment">// 11 先自增</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;br/&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> $v;  <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后自增</p>
+<p>  规则：先使用变量的原值参与式子的运算，在对变量的值进行加1.</p>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$v = <span class="number">10</span>;</span><br><span class="line">$r = $v++;</span><br><span class="line"><span class="keyword">echo</span> $r;  <span class="comment">// 10  </span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;br/&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> $v;  <span class="comment">// 11  后自增</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>综合练习</p>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$v = <span class="number">10</span>;</span><br><span class="line">$re = $v + ++$v  + $v++ + $v++  + $v++;</span><br><span class="line"><span class="comment">//    11  +  11  +  12 + 13 + 14</span></span><br><span class="line"><span class="keyword">echo</span> $re; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 说明： ++前 ，是先更改内存中的变量的值，再将新值读取到这个式子中。（先自增，再运算）</span></span><br><span class="line"><span class="comment">//       后++ ，是先取内存中的这个变量的值，放在式子中，在对变量的值加1。（先运算，再自增）</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>自减运算符</p>
+<ul>
+<li><p>前自减</p>
+<p>  规则：先对变量的值自增1，再使用变量的新值参与式子的运算</p>
+</li>
+<li><p>后自减</p>
+<p>  规则：先使用变量的原值参与式子的运算，在对变量的值进行加1.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$tab = <span class="string">"&lt;table border='1' rules = 'all'&gt;"</span>;</span><br><span class="line">$tab .= <span class="string">"&lt;tr&gt;"</span>;</span><br><span class="line">$tab .= <span class="string">"&lt;td&gt;1&lt;td&gt;-&lt;td&gt;3&lt;td&gt;-&lt;td&gt;4&lt;td&gt;-&lt;td&gt;5&lt;td&gt;-"</span>;</span><br><span class="line">$tab .= <span class="string">"&lt;tr&gt;"</span>;</span><br><span class="line">$tab .= <span class="string">"&lt;/table&gt;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $tab;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$str = <span class="string">'$i的值为：'</span> . <span class="number">10</span>;  <span class="comment">// 如果作为.来接收一个数值，数值与.之间要有空格</span></span><br><span class="line"><span class="keyword">echo</span> $str;</span><br></pre></td></tr></table></figure>
+<h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&lt;</span><br><span class="line">&gt;=</span><br><span class="line">&lt;=</span><br><span class="line">==    用于判断俩个数的值，是否相等</span><br><span class="line">!=    判断值，如果不相同则返回true，如果相同则返回false</span><br><span class="line">===	   同时判断变量的值与类型，是否相同。</span><br><span class="line">!==   判断俩个变量的值或类型至少一方面不相同，就会返回true。如果都相同返回 false</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提示：比较运算符，最终得到的结果是 boolean 类型的值。</p>
+</blockquote>
+<h5 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h5><h6 id="amp-amp-逻辑与"><a href="#amp-amp-逻辑与" class="headerlink" title="&amp;&amp;    逻辑与"></a>&amp;&amp;    逻辑与</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="keyword">true</span>;</span><br><span class="line">$v2 = <span class="keyword">false</span>;</span><br><span class="line">$v3 = <span class="keyword">true</span>;</span><br><span class="line">$v4 = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">$result = $v1 &amp;&amp; $v2;   <span class="comment">// false</span></span><br><span class="line">$result = $v1 &amp;&amp; $v3;   <span class="comment">// true</span></span><br><span class="line">$result = $v2 &amp;&amp; $v3;   <span class="comment">// false</span></span><br><span class="line">$result = $v2 &amp;&amp; $v4;   <span class="comment">// false</span></span><br><span class="line">var_dump($result);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>真值-运算规则：参与运算的俩个操作数，如果同时为true或能转换为true，那么最终结果就是true。</p>
+<p>假值-运算规则：参与运算的俩个操作数，如果同时为false或能转换为false，那么最终结果就是false。</p>
+</blockquote>
+<h6 id="逻辑与短路"><a href="#逻辑与短路" class="headerlink" title="逻辑与短路"></a>逻辑与短路</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="keyword">true</span>;</span><br><span class="line">$v2 = <span class="keyword">false</span>;</span><br><span class="line">$n = <span class="number">10</span>;</span><br><span class="line">$result = $v2 &amp;&amp; ++$n;</span><br><span class="line">var_dump($n);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>逻辑与短路：根据逻辑与的假值运算规则，由于第1个操作数$v2值就是false，最终结果就为false，没有必要再计算第2个式子了，所以++n 并没有运行，形象称之为逻辑与短路。</p>
+</blockquote>
+<h6 id="and-逻辑与"><a href="#and-逻辑与" class="headerlink" title="and 逻辑与"></a>and 逻辑与</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运算规则与&amp;&amp;,运算规则相同，唯一区别是&amp;&amp; 的优先级高于 = ，而 <span class="keyword">and</span>的优先级是低于 =</span><br></pre></td></tr></table></figure>
+<h6 id="逻辑或"><a href="#逻辑或" class="headerlink" title="逻辑或 ||"></a>逻辑或 ||</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="keyword">true</span>;</span><br><span class="line">$v2 = <span class="keyword">false</span>;</span><br><span class="line">$v3 = <span class="keyword">false</span>;</span><br><span class="line">$v4 = [];</span><br><span class="line"></span><br><span class="line">$result = $v3 || $v1; <span class="comment">// true</span></span><br><span class="line">$result = $v2 || $v3; <span class="comment">// false</span></span><br><span class="line">$result = $v2 || $v4; <span class="comment">// false</span></span><br><span class="line">var_dump($result) ;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>真值-运算规则：参与运算的俩个操作数，只要有一个为true或者能转换为true ,最终结果就为true。</p>
+<p>假值-运算规则：参与运算的俩个操作数，全为false或能够转换为false，则结果为false。</p>
+</blockquote>
+<h6 id="逻辑或短路"><a href="#逻辑或短路" class="headerlink" title="逻辑或短路"></a>逻辑或短路</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="keyword">true</span>;</span><br><span class="line">$v2 = <span class="keyword">false</span>;</span><br><span class="line">$n = <span class="number">10</span>;</span><br><span class="line">$result = $v1 || ++$n;</span><br><span class="line">var_dump($n) ;     <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>逻辑与短路：根据逻辑与的假值运算规则，由于第1个操作数$v1值就是true，最终结果就为true，没有必要再计算第2个式子了，所以++n 并没有运行，形象称之为逻辑或短路。</p>
+</blockquote>
+<h6 id="or-逻辑或"><a href="#or-逻辑或" class="headerlink" title="or  逻辑或"></a>or  逻辑或</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运算规则与   || 运算规则相同，唯一的区别是 || 的优先级高于 = , 而or 优先级低于 =;</span><br></pre></td></tr></table></figure>
+<h6 id="逻辑非"><a href="#逻辑非" class="headerlink" title="!     逻辑非"></a>!     逻辑非</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$v1 = <span class="keyword">true</span>;</span><br><span class="line">$v2 = <span class="keyword">false</span>;</span><br><span class="line">$re = !$v1;  <span class="comment">// $v1 = true </span></span><br><span class="line">var_dump($re ) ;   <span class="comment">// $re = false (取反操作)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对操作数进行取反</p>
+<p>$v =  ?;</p>
+<p>!!$v;</p>
+<p>注释：上面代码是转换为布尔值。类似于强制转换 </p>
+</blockquote>
+<p>运算符的优先级：</p>
+<p>在一个式子中可能会出现很多种运算符，但运算符之间有优先级。</p>
+<h6 id="运算口诀：单步-算术-关系-逻辑-条件-赋值-逗"><a href="#运算口诀：单步-算术-关系-逻辑-条件-赋值-逗" class="headerlink" title="运算口诀：单步 - 算术 - 关系 - 逻辑 - 条件 - 赋值 - 逗"></a>运算口诀：单步 - 算术 - 关系 - 逻辑 - 条件 - 赋值 - 逗</h6><h5 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h5><h5 id="错误控制运算符"><a href="#错误控制运算符" class="headerlink" title="错误控制运算符"></a>错误控制运算符</h5><h5 id="位运算符（了解）"><a href="#位运算符（了解）" class="headerlink" title="位运算符（了解）"></a>位运算符（了解）</h5>
       
     </div>
     
@@ -890,7 +1054,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、PHP基础语法"><span class="nav-number">1.</span> <span class="nav-text">1、PHP基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准格式（XML格式）"><span class="nav-number">1.1.</span> <span class="nav-text">标准格式（XML格式）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#script-格式"><span class="nav-number">1.2.</span> <span class="nav-text">script 格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#短格式"><span class="nav-number">1.3.</span> <span class="nav-text">短格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#asp格式"><span class="nav-number">1.4.</span> <span class="nav-text">asp格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">1.5.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、变量及操作"><span class="nav-number">2.</span> <span class="nav-text">2、变量及操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明"><span class="nav-number">2.2.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改变量"><span class="nav-number">2.3.</span> <span class="nav-text">修改变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除变量"><span class="nav-number">2.4.</span> <span class="nav-text">删除变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变变量"><span class="nav-number">2.5.</span> <span class="nav-text">可变变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定义变量"><span class="nav-number">2.6.</span> <span class="nav-text">预定义变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、内存原理（形象理解）"><span class="nav-number">3.</span> <span class="nav-text">3、内存原理（形象理解）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存结构"><span class="nav-number">3.1.</span> <span class="nav-text">内存结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP执行过程"><span class="nav-number">3.2.</span> <span class="nav-text">PHP执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP嵌入到HTML的执行过程"><span class="nav-number">3.3.</span> <span class="nav-text">PHP嵌入到HTML的执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP中变量的传值方式"><span class="nav-number">3.4.</span> <span class="nav-text">PHP中变量的传值方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-常量"><span class="nav-number">4.</span> <span class="nav-text">4.常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的概念"><span class="nav-number">4.1.</span> <span class="nav-text">常量的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的定义"><span class="nav-number">4.2.</span> <span class="nav-text">常量的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#语法1：define-“常量名”，值"><span class="nav-number">4.2.1.</span> <span class="nav-text">语法1：define(“常量名”，值)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#语法2：const-常量名-值"><span class="nav-number">4.2.2.</span> <span class="nav-text">语法2：const  常量名 = 值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义区别-define-VS-const"><span class="nav-number">4.3.</span> <span class="nav-text">定义区别    define  VS  const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的判断及获取所有常量"><span class="nav-number">4.4.</span> <span class="nav-text">常量的判断及获取所有常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#魔术常量"><span class="nav-number">4.5.</span> <span class="nav-text">魔术常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-数据类型"><span class="nav-number">5.</span> <span class="nav-text">5.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据类型分类"><span class="nav-number">5.0.1.</span> <span class="nav-text">数据类型分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#整数（int）类型"><span class="nav-number">5.0.2.</span> <span class="nav-text">整数（int）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#十进制"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#八进制"><span class="nav-number">5.0.2.2.</span> <span class="nav-text">八进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#十六进制"><span class="nav-number">5.0.2.3.</span> <span class="nav-text">十六进制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浮点类型"><span class="nav-number">5.0.3.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串（string）类型"><span class="nav-number">5.0.4.</span> <span class="nav-text">字符串（string）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#使用单引号定义字符串"><span class="nav-number">5.0.4.1.</span> <span class="nav-text">使用单引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#使用双引号定义字符串"><span class="nav-number">5.0.4.2.</span> <span class="nav-text">使用双引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#heredo-定义字符串"><span class="nav-number">5.0.4.3.</span> <span class="nav-text">heredo 定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#转义符："><span class="nav-number">5.0.4.4.</span> <span class="nav-text">转义符：\</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔（boolean）类型"><span class="nav-number">5.0.5.</span> <span class="nav-text">布尔（boolean）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#true-成立"><span class="nav-number">5.0.5.1.</span> <span class="nav-text">true-成立</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#false-不成立"><span class="nav-number">5.0.5.2.</span> <span class="nav-text">false-不成立</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组（Array）类型"><span class="nav-number">5.0.6.</span> <span class="nav-text">数组（Array）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#索引数组"><span class="nav-number">5.0.6.1.</span> <span class="nav-text">索引数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#关联数组"><span class="nav-number">5.0.6.2.</span> <span class="nav-text">关联数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数组元素的访问："><span class="nav-number">5.0.6.3.</span> <span class="nav-text">数组元素的访问：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null（null）类型"><span class="nav-number">5.0.7.</span> <span class="nav-text">null（null）类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#资源（resource）类型"><span class="nav-number">5.0.8.</span> <span class="nav-text">资源（resource）类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、PHP基础语法"><span class="nav-number">1.</span> <span class="nav-text">1、PHP基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准格式（XML格式）"><span class="nav-number">1.1.</span> <span class="nav-text">标准格式（XML格式）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#script-格式"><span class="nav-number">1.2.</span> <span class="nav-text">script 格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#短格式"><span class="nav-number">1.3.</span> <span class="nav-text">短格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#asp格式"><span class="nav-number">1.4.</span> <span class="nav-text">asp格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">1.5.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、变量及操作"><span class="nav-number">2.</span> <span class="nav-text">2、变量及操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明"><span class="nav-number">2.2.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改变量"><span class="nav-number">2.3.</span> <span class="nav-text">修改变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除变量"><span class="nav-number">2.4.</span> <span class="nav-text">删除变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变变量"><span class="nav-number">2.5.</span> <span class="nav-text">可变变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定义变量"><span class="nav-number">2.6.</span> <span class="nav-text">预定义变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、内存原理（形象理解）"><span class="nav-number">3.</span> <span class="nav-text">3、内存原理（形象理解）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存结构"><span class="nav-number">3.1.</span> <span class="nav-text">内存结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP执行过程"><span class="nav-number">3.2.</span> <span class="nav-text">PHP执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP嵌入到HTML的执行过程"><span class="nav-number">3.3.</span> <span class="nav-text">PHP嵌入到HTML的执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP中变量的传值方式"><span class="nav-number">3.4.</span> <span class="nav-text">PHP中变量的传值方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-常量"><span class="nav-number">4.</span> <span class="nav-text">4.常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的概念"><span class="nav-number">4.1.</span> <span class="nav-text">常量的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的定义"><span class="nav-number">4.2.</span> <span class="nav-text">常量的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#语法1：define-“常量名”，值"><span class="nav-number">4.2.1.</span> <span class="nav-text">语法1：define(“常量名”，值)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#语法2：const-常量名-值"><span class="nav-number">4.2.2.</span> <span class="nav-text">语法2：const  常量名 = 值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义区别-define-VS-const"><span class="nav-number">4.3.</span> <span class="nav-text">定义区别    define  VS  const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的判断及获取所有常量"><span class="nav-number">4.4.</span> <span class="nav-text">常量的判断及获取所有常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#魔术常量"><span class="nav-number">4.5.</span> <span class="nav-text">魔术常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-数据类型"><span class="nav-number">5.</span> <span class="nav-text">5.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据类型分类"><span class="nav-number">5.0.1.</span> <span class="nav-text">数据类型分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#整数（int）类型"><span class="nav-number">5.0.2.</span> <span class="nav-text">整数（int）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#十进制"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#八进制"><span class="nav-number">5.0.2.2.</span> <span class="nav-text">八进制</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#十六进制"><span class="nav-number">5.0.2.3.</span> <span class="nav-text">十六进制</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浮点类型"><span class="nav-number">5.0.3.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串（string）类型"><span class="nav-number">5.0.4.</span> <span class="nav-text">字符串（string）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#使用单引号定义字符串"><span class="nav-number">5.0.4.1.</span> <span class="nav-text">使用单引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#使用双引号定义字符串"><span class="nav-number">5.0.4.2.</span> <span class="nav-text">使用双引号定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#heredo-定义字符串"><span class="nav-number">5.0.4.3.</span> <span class="nav-text">heredo 定义字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#转义符："><span class="nav-number">5.0.4.4.</span> <span class="nav-text">转义符：\</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔（boolean）类型"><span class="nav-number">5.0.5.</span> <span class="nav-text">布尔（boolean）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#true-成立"><span class="nav-number">5.0.5.1.</span> <span class="nav-text">true-成立</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#false-不成立"><span class="nav-number">5.0.5.2.</span> <span class="nav-text">false-不成立</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组（Array）类型"><span class="nav-number">5.0.6.</span> <span class="nav-text">数组（Array）类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#索引数组"><span class="nav-number">5.0.6.1.</span> <span class="nav-text">索引数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#关联数组"><span class="nav-number">5.0.6.2.</span> <span class="nav-text">关联数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数组元素的访问："><span class="nav-number">5.0.6.3.</span> <span class="nav-text">数组元素的访问：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null（null）类型"><span class="nav-number">5.0.7.</span> <span class="nav-text">null（null）类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#资源（resource）类型"><span class="nav-number">5.0.8.</span> <span class="nav-text">资源（resource）类型</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#6-数据类型的转换"><span class="nav-number">6.</span> <span class="nav-text">6.数据类型的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自动转换"><span class="nav-number">6.0.1.</span> <span class="nav-text">自动转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强制转换"><span class="nav-number">6.0.2.</span> <span class="nav-text">强制转换</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据及类型的判断"><span class="nav-number">6.1.</span> <span class="nav-text">数据及类型的判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-运算符"><span class="nav-number">7.</span> <span class="nav-text">7.运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值运算符"><span class="nav-number">7.0.1.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#算数运算符"><span class="nav-number">7.0.2.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自操作运算符"><span class="nav-number">7.0.3.</span> <span class="nav-text">自操作运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串运算符"><span class="nav-number">7.0.4.</span> <span class="nav-text">字符串运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#比较运算符"><span class="nav-number">7.0.5.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">7.0.6.</span> <span class="nav-text">逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#amp-amp-逻辑与"><span class="nav-number">7.0.6.1.</span> <span class="nav-text">&amp;&amp;    逻辑与</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逻辑与短路"><span class="nav-number">7.0.6.2.</span> <span class="nav-text">逻辑与短路</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#and-逻辑与"><span class="nav-number">7.0.6.3.</span> <span class="nav-text">and 逻辑与</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逻辑或"><span class="nav-number">7.0.6.4.</span> <span class="nav-text">逻辑或 ||</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逻辑或短路"><span class="nav-number">7.0.6.5.</span> <span class="nav-text">逻辑或短路</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#or-逻辑或"><span class="nav-number">7.0.6.6.</span> <span class="nav-text">or  逻辑或</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逻辑非"><span class="nav-number">7.0.6.7.</span> <span class="nav-text">!     逻辑非</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#运算口诀：单步-算术-关系-逻辑-条件-赋值-逗"><span class="nav-number">7.0.6.8.</span> <span class="nav-text">运算口诀：单步 - 算术 - 关系 - 逻辑 - 条件 - 赋值 - 逗</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#条件运算符"><span class="nav-number">7.0.7.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#错误控制运算符"><span class="nav-number">7.0.8.</span> <span class="nav-text">错误控制运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#位运算符（了解）"><span class="nav-number">7.0.9.</span> <span class="nav-text">位运算符（了解）</span></a></li></ol></li></div>
             
 
           </div>
@@ -929,7 +1093,7 @@
   <span>|</span>
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共60.7k字</span>
+    <span class="post-count">博客全站共62.3k字</span>
   </div>
   <div id="days"></div> 
   <script>
