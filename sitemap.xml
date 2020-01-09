@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/Photography/index.html</loc>
+    
+    <lastmod>2020-01-09T13:32:19.800Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/Hobby/index.html</loc>
     
     <lastmod>2020-01-09T13:28:50.976Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>http://yoursite.com/child/2019/06/15/Flex%E5%B8%83%E5%B1%80/</loc>
     
     <lastmod>2019-07-28T14:00:55.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/Photography/index.html</loc>
-    
-    <lastmod>2019-07-26T12:01:28.699Z</lastmod>
     
   </url>
   
