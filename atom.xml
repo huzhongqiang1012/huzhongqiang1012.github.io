@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2019-10-13T14:39:02.040Z</updated>
+  <updated>2020-01-09T13:08:15.824Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo文档</title>
+    <link href="http://yoursite.com/child/2020/01/09/1/"/>
+    <id>http://yoursite.com/child/2020/01/09/1/</id>
+    <published>2020-01-09T13:03:54.000Z</published>
+    <updated>2020-01-09T13:08:15.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>php基础学习</title>
@@ -439,30 +458,6 @@
     </summary>
     
       <category term="flex" scheme="http://yoursite.com/child/categories/flex/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue基础篇</title>
-    <link href="http://yoursite.com/child/2019/06/05/Vue%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
-    <id>http://yoursite.com/child/2019/06/05/Vue基础篇/</id>
-    <published>2019-06-04T16:21:13.000Z</published>
-    <updated>2019-06-04T16:22:55.944Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期&quot; class=&quot;headerlink&quot; title=&quot;生命周期&quot;&gt;&lt;/a&gt;生命周期&lt;/h2&gt;&lt;p&gt;补充代待定….&lt;/p&gt;
-&lt;h2 id=&quot;选项数据&quot;&gt;&lt;a href=&quot;#选项数据&quot; class=&quot;headerlink&quot; t
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="http://yoursite.com/child/categories/Vue/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
