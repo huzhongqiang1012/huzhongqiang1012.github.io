@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-01-12T13:14:31.956Z</updated>
+  <updated>2020-01-20T14:51:48.889Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文章封面图</title>
+    <link href="http://yoursite.com/child/2020/01/20/1/"/>
+    <id>http://yoursite.com/child/2020/01/20/1/</id>
+    <published>2020-01-20T14:49:46.000Z</published>
+    <updated>2020-01-20T14:51:48.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo文档</title>
     <link href="http://yoursite.com/child/2020/01/09/1/"/>
     <id>http://yoursite.com/child/2020/01/09/1/</id>
     <published>2020-01-09T13:03:54.000Z</published>
-    <updated>2020-01-12T13:14:31.956Z</updated>
+    <updated>2020-01-20T14:45:44.599Z</updated>
     
     <summary type="html">
     
@@ -435,29 +455,6 @@
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/child/categories/javascript/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flex布局</title>
-    <link href="http://yoursite.com/child/2019/06/15/Flex%E5%B8%83%E5%B1%80/"/>
-    <id>http://yoursite.com/child/2019/06/15/Flex布局/</id>
-    <published>2019-06-15T07:14:39.000Z</published>
-    <updated>2019-07-28T14:00:55.303Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一、Flex布局是什么？&quot;&gt;&lt;a href=&quot;#一、Flex布局是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、Flex布局是什么？&quot;&gt;&lt;/a&gt;一、Flex布局是什么？&lt;/h2&gt;&lt;p&gt;Flex是Flexible Box的缩写，意为”弹性布局”，
-      
-    
-    </summary>
-    
-      <category term="flex" scheme="http://yoursite.com/child/categories/flex/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
