@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-01-21T09:22:32.012Z</updated>
+  <updated>2020-02-25T17:18:54.640Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js-pc网页兼容源码</title>
+    <link href="http://yoursite.com/child/2020/02/26/1/"/>
+    <id>http://yoursite.com/child/2020/02/26/1/</id>
+    <published>2020-02-25T17:14:00.000Z</published>
+    <updated>2020-02-25T17:18:54.640Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;HTML:&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>H5页面原生video禁止全屏播放</title>
+    <link href="http://yoursite.com/child/2020/02/26/1/"/>
+    <id>http://yoursite.com/child/2020/02/26/1/</id>
+    <published>2020-02-25T17:08:36.000Z</published>
+    <updated>2020-02-25T17:13:16.972Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;制作移动端H5，需要添加视频，点击播放的时候会自动全屏播放，记录一下处理局部播放的问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo文档</title>
     <link href="http://yoursite.com/child/2020/01/09/1/"/>
     <id>http://yoursite.com/child/2020/01/09/1/</id>
     <published>2020-01-09T13:03:54.000Z</published>
-    <updated>2020-01-21T09:22:32.012Z</updated>
+    <updated>2020-01-23T04:48:22.762Z</updated>
     
     <summary type="html">
     
@@ -409,55 +451,6 @@
     </summary>
     
       <category term="小程序" scheme="http://yoursite.com/child/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript闭包</title>
-    <link href="http://yoursite.com/child/2019/06/15/Javascript%E9%97%AD%E5%8C%85/"/>
-    <id>http://yoursite.com/child/2019/06/15/Javascript闭包/</id>
-    <published>2019-06-15T07:27:32.000Z</published>
-    <updated>2019-06-15T07:31:42.809Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。&lt;/p&gt;
-&lt;p&gt;下面就是我的学习笔记，对于Javascript初学者应该是很有用的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;一、变量的作用域&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;要理
-      
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/child/categories/javascript/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flex布局</title>
-    <link href="http://yoursite.com/child/2019/06/15/Flex%E5%B8%83%E5%B1%80/"/>
-    <id>http://yoursite.com/child/2019/06/15/Flex布局/</id>
-    <published>2019-06-15T07:14:39.000Z</published>
-    <updated>2019-07-28T14:00:55.303Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一、Flex布局是什么？&quot;&gt;&lt;a href=&quot;#一、Flex布局是什么？&quot; class=&quot;headerlink&quot; title=&quot;一、Flex布局是什么？&quot;&gt;&lt;/a&gt;一、Flex布局是什么？&lt;/h2&gt;&lt;p&gt;Flex是Flexible Box的缩写，意为”弹性布局”，
-      
-    
-    </summary>
-    
-      <category term="flex" scheme="http://yoursite.com/child/categories/flex/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
