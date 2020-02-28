@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
+    
+    <lastmod>2020-02-28T13:44:19.694Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/Photography/index.html</loc>
+    
+    <lastmod>2020-02-28T13:42:43.881Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/2020/02/26/1/</loc>
     
-    <lastmod>2020-02-25T17:18:54.640Z</lastmod>
+    <lastmod>2020-02-25T17:36:37.415Z</lastmod>
     
   </url>
   
@@ -23,23 +37,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    
-    <lastmod>2020-01-23T04:48:13.151Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/child/Personallog/index.html</loc>
     
     <lastmod>2020-01-20T14:46:32.486Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/Photography/index.html</loc>
-    
-    <lastmod>2020-01-09T13:40:47.315Z</lastmod>
     
   </url>
   

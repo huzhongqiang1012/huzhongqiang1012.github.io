@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
+    <lastmod>2020-02-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/Photography/index.html</loc>
+    <lastmod>2020-02-28</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/child/2020/02/26/1/</loc>
     <lastmod>2020-02-25</lastmod>
   </url>  <url>
@@ -9,12 +15,6 @@
   </url>  <url>
     <loc>http://yoursite.com/child/2020/01/09/1/</loc>
     <lastmod>2020-01-23</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    <lastmod>2020-01-23</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/Photography/index.html</loc>
-    <lastmod>2020-01-09</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/about/index.html</loc>
     <lastmod>2019-10-31</lastmod>
