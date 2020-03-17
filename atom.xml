@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-02-25T17:36:37.415Z</updated>
+  <updated>2020-03-09T02:13:23.004Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue基础入门篇-笔记</title>
+    <link href="http://yoursite.com/child/2020/03/04/1/"/>
+    <id>http://yoursite.com/child/2020/03/04/1/</id>
+    <published>2020-03-04T02:34:23.000Z</published>
+    <updated>2020-03-09T02:13:23.004Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://cn.vuejs.org/v2/api/#v-on&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;API - vue,js 官网文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;选项-数据&quot;&gt;&lt;a href=&quot;#选项-数据&quot; clas
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>js-pc网页兼容源码</title>
@@ -428,29 +448,6 @@
     </summary>
     
       <category term="前端" scheme="http://yoursite.com/child/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序篇</title>
-    <link href="http://yoursite.com/child/2019/06/20/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
-    <id>http://yoursite.com/child/2019/06/20/微信小程序篇/</id>
-    <published>2019-06-20T12:17:51.000Z</published>
-    <updated>2019-07-23T15:34:37.820Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;view-容器&quot;&gt;&lt;a href=&quot;#view-容器&quot; class=&quot;headerlink&quot; title=&quot;view  容器&quot;&gt;&lt;/a&gt;view  容器&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
-      
-    
-    </summary>
-    
-      <category term="小程序" scheme="http://yoursite.com/child/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
       <category term="博客" scheme="http://yoursite.com/child/tags/%E5%8D%9A%E5%AE%A2/"/>
