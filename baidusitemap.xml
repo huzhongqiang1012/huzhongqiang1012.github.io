@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/child/life/index.html</loc>
+    <loc>http://yoursite.com/child/about/index.html</loc>
     <lastmod>2020-04-25</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/child/about/index.html</loc>
-    <lastmod>2020-03-17</lastmod>
+    <loc>http://yoursite.com/child/life/index.html</loc>
+    <lastmod>2020-04-25</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2020/03/04/1/</loc>
     <lastmod>2020-03-09</lastmod>
