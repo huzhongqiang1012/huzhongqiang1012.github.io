@@ -4,7 +4,14 @@
   <url>
     <loc>http://yoursite.com/child/about/index.html</loc>
     
-    <lastmod>2020-04-25T13:35:16.821Z</lastmod>
+    <lastmod>2020-04-30T15:28:28.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/Hobby/index.html</loc>
+    
+    <lastmod>2020-04-25T14:11:16.158Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/child/Photography/index.html</loc>
     
     <lastmod>2020-02-29T02:52:29.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/Hobby/index.html</loc>
-    
-    <lastmod>2020-02-28T13:46:20.204Z</lastmod>
     
   </url>
   
