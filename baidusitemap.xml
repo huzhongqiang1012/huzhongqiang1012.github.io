@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/child/2020/02/26/1/</loc>
+    <lastmod>2020-04-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/09/02/%E5%B0%91%E7%8E%A9%E6%89%8B%E6%9C%BA/</loc>
+    <lastmod>2020-04-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/08/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
+    <lastmod>2020-04-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/child/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2020-04-30</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/child/2019/09/17/php/</loc>
     <lastmod>2020-04-30</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2020/01/09/1/</loc>
-    <lastmod>2020-04-30</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2020/02/26/1/</loc>
     <lastmod>2020-04-30</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2020/02/26/1/</loc>
@@ -30,9 +39,6 @@
   </url>  <url>
     <loc>http://yoursite.com/child/Photography/index.html</loc>
     <lastmod>2020-02-29</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/09/02/%E5%B0%91%E7%8E%A9%E6%89%8B%E6%9C%BA/</loc>
-    <lastmod>2019-09-02</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2019/08/22/Mac%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%BC%80/</loc>
     <lastmod>2019-08-22</lastmod>
@@ -75,12 +81,6 @@
   </url>  <url>
     <loc>http://yoursite.com/child/2019/05/20/hello-world/</loc>
     <lastmod>2019-07-24</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/08/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
-    <lastmod>2019-07-09</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/child/2019/07/06/%E5%89%8D%E7%AB%AF%E8%B7%AF%E5%BE%84%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2019-07-06</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/child/2019/06/15/Javascript%E9%97%AD%E5%8C%85/</loc>
     <lastmod>2019-06-15</lastmod>
