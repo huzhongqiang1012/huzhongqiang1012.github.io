@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hello Word</title>
+  <title>Hu FatFat</title>
   
-  <subtitle>但行好事莫问前程</subtitle>
+  <subtitle>懂点设计、会点前端、会骑摩托</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
