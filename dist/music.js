@@ -4,28 +4,10 @@ const ap = new APlayer({
     autoplay: false,
     audio: [
       {
-        name: "��һ��Ҫ�Ҹ�",
-        artist: '�����',
-        url: 'http://www.ytmp3.cn/down/51689.mp3',
-        cover: 'http://img.ytmp3.cn/image/52.jpg',
-      },
-      {
-        name: 'һ���������(Live)',
-        artist: 'Ħ���ֵ�',
-        url: 'http://www.ytmp3.cn/down/52772.mp3',
-        cover: 'http://img.ytmp3.cn/image/53.jpg',
-      },
-      {
-        name: 'The Rose',
+        name: "You Raise Me Up",
         artist: 'Westlife',
-        url: 'http://www.ytmp3.cn/down/56694.mp3',
-        cover: 'http://img.ytmp3.cn/image/51.jpg',
-      },
-      {
-        name: 'In The Eyes',
-        artist: '��ӳ��',
-        url: 'http://www.ytmp3.cn/down/53053.mp3',
-        cover: 'http://img.ytmp3.cn/image/10.jpg',
+        url: 'https://music.163.com/#/song?id=20707713',
+        cover: 'http://p2.music.126.net/ffWmzD86V-IKPe0D1DNSsA==/18348650045094640.jpg?param=130y130',
       }
     ]
 });
