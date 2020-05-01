@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/_posts/2020/05/01/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2020-05-01T06:47:54.143Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/_posts/2020/01/09/hexo%E6%96%87%E6%A1%A3/</loc>
     
     <lastmod>2020-05-01T05:46:28.410Z</lastmod>
@@ -222,13 +229,6 @@
     <loc>http://yoursite.com/_posts/2019/09/02/%E5%B0%91%E7%8E%A9%E6%89%8B%E6%9C%BA/</loc>
     
     <lastmod>2020-05-01T02:51:49.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/_posts/2020/05/01/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2020-05-01T02:36:10.118Z</lastmod>
     
   </url>
   
