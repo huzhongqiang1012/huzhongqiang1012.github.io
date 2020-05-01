@@ -5,9 +5,9 @@
   <subtitle>做设计、写前端、骑摩托</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/child/"/>
+  <link href="http://yoursite.com/_posts/"/>
   <updated>2020-05-01T02:36:10.118Z</updated>
-  <id>http://yoursite.com/child/</id>
+  <id>http://yoursite.com/_posts/</id>
   
   <author>
     <name>HuZhongQiang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>文章测试</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2020/05/01/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/_posts/2020/05/01/文章测试/</id>
     <published>2020-05-01T02:07:28.000Z</published>
     <updated>2020-05-01T02:36:10.118Z</updated>
     
@@ -33,19 +33,19 @@
     
     </summary>
     
-      <category term="测试" scheme="http://yoursite.com/child/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://yoursite.com/_posts/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="测试" scheme="http://yoursite.com/child/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://yoursite.com/_posts/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Git 指令</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2020/05/01/Git-%E6%8C%87%E4%BB%A4/"/>
+    <id>http://yoursite.com/_posts/2020/05/01/Git-指令/</id>
     <published>2020-05-01T01:16:08.000Z</published>
-    <updated>2020-05-01T02:41:23.447Z</updated>
+    <updated>2020-05-01T02:52:23.031Z</updated>
     
     <summary type="html">
     
@@ -61,10 +61,10 @@
   
   <entry>
     <title>Vue基础入门篇-笔记</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2020/03/04/Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AF%87-%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/_posts/2020/03/04/Vue基础入门篇-笔记/</id>
     <published>2020-03-04T02:34:23.000Z</published>
-    <updated>2020-05-01T02:41:46.822Z</updated>
+    <updated>2020-05-01T02:52:10.953Z</updated>
     
     <summary type="html">
     
@@ -81,10 +81,10 @@
   
   <entry>
     <title>js-pc网页兼容源码</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/"/>
+    <id>http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/</id>
     <published>2020-02-25T17:14:00.000Z</published>
-    <updated>2020-05-01T02:41:46.828Z</updated>
+    <updated>2020-05-01T02:52:08.424Z</updated>
     
     <summary type="html">
     
@@ -101,8 +101,8 @@
   
   <entry>
     <title>H5页面原生video禁止全屏播放</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2020/02/26/1/"/>
+    <id>http://yoursite.com/_posts/2020/02/26/1/</id>
     <published>2020-02-25T17:08:36.000Z</published>
     <updated>2020-04-30T16:56:45.007Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>hexo文档</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2020/01/09/1/"/>
+    <id>http://yoursite.com/_posts/2020/01/09/1/</id>
     <published>2020-01-09T13:03:54.000Z</published>
     <updated>2020-04-30T16:57:34.797Z</updated>
     
@@ -142,8 +142,8 @@
   
   <entry>
     <title>php基础学习</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/09/17/php/"/>
+    <id>http://yoursite.com/_posts/2019/09/17/php/</id>
     <published>2019-09-16T16:15:16.000Z</published>
     <updated>2020-04-30T16:58:20.416Z</updated>
     
@@ -157,16 +157,16 @@
     </summary>
     
     
-      <category term="php" scheme="http://yoursite.com/child/tags/php/"/>
+      <category term="php" scheme="http://yoursite.com/_posts/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>少玩手机</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2019/09/02/%E5%B0%91%E7%8E%A9%E6%89%8B%E6%9C%BA/"/>
+    <id>http://yoursite.com/_posts/2019/09/02/少玩手机/</id>
     <published>2019-09-02T13:48:16.000Z</published>
-    <updated>2020-05-01T02:42:27.182Z</updated>
+    <updated>2020-05-01T02:51:49.321Z</updated>
     
     <summary type="html">
     
@@ -186,8 +186,8 @@
   
   <entry>
     <title>Mac微信多开</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/08/22/Mac%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%BC%80/"/>
+    <id>http://yoursite.com/_posts/2019/08/22/Mac微信多开/</id>
     <published>2019-08-22T12:09:27.000Z</published>
     <updated>2019-08-22T13:38:49.571Z</updated>
     
@@ -205,8 +205,8 @@
   
   <entry>
     <title>ProcessOn 在线作图</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/08/11/ProcessOn/"/>
+    <id>http://yoursite.com/_posts/2019/08/11/ProcessOn/</id>
     <published>2019-08-10T16:20:50.000Z</published>
     <updated>2019-08-10T16:36:22.923Z</updated>
     
@@ -220,14 +220,14 @@
     </summary>
     
     
-      <category term="ProcessOn" scheme="http://yoursite.com/child/tags/ProcessOn/"/>
+      <category term="ProcessOn" scheme="http://yoursite.com/_posts/tags/ProcessOn/"/>
     
   </entry>
   
   <entry>
     <title>NPM-包管理工具</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/08/07/NPM/"/>
+    <id>http://yoursite.com/_posts/2019/08/07/NPM/</id>
     <published>2019-08-07T13:52:33.000Z</published>
     <updated>2019-08-07T13:53:37.240Z</updated>
     
@@ -247,8 +247,8 @@
   
   <entry>
     <title>Macmini融合硬盘双系统完美版</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/08/05/Macmini%E8%9E%8D%E5%90%88%E7%A1%AC%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%8C%E7%BE%8E%E7%89%88/"/>
+    <id>http://yoursite.com/_posts/2019/08/05/Macmini融合硬盘双系统完美版/</id>
     <published>2019-08-05T15:48:30.000Z</published>
     <updated>2019-08-06T12:16:03.591Z</updated>
     
@@ -262,19 +262,19 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://yoursite.com/child/categories/Mac/"/>
+      <category term="Mac" scheme="http://yoursite.com/_posts/categories/Mac/"/>
     
     
-      <category term="MacOS" scheme="http://yoursite.com/child/tags/MacOS/"/>
+      <category term="MacOS" scheme="http://yoursite.com/_posts/tags/MacOS/"/>
     
   </entry>
   
   <entry>
     <title>一岗多职</title>
-    <link href="http://yoursite.com/child/posts/seourl.html"/>
-    <id>http://yoursite.com/child/posts/seourl.html</id>
+    <link href="http://yoursite.com/_posts/2019/08/05/%E4%B8%80%E5%B2%97%E5%A4%9A%E8%81%8C/"/>
+    <id>http://yoursite.com/_posts/2019/08/05/一岗多职/</id>
     <published>2019-08-05T12:33:08.000Z</published>
-    <updated>2020-05-01T02:41:46.818Z</updated>
+    <updated>2020-05-01T02:52:13.519Z</updated>
     
     <summary type="html">
     
@@ -285,17 +285,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://yoursite.com/child/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/_posts/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://yoursite.com/child/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/_posts/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>Grid布局</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/29/1/"/>
+    <id>http://yoursite.com/_posts/2019/07/29/1/</id>
     <published>2019-07-29T12:13:26.000Z</published>
     <updated>2019-07-29T12:18:52.573Z</updated>
     
@@ -308,15 +308,15 @@
     
     </summary>
     
-      <category term="Grid" scheme="http://yoursite.com/child/categories/Grid/"/>
+      <category term="Grid" scheme="http://yoursite.com/_posts/categories/Grid/"/>
     
     
   </entry>
   
   <entry>
     <title>AJAX基础</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/25/AJAX/"/>
+    <id>http://yoursite.com/_posts/2019/07/25/AJAX/</id>
     <published>2019-07-24T16:19:31.000Z</published>
     <updated>2019-07-25T22:18:03.337Z</updated>
     
@@ -329,17 +329,17 @@
     
     </summary>
     
-      <category term="AJAX" scheme="http://yoursite.com/child/categories/AJAX/"/>
+      <category term="AJAX" scheme="http://yoursite.com/_posts/categories/AJAX/"/>
     
     
-      <category term="AJAX" scheme="http://yoursite.com/child/tags/AJAX/"/>
+      <category term="AJAX" scheme="http://yoursite.com/_posts/tags/AJAX/"/>
     
   </entry>
   
   <entry>
     <title>css媒体查询</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/25/css%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://yoursite.com/_posts/2019/07/25/css媒体查询/</id>
     <published>2019-07-24T16:18:05.000Z</published>
     <updated>2019-07-25T22:21:21.080Z</updated>
     
@@ -352,17 +352,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://yoursite.com/child/categories/css/"/>
+      <category term="css" scheme="http://yoursite.com/_posts/categories/css/"/>
     
     
-      <category term="css媒体查询" scheme="http://yoursite.com/child/tags/css%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/"/>
+      <category term="css媒体查询" scheme="http://yoursite.com/_posts/tags/css%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/"/>
     
   </entry>
   
   <entry>
     <title>HTML5语义化标签</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/25/html5/"/>
+    <id>http://yoursite.com/_posts/2019/07/25/html5/</id>
     <published>2019-07-24T16:16:23.000Z</published>
     <updated>2019-07-25T22:18:32.664Z</updated>
     
@@ -376,17 +376,17 @@
     
     </summary>
     
-      <category term="html" scheme="http://yoursite.com/child/categories/html/"/>
+      <category term="html" scheme="http://yoursite.com/_posts/categories/html/"/>
     
     
-      <category term="html" scheme="http://yoursite.com/child/tags/html/"/>
+      <category term="html" scheme="http://yoursite.com/_posts/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>SEO优化</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/24/SEO/"/>
+    <id>http://yoursite.com/_posts/2019/07/24/SEO/</id>
     <published>2019-07-24T13:54:40.000Z</published>
     <updated>2019-07-25T22:18:59.484Z</updated>
     
@@ -399,17 +399,17 @@
     
     </summary>
     
-      <category term="SEO" scheme="http://yoursite.com/child/categories/SEO/"/>
+      <category term="SEO" scheme="http://yoursite.com/_posts/categories/SEO/"/>
     
     
-      <category term="SEO" scheme="http://yoursite.com/child/tags/SEO/"/>
+      <category term="SEO" scheme="http://yoursite.com/_posts/tags/SEO/"/>
     
   </entry>
   
   <entry>
     <title>WebQuality</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/24/WebQuality/"/>
+    <id>http://yoursite.com/_posts/2019/07/24/WebQuality/</id>
     <published>2019-07-24T13:44:10.000Z</published>
     <updated>2019-07-26T00:13:59.864Z</updated>
     
@@ -422,17 +422,17 @@
     
     </summary>
     
-      <category term="无障碍访问" scheme="http://yoursite.com/child/categories/%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BF%E9%97%AE/"/>
+      <category term="无障碍访问" scheme="http://yoursite.com/_posts/categories/%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BF%E9%97%AE/"/>
     
     
-      <category term="WebQuality" scheme="http://yoursite.com/child/tags/WebQuality/"/>
+      <category term="WebQuality" scheme="http://yoursite.com/_posts/tags/WebQuality/"/>
     
   </entry>
   
   <entry>
     <title>ES6篇</title>
-    <link href="http://yoursite.com/child/posts/undefined.html"/>
-    <id>http://yoursite.com/child/posts/undefined.html</id>
+    <link href="http://yoursite.com/_posts/2019/07/23/1/"/>
+    <id>http://yoursite.com/_posts/2019/07/23/1/</id>
     <published>2019-07-23T15:30:33.000Z</published>
     <updated>2019-07-29T12:18:49.769Z</updated>
     
@@ -445,7 +445,7 @@
     
     </summary>
     
-      <category term="ES6" scheme="http://yoursite.com/child/categories/ES6/"/>
+      <category term="ES6" scheme="http://yoursite.com/_posts/categories/ES6/"/>
     
     
   </entry>

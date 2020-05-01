@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博客,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hu FatFat" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="生命周期补充代待定…. 选项数据mounted(){}12&amp;lt;!-- ref 主要是获取dom  --&amp;gt;&amp;lt;div ref=&amp;quot;head&amp;quot; id=&amp;quot;head&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 12345678910export default &amp;#123;    data() &amp;#123;      return &amp;#123;&amp;#125;">
+<meta name="keywords" content="博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue基础篇">
+<meta property="og:url" content="http://yoursite.com/_posts/2019/06/05/Vue基础篇/index.html">
+<meta property="og:site_name" content="Hu FatFat">
+<meta property="og:description" content="生命周期补充代待定…. 选项数据mounted(){}12&amp;lt;!-- ref 主要是获取dom  --&amp;gt;&amp;lt;div ref=&amp;quot;head&amp;quot; id=&amp;quot;head&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 12345678910export default &amp;#123;    data() &amp;#123;      return &amp;#123;&amp;#125;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-04T16:22:55.944Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue基础篇">
+<meta name="twitter:description" content="生命周期补充代待定…. 选项数据mounted(){}12&amp;lt;!-- ref 主要是获取dom  --&amp;gt;&amp;lt;div ref=&amp;quot;head&amp;quot; id=&amp;quot;head&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 12345678910export default &amp;#123;    data() &amp;#123;      return &amp;#123;&amp;#125;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: "",
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/_posts/2019/06/05/Vue基础篇/">
+
+
+
+
+
+
+
+
+  <title>Vue基础篇 | Hu FatFat</title>
+  
+
+
+
+
+
+
+
+
+</head>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hu FatFat</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">做设计、写前端、骑摩托</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-check"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br>
+            
+            前端
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>
+            
+            收藏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photography">
+          <a href="/photography/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-picture-o"></i> <br>
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-personallog">
+          <a href="/Personallog" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            语录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-little">
+          <a href="/Little/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-key"></i> <br>
+            
+            私人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/_posts/2019/06/05/Vue基础篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuZhongQiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s1.ax1x.com/2020/04/30/JLTmrV.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hu FatFat">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue基础篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-05T00:21:13+08:00">
+                2019-06-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T00:22:55+08:00">
+                2019-06-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/05/Vue基础篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/05/Vue基础篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>补充代待定….</p>
+<h2 id="选项数据"><a href="#选项数据" class="headerlink" title="选项数据"></a>选项数据</h2><h3 id="mounted"><a href="#mounted" class="headerlink" title="mounted(){}"></a>mounted(){}</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ref 主要是获取dom  --&gt;</span><br><span class="line">&lt;div ref=&quot;head&quot; id=&quot;head&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// DOM已生成</span></span><br><span class="line">    mounted() &#123;</span><br><span class="line">      <span class="comment">// DOM 操作，this.$refs.head.样式属性 = ‘样式值’</span></span><br><span class="line">      <span class="keyword">this</span>.$refs.head.innerHTML = <span class="string">'虚拟Dom操作'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="data"><a href="#data" class="headerlink" title="data (){}"></a>data (){}</h3><p>全局变量的定义—变量组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  模板  --&gt;</span><br><span class="line">&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="comment">// 全局变量的定义---变量组件</span></span><br><span class="line">    date() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="comment">// 数据绑定</span></span><br><span class="line">            msg: <span class="string">'helloword Vue'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="computed"><a href="#computed" class="headerlink" title="computed:{}"></a>computed:{}</h3><p>全局函数的定义—函数组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  模板  --&gt;</span><br><span class="line">&lt;div&gt;computed:&#123;&#123;aDouble&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局函数的定义---函数组件</span></span><br><span class="line">computed: &#123;</span><br><span class="line">    aDouble() &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.num * <span class="number">2</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="methods"><a href="#methods" class="headerlink" title="methods:{}"></a>methods:{}</h3><p> 全局事件的定义—事件组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  模板  --&gt;</span><br><span class="line">&lt;div @click=&quot;say(&quot;我是事件&quot;)&quot;&gt;点击我弹出&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局事件的定义---事件组件</span></span><br><span class="line">methods: &#123;</span><br><span class="line">    say(h) &#123;</span><br><span class="line">        alert(h);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="filters"><a href="#filters" class="headerlink" title="filters:{}"></a>filters:{}</h3><p>全局事件的定义—过滤器组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  过滤器  --&gt;</span><br><span class="line">&lt;div&gt;&#123;&#123; message || capitalized &#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">filters: &#123;</span><br><span class="line">    capitalized()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><ul>
+<li>data</li>
+<li>模板中直接嵌入JS代码</li>
+<li>指令  v-html   v-on   v-bind</li>
+<li>计算属性</li>
+<li>过滤器</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  v-html 指令,生成子元素  --&gt;</span><br><span class="line">&lt;div v-html=&quot;rawhtml&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--  v-bind  动态的绑定指令 --&gt;</span><br><span class="line">&lt;div v-bind:class=&quot;obj&quot;&gt;修改颜色&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--  模板-绑定事件  --&gt;</span><br><span class="line">&lt;div @click=&quot;change&quot;&gt;修改颜色&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="comment">// 全局变量的定义---变量组件</span></span><br><span class="line">    date() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="comment">// 模板与数据绑定</span></span><br><span class="line">            msg: <span class="string">"模板与数据绑定"</span>,</span><br><span class="line">            rawhtml: <span class="string">"&lt;span&gt;v-html 指令&lt;/span&gt;"</span>,</span><br><span class="line">            <span class="comment">// 定义变量原始值</span></span><br><span class="line">            obj: <span class="string">'pink active'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 全局函数的定义---函数组件</span></span><br><span class="line">    computed: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 全局事件的定义---事件组件</span></span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">// 点击当前变量，动态改变 为blue</span></span><br><span class="line">        change() &#123;</span><br><span class="line">            <span class="keyword">this</span>.obj = <span class="string">'blue'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p>在模板中放入太多的逻辑会让模板过重且难以维护 </p>
+<p>计算属性下所有函数可以放到computed 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt; 计算属性&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            msg:<span class="string">"helloworld"</span>, <span class="comment">// 反向输出</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line">        <span class="comment">// 颠倒字符串函数</span></span><br><span class="line">        reverseMessage()&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.msg.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="class与style动态绑定"><a href="#class与style动态绑定" class="headerlink" title="class与style动态绑定"></a>class与style动态绑定</h2><h3 id="v-bind指令"><a href="#v-bind指令" class="headerlink" title="v-bind指令"></a>v-bind指令</h3><p>动态的绑定一个或多个特性</p>
+<p>缩写 “ :  ”</p>
+<p> 原始写法  v-bind：class   缩写写法：class</p>
+<h3 id="class绑定方法"><a href="#class绑定方法" class="headerlink" title="class绑定方法"></a>class绑定方法</h3><p>第一种绑定方式：{ “active”：isActive, “ text-danger” : hansError }</p>
+<p>第二种绑定方式：classObject</p>
+<p>第三种绑定方式：[ activeClass , errorClass ]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;style和class 绑定方式&lt;/div&gt;</span><br><span class="line">&lt;!-- 第一种方式--&gt;</span><br><span class="line">&lt;div v-bind:class=&quot;&#123;&apos;active&apos; : isActive, &apos;text-danger&apos;: hansError&#125;&quot;&gt;class绑定&lt;/div&gt;</span><br><span class="line">&lt;!-- 第二种方式--&gt;</span><br><span class="line">&lt;div v-bind:class=&quot;classObject&quot;&gt;class绑定&lt;/div&gt;</span><br><span class="line">&lt;!-- 第三种方式--&gt;</span><br><span class="line">&lt;div v-bind:class=&quot;[&apos;active&apos;,&apos;text-danger&apos;]&quot;&gt;class绑定&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">      data() &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">              <span class="comment">// 第一种方式</span></span><br><span class="line">              isActive: <span class="literal">true</span>,   <span class="comment">// 添加class</span></span><br><span class="line">              hansError: <span class="literal">false</span>, <span class="comment">// 去掉class</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">// 第二种方式</span></span><br><span class="line">              classObject: &#123;</span><br><span class="line">                  <span class="string">"active"</span>: <span class="literal">true</span>,</span><br><span class="line">                  <span class="string">"text-danger"</span>: <span class="literal">false</span>,</span><br><span class="line">              &#125;,</span><br><span class="line"></span><br><span class="line">              <span class="comment">// 第三种方式</span></span><br><span class="line">              activeClass: <span class="string">'active'</span>,</span><br><span class="line">              errorClass: <span class="string">'text-danger'</span></span><br><span class="line"></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="style绑定方法"><a href="#style绑定方法" class="headerlink" title="style绑定方法"></a>style绑定方法</h3><p>绑定1：{ “color”：activeColor , “fontSize” : “16px” }</p>
+<p>绑定2：styleObject</p>
+<p>绑定3：[ basestyle , overridingstyles ]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 第一种方式--&gt;</span><br><span class="line">&lt;div v-bind:style=&quot;&#123;&apos;color&apos;: activeColor,&apos;fontSize&apos;: fontSize + &apos;px&apos;&#125;&quot;&gt; style第一种方式&lt;/div&gt;</span><br><span class="line">&lt;!-- 第二种方式--&gt;</span><br><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;style第二种方式&lt;/div&gt;</span><br><span class="line">&lt;!-- 第三种方式--&gt;</span><br><span class="line">&lt;div v-bind:style=&quot;[baseStyle,overridingStyle]&quot;&gt;style第三种方式&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">      data() &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">              <span class="comment">// style 第一种方式</span></span><br><span class="line">              activeColor: <span class="string">'black'</span>,</span><br><span class="line">              fontSize: <span class="number">30</span>,</span><br><span class="line">              </span><br><span class="line">              <span class="comment">// style 第二种方式</span></span><br><span class="line">              styleObject: &#123;</span><br><span class="line">                  <span class="string">'color'</span>: <span class="string">'activeColor'</span>,</span><br><span class="line">                  <span class="string">"fontSize"</span>: <span class="string">"43px"</span></span><br><span class="line">              &#125;,</span><br><span class="line">              </span><br><span class="line">              <span class="comment">// style 第三种方式</span></span><br><span class="line">              baseStyle:&#123;</span><br><span class="line">                  color:<span class="string">'red'</span>,</span><br><span class="line">                  fontSize:<span class="string">'53px'</span>,</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
+<li>v-if 指令</li>
+<li>v-if   v-else</li>
+<li>v-if   v-else-if   v-else</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 单个元素判断  --&gt;</span><br><span class="line">&lt;div v-if=&quot;ok&quot;&gt;yes&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- if else判断 --&gt;</span><br><span class="line">&lt;div v-if=&quot;type === &apos;A&apos;&quot;&gt;A&lt;/div&gt;</span><br><span class="line">&lt;div v-else-if=&quot;type === &apos;B&apos;&quot;&gt;B&lt;/div&gt;</span><br><span class="line">&lt;div v-else-if=&quot;type === &apos;C&apos;&quot;&gt;C&lt;/div&gt;</span><br><span class="line">&lt;div v-else&gt;not a/b/c&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 显示隐藏  --&gt;</span><br><span class="line">&lt;div v-show=&quot;isShow&quot;&gt;显示隐藏&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="comment">//  true 显示 绑定的模板标签</span></span><br><span class="line">            ok: &#123;<span class="literal">true</span>&#125;,</span><br><span class="line">            type: <span class="string">"A"</span>,  <span class="comment">// 输出 A</span></span><br><span class="line">            isShow : <span class="literal">false</span>, <span class="comment">// 隐藏，true 显示</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h2><ul>
+<li>v-for指令</li>
+<li>用法1：v-for = “ item in items”   数组</li>
+<li>用法2：v-for = “  ( item, index ) in items “ 数组</li>
+<li>用法3：v-for = “ ( value , key) in object “  对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=&quot;example-1&quot;&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">        in = for循环</span><br><span class="line">        items = 变量，要遍历的数据</span><br><span class="line">     --&gt;</span><br><span class="line">    &lt;li v-for=&quot;item in items&quot;&gt;</span><br><span class="line">        &#123;&#123; item.message &#125;&#125;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;ul id=&quot;example-2&quot;&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">        in  = for循环</span><br><span class="line">        items   = 变量，要遍历的数据</span><br><span class="line">        index   = 数组的下标</span><br><span class="line">     --&gt;</span><br><span class="line">    &lt;li v-for=&quot;(item,index) in item&quot;&gt;</span><br><span class="line">        &#123;&#123; index &#125;&#125; - &#123;&#123; item.message &#125;&#125;</span><br><span class="line">        &lt;!--</span><br><span class="line">         输出页面</span><br><span class="line">            0 - foo</span><br><span class="line">            1 - Bar</span><br><span class="line">            2 - AA</span><br><span class="line">         --&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;ul id=&quot;example-3&quot;&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">        in  = for循环</span><br><span class="line">        items   = 变量，要遍历的数据</span><br><span class="line">        index   = 数组的下标</span><br><span class="line">     --&gt;</span><br><span class="line">    &lt;li v-for=&quot;(value,key) in obj&quot;&gt;</span><br><span class="line">        &#123;&#123; key &#125;&#125; : &#123;&#123; value &#125;&#125;</span><br><span class="line">        &lt;!--</span><br><span class="line">            key  =  firstName   value  =  John</span><br><span class="line">            key  =  lastName    value  =  Doe</span><br><span class="line">          --&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="comment">// 第一种写法，第二种写法 列表渲染</span></span><br><span class="line">            item: [</span><br><span class="line">                &#123;<span class="attr">message</span>: <span class="string">'foo'</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">message</span>: <span class="string">'Bar'</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">message</span>: <span class="string">'AA'</span>&#125;,</span><br><span class="line">            ],</span><br><span class="line">            <span class="comment">// 第三种写法,对象渲染</span></span><br><span class="line">            obj: &#123;</span><br><span class="line">                firstName: <span class="string">'John'</span>,</span><br><span class="line">                lastName: <span class="string">'Doe'</span>,</span><br><span class="line">                age: <span class="number">30</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="事件处理器"><a href="#事件处理器" class="headerlink" title="事件处理器"></a>事件处理器</h2><ul>
+<li>v-on指令</li>
+<li>缩写</li>
+<li>原是写法 v-on：click 缩写 @click</li>
+<li>事件修饰符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;1. v-on:click=&quot;名称&quot;————————简单———————&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;example-1&quot;&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;counter += 1&quot;&gt;增加 1&lt;/button&gt;</span><br><span class="line">  &lt;p&gt;这个按钮被点击了 &#123;&#123;counter&#125;&#125; &lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;2. @click=&quot;方法名称&quot;——————————推荐—————&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;example-2&quot;&gt;</span><br><span class="line">  &lt;!-- greet 是在下面定义的方法名  --&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;greet&quot;&gt;Greet&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;3. @click=&quot;方法名称(参数)&quot;——————————————&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;example-3&quot;&gt;</span><br><span class="line">  &lt;!-- greet 是在下面定义的方法名  --&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;say(&apos;嗨，你好!&apos;)&quot;&gt;say&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;4. @click.stop=&quot;方法名称&quot;——————————————&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;example-4&quot;&gt;</span><br><span class="line">  &lt;div @click=&quot;dothis2&quot;&gt;</span><br><span class="line">      &lt;button @click.stop=&quot;dothis&quot;&gt;阻止事件冒泡&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">   <span class="comment">// 全局变量的定义---变量组件</span></span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      counter: <span class="number">1</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 全局事件的定义---事件组件</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="comment">// 操作方法</span></span><br><span class="line">    greet() &#123;</span><br><span class="line">      <span class="keyword">this</span>.counter = <span class="keyword">this</span>.counter + <span class="number">1</span>;</span><br><span class="line">   <span class="comment">// this.counter = this.counter - 1;</span></span><br><span class="line">   <span class="comment">// this.counter = this.counter * 1;</span></span><br><span class="line">   <span class="comment">// this.counter = this.counter / 1;</span></span><br><span class="line">    &#125;,</span><br><span class="line"> 	   <span class="comment">// 弹出方法，调用say 名就好了</span></span><br><span class="line">    say(h) &#123;</span><br><span class="line">      alert(h)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 弹出方法</span></span><br><span class="line">    dothis2() &#123;</span><br><span class="line">        alert(<span class="string">'dothis2'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 弹出方法</span></span><br><span class="line">    dothis()&#123;</span><br><span class="line">      alert(<span class="string">'dothis'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="表单控件绑定"><a href="#表单控件绑定" class="headerlink" title="表单控件绑定"></a>表单控件绑定</h2><ul>
+<li>v-model 指令在表单控件元素上创建双向数据绑定</li>
+<li>复选框</li>
+<li>多个勾选框</li>
+<li>选择列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;h1&gt;表单控件绑定 v-model指令&lt;/h1&gt;&lt;/div&gt;</span><br><span class="line">   </span><br><span class="line">&lt;input v-model=&quot;messages&quot; placeholder=&quot;edit me&quot;&gt;</span><br><span class="line">&lt;p&gt;Messages is: &#123;&#123;messages&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line"></span><br><span class="line"> &lt;p&gt;表单绑定-------&gt;&gt;数组,并把vue 追加到数组中，显示在模版中&lt;/p&gt;</span><br><span class="line"> Jack：&lt;input type=&quot;checkbox&quot; value=&quot;Jack&quot; v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line"> Boy： &lt;input type=&quot;checkbox&quot; value=&quot;Boy&quot;  v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line"> Ket： &lt;input type=&quot;checkbox&quot; value=&quot;Ket&quot;  v-model=&quot;checkedNames&quot;&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;span&gt;Check names: &#123;&#123;checkedNames&#125;&#125;&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 选择列表 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;select v-model=&quot;selected&quot; &gt;</span><br><span class="line">      &lt;!--    disabled 默认选择状态   --&gt;</span><br><span class="line">      &lt;!--    option 必须去掉value 不然报错   --&gt;</span><br><span class="line">      &lt;option disabled value=&quot;&quot;&gt;请选择&lt;/option&gt;</span><br><span class="line">      &lt;option&gt;A&lt;/option&gt;</span><br><span class="line">      &lt;option&gt;B&lt;/option&gt;</span><br><span class="line">      &lt;option&gt;C&lt;/option&gt;</span><br><span class="line">      &lt;option&gt;F&lt;/option&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;span&gt;Selected: &#123;&#123;selected&#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">         messages: <span class="string">'表单控件绑定'</span>,</span><br><span class="line">     	   <span class="comment">// 复选框选择一个，则把元素传入到checkedNames 数组中，多个则，往后追加</span></span><br><span class="line">        checkedNames:[],</span><br><span class="line">        <span class="comment">// 存储，模版中获取的 option的值</span></span><br><span class="line">        selected:<span class="string">''</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><ul>
+<li>组件写到components 文件夹下</li>
+<li>自定义一个倒计时组件</li>
+<li>组件基本要素：props    $emmit 等</li>
+<li>通过import 导入自定义组件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 创建自定义定时器组件 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- 传入值必须是对象--&gt;</span><br><span class="line">  &lt;p :style=&quot;&#123;color : col&#125;&quot;&gt;&#123;&#123;time&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        // 定义变量time 等于 10</span><br><span class="line">        time: 10</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 全局函数组件</span><br><span class="line">    mounted() &#123;</span><br><span class="line">      // 创建变量 vm</span><br><span class="line">      var vm = this;</span><br><span class="line">      // t 定时器，每1秒执行一次</span><br><span class="line">      var t = setInterval(function () &#123;</span><br><span class="line">        //  当前的time 每次执行调用 -1</span><br><span class="line">        vm.time--;</span><br><span class="line">        // 判断 time == 0</span><br><span class="line">        if (vm.time == 0) &#123;</span><br><span class="line">          // 定时器结束前，会触发end事件</span><br><span class="line">          vm.$emit(&apos;end&apos;);</span><br><span class="line">          // 清除定时器</span><br><span class="line">          clearInterval(t);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;,</span><br><span class="line"> </span><br><span class="line">    // 接受传过来的属性值</span><br><span class="line">    props: &#123;</span><br><span class="line">      col: &#123;</span><br><span class="line">        // 传入的值，必须是字符串</span><br><span class="line">        type: String,</span><br><span class="line">     	   // 定义默认颜色</span><br><span class="line">        default: &apos;#000&apos;,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 引入组件</span><br><span class="line">import countdown from &apos;@/components/countdown.vue&apos;</span><br><span class="line"></span><br><span class="line">// end 触发事件函数</span><br><span class="line">methods: &#123;</span><br><span class="line">    ending() &#123;</span><br><span class="line">      alert(&apos;已经结束了！&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 注册组件</span><br><span class="line">  components: &#123;</span><br><span class="line">    &apos;count-down&apos;: countdown</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 使用组件，通过标签方式</span><br><span class="line"></span><br><span class="line">// count-down, 自定义的标签名称，可以在注册组件，修改名称</span><br><span class="line">// col=&quot;blue&quot;, 传入自定义值（颜色值）</span><br><span class="line">// @end=&quot;ending&quot;, 自定义end事件，触发时，执行ending函数脚本</span><br><span class="line">&lt;count-down col=&quot;blue&quot; @end=&quot;ending&quot;&gt;&lt;/count-down&gt;</span><br></pre></td></tr></table></figure>
+<p>自定义组件，重要的是自定义一些事件，以及传参。。。</p>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><ul>
+<li>Vue 中操作 DOM</li>
+<li>this.$refs</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ref=&quot;head&quot; id=&quot;head&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// DOM操作的模版</span></span><br><span class="line">  mounted() &#123;</span><br><span class="line">    <span class="comment">// DOM已生成</span></span><br><span class="line">    <span class="keyword">this</span>.$refs.head.innerHTML = <span class="string">'虚拟Dom操作'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="过渡效果"><a href="#过渡效果" class="headerlink" title="过渡效果"></a>过渡效果</h2>
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpg" alt="HuZhongQiang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/zhifubao.jpg" alt="HuZhongQiang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Huzhongqiang：</strong>
+    HuZhongQiang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/_posts/2019/06/05/Vue基础篇/" title="Vue基础篇">http://yoursite.com/_posts/2019/06/05/Vue基础篇/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/03/jquery基础/" rel="next" title="jquery基础">
+                <i class="fa fa-chevron-left"></i> jquery基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/15/Flex布局/" rel="prev" title="Flex布局">
+                Flex布局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://s1.ax1x.com/2020/04/30/JLTmrV.jpg" alt="HuZhongQiang">
+            
+              <p class="site-author-name" itemprop="name">HuZhongQiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/" title="Vue官网" target="_blank">Vue官网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/developer" title="阮 一 峰" target="_blank">阮 一 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/wiki/1022910821149312" title="廖 雪 峰" target="_blank">廖 雪 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/TomXu" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">1.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项数据"><span class="nav-number">2.</span> <span class="nav-text">选项数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mounted"><span class="nav-number">2.1.</span> <span class="nav-text">mounted(){}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data"><span class="nav-number">2.2.</span> <span class="nav-text">data (){}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#computed"><span class="nav-number">2.3.</span> <span class="nav-text">computed:{}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#methods"><span class="nav-number">2.4.</span> <span class="nav-text">methods:{}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filters"><span class="nav-number">2.5.</span> <span class="nav-text">filters:{}</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板语法"><span class="nav-number">3.</span> <span class="nav-text">模板语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性"><span class="nav-number">4.</span> <span class="nav-text">计算属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class与style动态绑定"><span class="nav-number">5.</span> <span class="nav-text">class与style动态绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-bind指令"><span class="nav-number">5.1.</span> <span class="nav-text">v-bind指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class绑定方法"><span class="nav-number">5.2.</span> <span class="nav-text">class绑定方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#style绑定方法"><span class="nav-number">5.3.</span> <span class="nav-text">style绑定方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件渲染"><span class="nav-number">6.</span> <span class="nav-text">条件渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表渲染"><span class="nav-number">7.</span> <span class="nav-text">列表渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理器"><span class="nav-number">8.</span> <span class="nav-text">事件处理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单控件绑定"><span class="nav-number">9.</span> <span class="nav-text">表单控件绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义组件"><span class="nav-number">10.</span> <span class="nav-text">自定义组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM操作"><span class="nav-number">11.</span> <span class="nav-text">DOM操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过渡效果"><span class="nav-number">12.</span> <span class="nav-text">过渡效果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+
+
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuZhongQiang</span>
+  <span>|</span>
+  <div class="theme-info">
+    <div class="powered-by"></div>
+    <span class="post-count">博客全站共72.2k字</span>
+  </div>
+  <div id="days"></div> 
+  <script>
+    function show_date_time(){
+      window.setTimeout("show_date_time()", 1000);
+      BirthDay=new Date("05/20/2019 12:00:00");
+      today=new Date();
+      timeold=(today.getTime()-BirthDay.getTime());
+      sectimeold=timeold/1000
+      secondsold=Math.floor(sectimeold);
+      msPerDay=24*60*60*1000
+      e_daysold=timeold/msPerDay
+      daysold=Math.floor(e_daysold);
+      e_hrsold=(e_daysold-daysold)*24;
+      hrsold=setzero(Math.floor(e_hrsold));
+      e_minsold=(e_hrsold-hrsold)*60;
+      minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+      seconds=setzero(Math.floor((e_minsold-minsold)*60));
+      document.getElementById('days').innerHTML="本站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+  </script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">72.2k</span>
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+	
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+</html>

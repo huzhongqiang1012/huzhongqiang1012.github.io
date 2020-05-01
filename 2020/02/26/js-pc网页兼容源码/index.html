@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hu FatFat" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="HTML: 123456789101112131415161718192021222324252627282930313233343536373839404142434445&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;    &amp;lt;meta name=&quot;viewpor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-pc网页兼容源码">
+<meta property="og:url" content="http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/index.html">
+<meta property="og:site_name" content="Hu FatFat">
+<meta property="og:description" content="HTML: 123456789101112131415161718192021222324252627282930313233343536373839404142434445&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;    &amp;lt;meta name=&quot;viewpor">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://files.vlad.studio/sequoia/joy/bookworm/thumbs/1024x1024.jpg">
+<meta property="og:updated_time" content="2020-05-01T02:52:08.424Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js-pc网页兼容源码">
+<meta name="twitter:description" content="HTML: 123456789101112131415161718192021222324252627282930313233343536373839404142434445&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;    &amp;lt;meta name=&quot;viewpor">
+<meta name="twitter:image" content="https://files.vlad.studio/sequoia/joy/bookworm/thumbs/1024x1024.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: "",
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/">
+
+
+
+
+
+
+
+
+  <title>js-pc网页兼容源码 | Hu FatFat</title>
+  
+
+
+
+
+
+
+
+
+</head>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hu FatFat</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">做设计、写前端、骑摩托</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-check"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br>
+            
+            前端
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hobby">
+          <a href="/Hobby/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>
+            
+            收藏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photography">
+          <a href="/photography/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-picture-o"></i> <br>
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-personallog">
+          <a href="/Personallog" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            语录
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-little">
+          <a href="/Little/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-key"></i> <br>
+            
+            私人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuZhongQiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s1.ax1x.com/2020/04/30/JLTmrV.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hu FatFat">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js-pc网页兼容源码</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-26T01:14:00+08:00">
+                2020-02-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-01T10:52:08+08:00">
+                2020-05-01
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/02/26/js-pc网页兼容源码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/02/26/js-pc网页兼容源码/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="https://files.vlad.studio/sequoia/joy/bookworm/thumbs/1024x1024.jpg" rel="gallery_ck9nltes800170i2odhlep0r6" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://files.vlad.studio/sequoia/joy/bookworm/thumbs/1024x1024.jpg" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://temp.im/640x260/444/fff"</span> <span class="attr">class</span>=<span class="string">"img-responsive"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"font-size:0.3rem; padding: 0.2rem"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">"font-size:0.4rem"</span>&gt;</span>rem布局（进阶版）的一些说明<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>1，大家先把这个页面在不同设备模式下浏览下，感受下。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>2，一般来说我们的手机端效果图是640px或750px。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>3，对于上图这类需要等屏宽的图片，只需让其宽度设为 100% 即可。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>4，该布局方案要求凡是涉及尺寸的，单位都是rem，比如，height width margin paddint top border-radius 等等。你只需要按照效果图上标注的尺寸布局即可。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navRoot"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"navLink active"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home navLinkIco"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"navLinkText"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"navLink"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home navLinkIco"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"navLinkText"</span>&gt;</span>好店<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"navLink"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home navLinkIco"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"navLinkText"</span>&gt;</span>简单<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"navLink"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home navLinkIco"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"navLinkText"</span>&gt;</span>复杂<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"navLink"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home navLinkIco"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"navLinkText"</span>&gt;</span>异步<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS: </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*/ 原始样式 */</span><br><span class="line">*&#123;<span class="attribute">box-sizing</span>:border-box;<span class="attribute">max-height</span>:<span class="number">100000px</span>&#125;</span><br><span class="line"><span class="selector-pseudo">:after</span>,<span class="selector-pseudo">:before</span>&#123;<span class="attribute">box-sizing</span>:border-box;<span class="attribute">max-height</span>:<span class="number">100000px</span>&#125;</span><br><span class="line">*,<span class="selector-pseudo">:after</span>,<span class="selector-pseudo">:before</span>&#123;<span class="attribute">-webkit-tap-highlight-color</span>:<span class="built_in">rgba</span>(0,0,0,0)&#125;</span><br><span class="line"><span class="selector-tag">a</span>,<span class="selector-tag">abbr</span>,<span class="selector-tag">address</span>,<span class="selector-tag">b</span>,<span class="selector-tag">blockquote</span>,<span class="selector-tag">body</span>,<span class="selector-tag">caption</span>,<span class="selector-tag">cite</span>,<span class="selector-tag">code</span>,<span class="selector-tag">dd</span>,<span class="selector-tag">del</span>,<span class="selector-tag">dfn</span>,<span class="selector-tag">div</span>,<span class="selector-tag">dl</span>,<span class="selector-tag">dt</span>,<span class="selector-tag">em</span>,<span class="selector-tag">fieldset</span>,<span class="selector-tag">form</span>,<span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span>,<span class="selector-tag">html</span>,<span class="selector-tag">i</span>,<span class="selector-tag">iframe</span>,<span class="selector-tag">img</span>,<span class="selector-tag">ins</span>,<span class="selector-tag">kbd</span>,<span class="selector-tag">label</span>,<span class="selector-tag">legend</span>,<span class="selector-tag">li</span>,<span class="selector-tag">object</span>,<span class="selector-tag">ol</span>,<span class="selector-tag">p</span>,<span class="selector-tag">pre</span>,<span class="selector-tag">q</span>,<span class="selector-tag">samp</span>,<span class="selector-tag">small</span>,<span class="selector-tag">span</span>,<span class="selector-tag">strong</span>,<span class="selector-tag">sub</span>,<span class="selector-tag">sup</span>,<span class="selector-tag">table</span>,<span class="selector-tag">tbody</span>,<span class="selector-tag">td</span>,<span class="selector-tag">textarea</span>,<span class="selector-tag">tfoot</span>,<span class="selector-tag">th</span>,<span class="selector-tag">thead</span>,<span class="selector-tag">tr</span>,<span class="selector-tag">ul</span>,<span class="selector-tag">var</span>&#123;<span class="attribute">border</span>:<span class="number">0</span> none;<span class="attribute">font-size</span>:inherit;<span class="attribute">color</span>:inherit;<span class="attribute">margin</span>:<span class="number">0</span>;<span class="attribute">padding</span>:<span class="number">0</span>;<span class="attribute">vertical-align</span>:baseline&#125;</span><br><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span>&#123;<span class="attribute">font-weight</span>:<span class="number">400</span>&#125;</span><br><span class="line"><span class="selector-tag">em</span>,<span class="selector-tag">strong</span>&#123;<span class="attribute">font-style</span>:normal&#125;</span><br><span class="line"><span class="selector-tag">li</span>,<span class="selector-tag">ol</span>,<span class="selector-tag">ul</span>&#123;<span class="attribute">list-style</span>:none&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;<span class="attribute">font-family</span>:<span class="string">"Helvetica Neue"</span>,Helvetica,<span class="string">"PingFang SC"</span>,<span class="string">"Hiragino Sans GB"</span>,<span class="string">"Microsoft YaHei"</span>,<span class="string">"\5FAE\8F6F\96C5\9ED1"</span>,Arial,sans-serif;<span class="attribute">line-height</span>:<span class="number">1.5</span>;<span class="attribute">color</span>:<span class="number">#333</span>;<span class="attribute">background-color</span>:<span class="number">#f2f2f2</span>;<span class="attribute">font-size</span>:.<span class="number">24rem</span>&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;<span class="attribute">text-decoration</span>:none&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;<span class="attribute">position</span>:relative;<span class="attribute">max-width</span>:<span class="number">10rem</span>;<span class="attribute">margin</span>:<span class="number">0</span> auto&#125;</span><br><span class="line"><span class="selector-class">.navRoot</span>&#123;<span class="attribute">position</span>: -webkit-sticky;<span class="attribute">position</span>: sticky;<span class="attribute">z-index</span>:<span class="number">50</span>;<span class="attribute">bottom</span>:<span class="number">0</span>;<span class="attribute">left</span>:<span class="number">0</span>;<span class="attribute">width</span>:<span class="number">100%</span>;<span class="attribute">height</span>:<span class="number">1rem</span>;<span class="attribute">display</span>:-webkit-box;<span class="attribute">display</span>:-ms-flexbox;<span class="attribute">display</span>:flex;<span class="attribute">border-top</span>:.<span class="number">01rem</span> solid <span class="number">#ccc</span>;<span class="attribute">background</span>:<span class="number">#f2f2f2</span>&#125;</span><br><span class="line"><span class="selector-class">.navLink</span>&#123;<span class="attribute">font-size</span>:.<span class="number">42rem</span>;<span class="attribute">-webkit-box-flex</span>:<span class="number">1</span>;<span class="attribute">-ms-flex</span>:auto;<span class="attribute">flex</span>:auto;<span class="attribute">display</span>:-webkit-box;<span class="attribute">display</span>:-ms-flexbox;<span class="attribute">display</span>:flex;<span class="attribute">-webkit-box-orient</span>:vertical;<span class="attribute">-webkit-box-direction</span>:normal;<span class="attribute">-ms-flex-direction</span>:column;<span class="attribute">flex-direction</span>:column;<span class="attribute">-ms-flex-wrap</span>:wrap;<span class="attribute">flex-wrap</span>:wrap;<span class="attribute">-webkit-box-pack</span>:center;<span class="attribute">-ms-flex-pack</span>:center;<span class="attribute">justify-content</span>:center;<span class="attribute">-webkit-box-align</span>:center;<span class="attribute">-ms-flex-align</span>:center;<span class="attribute">align-items</span>:center;<span class="attribute">line-height</span>:<span class="number">1</span>;<span class="attribute">color</span>:<span class="number">#666</span>&#125;</span><br><span class="line"><span class="selector-class">.navLink</span><span class="selector-class">.active</span>&#123;<span class="attribute">color</span>:<span class="number">#1abc9c</span>&#125;</span><br><span class="line"><span class="selector-class">.navLinkIco</span>&#123;<span class="attribute">display</span>:block;<span class="attribute">margin-bottom</span>:.<span class="number">1rem</span>&#125;</span><br><span class="line"><span class="selector-class">.navLinkText</span>&#123;<span class="attribute">display</span>:block;<span class="attribute">line-height</span>:<span class="number">1</span>;<span class="attribute">font-size</span>:.<span class="number">24rem</span>&#125;</span><br><span class="line"><span class="selector-class">.img-responsive</span>&#123;<span class="attribute">width</span>:<span class="number">100%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>JS:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 阿里高清方案 --&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">      ! <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">          <span class="function"><span class="keyword">function</span> <span class="title">t</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">              <span class="keyword">if</span> (i[a]) <span class="keyword">return</span> i[a].exports;</span><br><span class="line">              <span class="keyword">var</span> n = i[a] = &#123;</span><br><span class="line">                  exports: &#123;&#125;,</span><br><span class="line">                  id: a,</span><br><span class="line">                  loaded: !<span class="number">1</span></span><br><span class="line">              &#125;;</span><br><span class="line">              <span class="keyword">return</span> e[a].call(n.exports, n, n.exports, t), n.loaded = !<span class="number">0</span>, n.exports</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">var</span> i = &#123;&#125;;</span><br><span class="line">          <span class="keyword">return</span> t.m = e, t.c = i, t.p = <span class="string">""</span>, t(<span class="number">0</span>)</span><br><span class="line">      &#125;([<span class="function"><span class="keyword">function</span> (<span class="params">e, t</span>) </span>&#123;</span><br><span class="line"><span class="meta">          "use strict"</span>;</span><br><span class="line">          <span class="built_in">Object</span>.defineProperty(t, <span class="string">"__esModule"</span>, &#123;</span><br><span class="line">              value: !<span class="number">0</span></span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">var</span> i = <span class="built_in">window</span>;</span><br><span class="line">          t[<span class="string">"default"</span>] = i.flex = <span class="function"><span class="keyword">function</span> (<span class="params">e, t</span>) </span>&#123;</span><br><span class="line">              <span class="keyword">var</span> a = e || <span class="number">100</span>,</span><br><span class="line">                  n = t || <span class="number">1</span>,</span><br><span class="line">                  r = i.document,</span><br><span class="line">                  o = navigator.userAgent,</span><br><span class="line">                  d = o.match(<span class="regexp">/Android[\S\s]+AppleWebkit\/(\d&#123;3&#125;)/i</span>),</span><br><span class="line">                  l = o.match(<span class="regexp">/U3\/((\d+|\.)&#123;5,&#125;)/i</span>),</span><br><span class="line">                  c = l &amp;&amp; <span class="built_in">parseInt</span>(l[<span class="number">1</span>].split(<span class="string">"."</span>).join(<span class="string">""</span>), <span class="number">10</span>) &gt;= <span class="number">80</span>,</span><br><span class="line">                  p = navigator.appVersion.match(<span class="regexp">/(iphone|ipad|ipod)/gi</span>),</span><br><span class="line">                  s = i.devicePixelRatio || <span class="number">1</span>;</span><br><span class="line">              p || d &amp;&amp; d[<span class="number">1</span>] &gt; <span class="number">534</span> || c || (s = <span class="number">1</span>);</span><br><span class="line">              <span class="keyword">var</span> u = <span class="number">1</span> / s,</span><br><span class="line">                  m = r.querySelector(<span class="string">'meta[name="viewport"]'</span>);</span><br><span class="line">              m || (m = r.createElement(<span class="string">"meta"</span>), m.setAttribute(<span class="string">"name"</span>, <span class="string">"viewport"</span>), r.head.appendChild(</span><br><span class="line">                  m)), m.setAttribute(<span class="string">"content"</span>,</span><br><span class="line">                  <span class="string">"width=device-width,user-scalable=no,initial-scale="</span> + u + <span class="string">",maximum-scale="</span> + u +</span><br><span class="line">                  <span class="string">",minimum-scale="</span> + u), r.documentElement.style.fontSize = a / <span class="number">2</span> * s * n + <span class="string">"px"</span></span><br><span class="line">          &#125;, e.exports = t[<span class="string">"default"</span>]</span><br><span class="line">      &#125;]);</span><br><span class="line">      flex(<span class="number">100</span>, <span class="number">1</span>);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>引用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 引用字体图标 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"font-awesome/css/font-awesome.min.css"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 字形图标 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;script src="https://use.fontawesome.com/f47f4563cb.js"&gt;&lt;/script&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+    <div>
+          
+            
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpg" alt="HuZhongQiang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/zhifubao.jpg" alt="HuZhongQiang 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Huzhongqiang：</strong>
+    HuZhongQiang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/" title="js-pc网页兼容源码">http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/26/1/" rel="next" title="H5页面原生video禁止全屏播放">
+                <i class="fa fa-chevron-left"></i> H5页面原生video禁止全屏播放
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/04/Vue基础入门篇-笔记/" rel="prev" title="Vue基础入门篇-笔记">
+                Vue基础入门篇-笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://s1.ax1x.com/2020/04/30/JLTmrV.jpg" alt="HuZhongQiang">
+            
+              <p class="site-author-name" itemprop="name">HuZhongQiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://raw.githubusercontent.com/huzhongqiang1012/picGoG/master/data/weixin.jpeg" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-weixin"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:215851038@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huzhongqiang1012/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://hufeifeifeifeifei@gmail.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/" title="Vue官网" target="_blank">Vue官网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/developer" title="阮 一 峰" target="_blank">阮 一 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/wiki/1022910821149312" title="廖 雪 峰" target="_blank">廖 雪 峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/TomXu" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+
+
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuZhongQiang</span>
+  <span>|</span>
+  <div class="theme-info">
+    <div class="powered-by"></div>
+    <span class="post-count">博客全站共72.2k字</span>
+  </div>
+  <div id="days"></div> 
+  <script>
+    function show_date_time(){
+      window.setTimeout("show_date_time()", 1000);
+      BirthDay=new Date("05/20/2019 12:00:00");
+      today=new Date();
+      timeold=(today.getTime()-BirthDay.getTime());
+      sectimeold=timeold/1000
+      secondsold=Math.floor(sectimeold);
+      msPerDay=24*60*60*1000
+      e_daysold=timeold/msPerDay
+      daysold=Math.floor(e_daysold);
+      e_hrsold=(e_daysold-daysold)*24;
+      hrsold=setzero(Math.floor(e_hrsold));
+      e_minsold=(e_hrsold-hrsold)*60;
+      minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+      seconds=setzero(Math.floor((e_minsold-minsold)*60));
+      document.getElementById('days').innerHTML="本站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+  </script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">72.2k</span>
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+	
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hHpFzswpGKptVEECiNuOYViR-gzGzoHsz',
+        appKey: 'GQYt5ypw600eYxwtJ5UWvbfB',
+        placeholder: '215851038@qq.com',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+</html>
