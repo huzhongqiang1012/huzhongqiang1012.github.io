@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/_posts/about/index.html</loc>
+    <loc>http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/</loc>
     
-    <lastmod>2020-05-02T15:06:16.629Z</lastmod>
+    <lastmod>2020-05-02T15:12:04.890Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/_posts/2020/05/01/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yoursite.com/_posts/about/index.html</loc>
     
-    <lastmod>2020-05-01T06:47:54.143Z</lastmod>
+    <lastmod>2020-05-02T15:06:16.629Z</lastmod>
     
   </url>
   
@@ -187,13 +187,6 @@
     <loc>http://yoursite.com/_posts/2019/07/25/AJAX%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2020-05-01T02:59:15.445Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/</loc>
-    
-    <lastmod>2020-05-01T02:57:58.408Z</lastmod>
     
   </url>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/_posts/"/>
-  <updated>2020-05-01T06:47:54.143Z</updated>
+  <updated>2020-05-01T02:52:23.031Z</updated>
   <id>http://yoursite.com/_posts/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>文章测试</title>
-    <link href="http://yoursite.com/_posts/2020/05/01/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/"/>
-    <id>http://yoursite.com/_posts/2020/05/01/文章测试/</id>
-    <published>2020-05-01T02:07:28.000Z</published>
-    <updated>2020-05-01T06:47:54.143Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Ssb&lt;/p&gt;
-&lt;p&gt;aplayer:&lt;br&gt;  meting: true&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/_posts/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://yoursite.com/_posts/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>Git 指令</title>
@@ -85,14 +60,15 @@
     <link href="http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/"/>
     <id>http://yoursite.com/_posts/2020/02/26/js-pc网页兼容源码/</id>
     <published>2020-02-25T17:14:00.000Z</published>
-    <updated>2020-05-01T02:57:58.408Z</updated>
+    <updated>2020-05-02T15:12:04.890Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;HTML:&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
+        &lt;p&gt;移动端兼容源码/电脑端显示最大宽度已做限制🚫，参考阿里的高清适配方案做页面适配&lt;/p&gt;
+&lt;p&gt;HTML:&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
       
     
     </summary>
@@ -448,6 +424,30 @@
     
       <category term="ES6" scheme="http://yoursite.com/_posts/categories/ES6/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>前端进阶篇</title>
+    <link href="http://yoursite.com/_posts/2019/07/08/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
+    <id>http://yoursite.com/_posts/2019/07/08/前端进阶篇/</id>
+    <published>2019-07-07T17:00:29.000Z</published>
+    <updated>2020-05-01T02:52:01.679Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;原文地址：&lt;a href=&quot;https://phodal.github.io/fed/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://phodal.github.io/fed/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;前端进阶&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+      <category term="前端进阶篇" scheme="http://yoursite.com/_posts/categories/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/_posts/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
