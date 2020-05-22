@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/</loc>
-    <lastmod>2020-05-02</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/_posts/about/index.html</loc>
+    <lastmod>2020-05-22</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/_posts/2020/02/26/js-pc%E7%BD%91%E9%A1%B5%E5%85%BC%E5%AE%B9%E6%BA%90%E7%A0%81/</loc>
     <lastmod>2020-05-02</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/_posts/2020/01/09/hexo%E6%96%87%E6%A1%A3/</loc>
