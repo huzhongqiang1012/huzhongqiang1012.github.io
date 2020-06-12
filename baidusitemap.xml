@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yoursite.com/_posts/Hobby/index.html</loc>
-    <lastmod>2020-06-11</lastmod>
+    <lastmod>2020-06-12</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/_posts/about/index.html</loc>
+    <lastmod>2020-06-12</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/_posts/Photography/index.html</loc>
     <lastmod>2020-06-11</lastmod>
@@ -12,9 +15,6 @@
   </url>  <url>
     <loc>http://yoursite.com/_posts/2020/06/11/jqueryAjax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2020-06-11</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/_posts/about/index.html</loc>
-    <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/_posts/2020/05/27/Vue-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2020-05-28</lastmod>
