@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/_posts/"/>
-  <updated>2020-06-11T15:09:16.726Z</updated>
+  <updated>2020-07-05T14:33:11.974Z</updated>
   <id>http://yoursite.com/_posts/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>减肥第一天</title>
+    <link href="http://yoursite.com/_posts/2020/07/05/%E5%87%8F%E8%82%A5%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <id>http://yoursite.com/_posts/2020/07/05/减肥第一天/</id>
+    <published>2020-07-05T14:30:13.000Z</published>
+    <updated>2020-07-05T14:33:11.974Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这酸爽，才知道坚持这俩个字不是闹着玩的，需要毅力，需要毅力，需要毅力！先把肚子给廋下来，正好验证我的毅力是否坚定。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="类别" scheme="http://yoursite.com/_posts/categories/%E7%B1%BB%E5%88%AB/"/>
+    
+    
+      <category term="标签" scheme="http://yoursite.com/_posts/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>jqueryAjax获取数据方法实现</title>
@@ -427,29 +451,6 @@
     
     
       <category term="html" scheme="http://yoursite.com/_posts/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SEO优化</title>
-    <link href="http://yoursite.com/_posts/2019/07/24/SEO%E4%BC%98%E5%8C%96/"/>
-    <id>http://yoursite.com/_posts/2019/07/24/SEO优化/</id>
-    <published>2019-07-24T13:54:40.000Z</published>
-    <updated>2020-05-01T03:02:59.892Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;SEO-搜索引擎优化&quot;&gt;&lt;a href=&quot;#SEO-搜索引擎优化&quot; class=&quot;headerlink&quot; title=&quot;SEO 搜索引擎优化&quot;&gt;&lt;/a&gt;SEO 搜索引擎优化&lt;/h1&gt;&lt;h5 id=&quot;白帽SEO，搜索引擎支持推荐的，三好市民&quot;&gt;&lt;a href=&quot;#白
-      
-    
-    </summary>
-    
-      <category term="SEO" scheme="http://yoursite.com/_posts/categories/SEO/"/>
-    
-    
-      <category term="SEO" scheme="http://yoursite.com/_posts/tags/SEO/"/>
     
   </entry>
   
