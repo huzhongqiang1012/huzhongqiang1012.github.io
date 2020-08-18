@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/_posts/Photography/index.html</loc>
+    <lastmod>2020-08-18</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/_posts/2020/05/26/2021-12-13/</loc>
     <lastmod>2020-08-02</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/_posts/about/index.html</loc>
     <lastmod>2020-07-21</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/_posts/Photography/index.html</loc>
-    <lastmod>2020-07-07</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/_posts/Hobby/index.html</loc>
     <lastmod>2020-06-22</lastmod>
